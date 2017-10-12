@@ -1,0 +1,981 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0060)http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#DOWNLOAD -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+  
+        
+  <meta name="GENERATOR" content="Mozilla/4.7 [de] (Win98; I) [Netscape]">
+  <title>Maestra homepage</title>
+</head>
+  <body background="./Maestra homepage_files/tangrnd.gif">
+    
+<center>  
+<hr width="100%"><b><font size="+2">The MAESTRA Model</font></b>  
+<p>This website maintained by Belinda Medlyn: <a href="mailto:b.medlyn@unsw.edu.au">b.medlyn@unsw.edu.au</a> <br>
+ Last updated Sept. 01 <br>
+ Hosted by <a href="http://www.bioscience.unsw.edu.au/">Biological Science</a>
+ at <a href="http://www.unsw.edu.au/">University of NSW</a> <br>
+ Mirror sites: <br>
+<a href="http://www.ed.ac.uk/~bmedlyn/maestra/homepage.htm">http://www.ed.ac.uk/~bmedlyn/maestra/</a><br>
+ <a href="http://www.gwdg.de/~aibrom/maestra/homepage.htm">http://www.gwdg.de/~aibrom/maestra/</a></p>
+</center>
+<p> </p>
+ 
+<hr width="100%">  
+<ul>
+   <b><font size="+1">CONTENTS:</font></b> 
+</ul>
+    
+<ul>
+ &nbsp;    
+  <table>
+  <tbody>
+       <tr>
+  <td width="250">          
+        <center><i><font size="+1"><a href="http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#MODEL">Model Description</a></font></i>
+         
+        <p><i><font size="+1"><a href="http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#DOWNLOAD">Download Files</a></font></i>
+         </p>
+         
+        <p><i><font size="+1"><a href="manual.htm">On-Line Manual</a></font></i>
+         </p>
+         
+        <p><i><font size="+1"><a href="bibliog.htm">Bibliography</a></font></i></p>
+         </center>
+  </td>
+   <td width="250">          
+        <center><i><font size="+1"><a href="http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#MAILING%20LIST">Join Mailing 
+List</a></font></i>          
+        <p><i><font size="+1"><a href="http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#CHANGES">Most Recent Changes</a></font></i>
+         </p>
+         
+        <p><i><font size="+1"><a href="http://wwwuser.gwdg.de/~aibrom/maestra/homepage.htm#INPUT">Input Checklist</a></font></i></p>
+         </center>
+  </td>
+  </tr>
+       
+    </tbody>   
+  </table>
+   
+</ul>
+    
+<hr width="100%">  
+<ul>
+   <a name="MODEL"></a><b><font size="+1">DESCRIPTION OF THE MAESTRA MODEL</font></b> 
+</ul>
+  <b>Some history:</b>  
+<p>MAESTRO/MAESTRA is a model of forest canopy radiation absorption and photosynthesis. 
+The model has a long history, going back to the work of Norman &amp; Jarvis 
+in the 1970's and 80's. Ying Ping Wang improved and tested the model for his
+PhD thesis, and it was published in <i>Wang &amp; Jarvis (1990) Agric For
+Meteorol 51:257-280</i>. A lot of other people have worked on the model over
+the years, and as of 1997 there were several versions of the model in existence,
+most of which were complicated and difficult to understand or modify. For
+the purposes of the <a href="http://helios.bto.ed.ac.uk/ierm/ecocraft">ECOCRAFT</a>
+project, I have revised a version of the MAESTRO model which I obtained in
+early 1997 from Ying-Ping Wang. The revised model was renamed to MAESTRA.
+The major revisions included: (i) removing redundant and ‘spaghetti’ code;
+(ii) modularising the code to make the program easier to understand and modify;
+(iii) incorporating standard formulations of physiological sub-modules (Farquhar
+- von Caemmerer, Ball-Berry). </p>
+ 
+<p><b>Model description:</b> </p>
+ 
+<ul>
+  <li> The forest canopy is represented in the model as an array of tree
+crowns,  whose positions and dimensions are specified.</li>
+   <li> Calculations are done for just one crown, the 'target crown’.</li>
+   <li> The distribution of leaf area within the target crown is specified, 
+as is the leaf angle distribution.</li>
+   <li> The main meteorological driving variables are incident radiation, 
+temperature and humidity.</li>
+   <li> The target crown is divided into up to120 grid points, and the radiation
+ penetrating to each grid point is calculated for three wavebands (PAR, near 
+infra-red and longwave). Direct, diffuse, and scattered radiation are considered 
+separately.</li>
+   <li> The absorbed PAR at each grid point drives the photosynthesis and 
+transpiration routines.</li>
+   <li> Photosynthesis is calculated from the Farquhar-von Caemmerer model.</li>
+   <li> Stomatal conductance can be calculated from either of the Jarvis, 
+Ball-Berry, or Ball-Berry-Leuning models.</li>
+   <li> Transpiration is calculated by applying the Penman-Monteith equation 
+at each gridpoint, and summing over the gridpoints.</li>
+   
+</ul>
+  The model is implemented in DOS-based Fortran, with text input and output
+ files. At present there are no plans to develop a Windows version.  
+<p> </p>
+ 
+<hr width="100%">  
+<ul>
+   <a name="DOWNLOAD"></a><b><font size="+1">DOWNLOAD FILES</font></b>  
+ 
+  <p><b><font size="+1"><u><font color="#ff0000">Please Note!</font></u> 
+ </font></b><i>The MAESTRA program is provided freely here. We expect you 
+to use it in good faith. Please contact us if you would like to use the program 
+in your work. Also, we take no responsibility for errors encountered in the 
+model or in outputs generated by the model.</i> </p>
+   
+  <p><b><u><font color="#ff0000">IMPORTANT 12/01/00: </font></u></b><font color="#000000">IF YOU DOWNLOAD THE PROGRAM FILES AFTER THIS DATE, YOU MUST 
+CHANGE ANY EXISTING PARAMETER FILES (<i>phy.dat</i> AND<i> trees.dat</i>) 
+SO THAT, IN ANY BLOCK OF PARAMETERS CONTAINING DATES, THE DATES COME LAST 
+IN THE BLOCK - OTHERWISE THE PROGRAM CRASHES!</font> </p>
+   
+  <p><b>Documentation: </b>The file <a href="http://wwwuser.gwdg.de/~aibrom/maestra/doc.zip">DOC.ZIP</a> (85 KB, 
+zipped RTF files) contains: </p>
+   <li> <b>MANUAL.RTF</b> is the 'User's Guide', with general information 
+about the program and how to set up the input files. This file has been updated
+ as of <font color="#ff0000">11/09/01</font>. This information is also available
+     <a href="http://wwwuser.gwdg.de/~aibrom/maestra/manual.htm">on-line</a>.</li>
+   <li> <b>PROGMAN.RTF</b> is the 'Programmer's Guide', with technical information
+ about the program. This file has not been updated to include changes since
+ July 1997 ie it is a bit out of date now.</li>
+   <li> <b>CHECKPHY.MCD</b> is a MathCAD program which implements the physiology
+ routines; <b>POINTS.MCD</b> implements the routines used to construct the
+ sub-volumes. If you have MathCAD, you can use these programs to check the
+ sub-volumes, photosynthesis and transpiration subroutines.</li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><b>Executable:</b> There are hourly ( <a href="http://wwwuser.gwdg.de/~aibrom/maestra/exe24.zip">EXE24.ZIP</a>)
+ and half-hourly ( <a href="http://wwwuser.gwdg.de/~aibrom/maestra/exe48.zip">EXE48.ZIP</a>) versions of the program, 
+updated <font color="#ff0000">11/09/01</font>. Each of these files (650 KB, 
+zipped) contain: </p>
+   <li> <b>MAESTRA.EXE</b> is the executable program. Just type 'MAESTRA' 
+to run.(NB currently only runs on PC).</li>
+   <li> <b>MAESHR.EXE</b> is an alternative version of the program which
+only runs for one hour but gives a very detailed printout of what happens
+in that  hour. Useful for checking the program!</li>
+   <li> Sample input files: <b>STR.DAT</b>, <b>PHY.DAT</b>, <b>TREES.DAT</b>,
+     <b>CONFILE.DAT</b>, and <b>MET.DAT</b>.</li>
+   <li> Sample output files: <b>DAYFLX.DAT</b>, <b>HRFLUX.DAT</b>, <b>LAYFLX.DAT</b>,
+     <b>PTFLX.DAT, TESTFLX.DAT, DAYTOT.DAT, HRTOT.DAT, MAESERR.DAT.</b></li>
+   <li> Additional programs: <b>SUMTREES.EXE, RESP.EXE, MAESTEST.EXE</b></li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><b>Code: </b>The file <a href="http://wwwuser.gwdg.de/~aibrom/maestra/maestra.zip">MAESTRA.ZIP</a> (updated 
+  <font color="#ff0000">11/09/01</font><font color="#000000">; 88 KB, zipped</font>) 
+contains: </p>
+   <li> The FORTRAN files <b>MAESTRA.FOR</b> and <b>MAESHR.FOR</b> which
+are the two alternative main programs, plus the files of code <b>INOUT.FOR</b>,<b>GETMET.FOR</b>,
+     <b>PHYSIOL.FOR</b>, <b>RADN.FOR</b> and <b>UTILS.FOR</b>. These Fortran 
+files contain all the code for the program. MAESTRA can be compiled with Microsoft
+Fortran on a PC. It can also be compiled on a UNIX system - but has not yet
+been tested on Unix.</li>
+   <li> The header files <b>MAESTCOM</b>, <b>METCOM</b> - these contain program
+ constants and are referred to in the code.</li>
+   <li> The FORTRAN files <b>SUMTREES.FOR, RESP.FOR </b>and <b>MAESTEST.FOR</b>.</li>
+   
+</ul>
+    
+<hr width="100%">  
+<ul>
+   <a name="MAILING LIST"></a><b><font size="+1">MAILING LIST</font></b> 
+</ul>
+  Would you like to be kept informed of changes to the MAESTRA program? If
+ you <a href="mailto:b.medlyn@unsw.edu.au">write me a note</a> I will add
+your name to my mailing list. This mailing list will be advised whenever
+an updated version of MAESTRA becomes available from these pages. Please
+note that all <a href="http://helios.bto.ed.ac.uk/ierm/ecocraft">ECOCRAFT</a>
+members are automatically on my mailing list!  
+<p> </p>
+ 
+<hr width="100%">  
+<ul>
+   <a name="INPUT"></a><b><font size="+1">INPUT CHECKLIST</font></b> 
+</ul>
+    
+<ul>
+ The little red dot indicates that a particular input is necessary. Other 
+inputs are optional.    
+  <p><u>Plot details:</u> </p>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Latitude and longitude.</i></li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Stocking</i>.</li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Bearing. </i>The bearing from north of the x-axis of the plot.</li>
+   <li> <i>Slope. </i>The slope, in degrees, in x and y directions.</li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; <br>
+ &nbsp; <br>
+ &nbsp; </p>
+   
+  <p><u>Canopy structure:</u> </p>
+   <li> <i>Positions of all the individual crowns. </i>The x and y co-ordinates
+ of each crown can be specified, or calculated from the plot size and number
+ of trees.</li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Crown dimensions. </i>The radii in the x and y directions and the 
+heights of the trunk and green canopy can be specified for each crown, or 
+it can be assumed that all crowns have the same dimensions. If the simulation 
+is to run for a long period of time, these values should be specified for 
+a series of dates, to allow the crowns to grow.</li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Leaf area. </i>The leaf area for each crown (or an average value 
+for all crowns) should be specified for the whole period of the simulation.</li>
+   <li> <i>Stem diameters.</i></li>
+   <li> <i>Canopy shape.</i> Conical, ellipsoidal, or paraboloidal.</li>
+   <li> <i>Leaf inclination angle distrutibution.</i> The distribution of 
+leaf angles, or the average leaf angle.</li>
+   <li> <i>Proportion of leaf area in each leaf age class</i>.</li>
+   <li> <i>Distribution of leaf area</i> within the crown, in vertical and/or 
+horizontal directions. This can be specified for up to three leaf age classes.</li>
+   <li> <i>Clumping factor</i>: the ratio of shoot projected area : leaf
+projected  area.</li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><u>Meteorological data:</u> on an hourly or daily basis </p>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Incident radiation. </i>Either PAR or total radiation.</li>
+   <li> <i>Fraction of incident radiation which is direct-beam.</i></li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Temperature. </i>Either hourly temperature or daily minimum and
+maximum.</li>
+   <li> <i>Relative humidity or vapour pressure deficit.</i></li>
+   <li> <i>Wind speed above the canopy.</i></li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Atmospheric CO2 concentration. </i>Average value sufficient.</li>
+   <li> <i>Atmospheric pressure. </i>Average value sufficient.</li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><u>Photosynthesis Parameters:</u> </p>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Jmax and Vcmax. </i>These can be specified for different canopy
+layers and different foliage age classes, also on different dates. They can
+also be specified as functions of leaf nitrogen content, in which case the
+slope and intercept of the relationship are required.</li>
+   <li> <i>Leaf N content. </i>This can be specified for different canopy 
+layers and different foliage age classes, also on different dates.</li>
+   <li> <i>Theta. </i>Curvature of light-response curve of Jmax.</li>
+   <li> <i>Parameters of temperature-response curves of Vcmax and Jmax.</i></li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><u>Stomatal Conductance Parameters:</u> </p>
+   <li> <i>Jarvis model parameters. </i>GSREF, GSJI0, GSJD0, GSJA, GSJB,
+GSJTREF,  GSJTMAX, GSJT0</li>
+   <li> <i>Ball-Berry model parameters. </i>Slope and intercept of Ball-Berry 
+model.</li>
+   <li> <i>Ball-Berry-Leuning model parameters. </i>Slope, intercept, and 
+D0 in Ball-Berry-Leuning model.</li>
+   <li> <i>Leaf width.</i></li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><u>Respiration Parameters:</u> </p>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Leaf dark respiration rate.</i>This can be specified for different 
+canopy layers and different foliage age classes, also on different dates. 
+It can also be specified as a function of leaf nitrogen content, in which 
+case the slope and intercept of the relationship are required.</li>
+   <li> <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+     <i> Q10 for leaf respiration.</i></li>
+   <li> <i>Fraction by which leaf dark respiration is reduced in the light.</i></li>
+   <li> <i>Growth and maintenance respiration coefficients for respiration 
+of other tree components</i>. Stem, branches, coarse roots, fine roots.</li>
+   <li> <i>Allometric coefficients for biomass as a function of stem height 
+and diameter</i>. These are used to calculate the amount of respiring biomass.</li>
+   <br>
+ &nbsp;    
+  <p>&nbsp; </p>
+   
+  <p><u>Reflectance and Transmittance Parameters:</u> </p>
+   <li> <i>Soil reflectance. </i>For three wavebands.</li>
+   <li> <i>Leaf reflectance and transmittance. For three wavebands. </i>These 
+can be specified separately for different canopy layers and foliage age classes.</li>
+   
+</ul>
+    
+<ul>
+   <b><font size="+1">VALIDATION DATA</font></b>    
+  <p>The outputs from MAESTRA are the hourly values of absorbed radiation,
+ photosynthesis and transpiration of the target tree. Useful validation data 
+are intercepted PAR and CO2 and H2O fluxes.</p>
+ 
+</ul>
+    
+<hr width="100%">  
+<ul>
+   <a name="CHANGES"></a><b><font size="+1">CHANGES TO 10/09/01</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Met data file</b>. The start of the actual met data in the file <i>met.dat</i> 
+must be preceded by the line <br>
+ DATA STARTS <br>
+ (note: caps essential; no tabs or extra blank spaces). This ensures the
+file is read from the correct place, regardless of system.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Soil water content and its effect on stomatal conductance</b>. Soil
+water content may be specified in the met.dat file by adding a column 'SW'.
+This will be converted into a soil moisture deficit using the two additional
+parameters SWMAX and SWMIN which must be given in the namelist ENVIRON in
+met.dat. The soil moisture deficit is given by SMD = (SWMAX - SW) / (SWMAX
+- SWMIN). Thus SW should be in the same units as SWMAX and SWMIN. <br>
+ The effect of soil moisture on stomatal condutance is calculated as f(SMD) 
+= 1 - SMD1*exp(SMD2*SMD) where SMD1, SMD2 are parameters. This function is 
+implemented for all three stomatal conductance models. The parameters SMD1, 
+SMD2 should be added to the relevant namelists in phy.dat. <br>
+ In the code you will note that work is also under way to add back in the 
+water balance routines used by Barton &amp; Massheder - however this has not
+yet been completed. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Quantum yield of electron transport.</b> Previously this was specified 
+as AJQ in namelist JMAXPARS in phy.dat. Alternatively, you can now specify 
+different values according to date, layer, and age class, as you can for JMAX,
+VCMAX, etc. This is done by adding namelists <br>
+ &amp;AJQCON&nbsp;&nbsp;&nbsp; NODATES, NOLAYERS, NOAGES \ <br>
+ &amp;AJQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ DATES, VALUES \ <br>
+ to phy.dat. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Alternative formulations of the temperature dependences of Km and Gamma*</b>.&nbsp; 
+Use the temperature dependences found by Bernacchi et al (2001) Plant Cell 
+Environ. 24:253-260 by adding the parameter IECO = 0 in namelist JMAXPARS 
+in file phy.dat. The default IECO = 1 is to use the temperature dependences 
+opted for by the ECOCRAFT group. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Estimating incident radiation. </b>The program can use the formula of 
+Bristow &amp; Campbell (1984) Ag For Met 31: 159-166 to calculate incident 
+PAR from air temperature. To use this option it is necessary to put the namelist
+ <br>
+ &amp; BRISTO&nbsp;&nbsp;&nbsp; DELTAT&nbsp;&nbsp;&nbsp; \ <br>
+ in the met.dat file. DELTAT should have 12 values representing the mean
+monthly daily temperature amplitude for each month of the year. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Stem maintenance respiration on an area basis.</b> To specify stem maintenance 
+respiration on an area basis rather than a mass basis, change the namelist 
+WRESP in phy.dat to have the following parameters: <br>
+ RMA - maintenance respiration per unit stem surface area (instead of RM, 
+the rate per unit mass) <br>
+ STEMFORM - used to calculate total stem surface area. Stem SA = STEMFORM
+* PI * HT * DBH^2 <br>
+ Parameters RTEMP, Q10W, EFFY stay the same. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Outputs.</b> Mean canopy temperature (TCAN) is output on an hourly basis. 
+There is also a column for water evaporation but this is non-operational at
+the moment. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Bugs. </b>In the version of 14/3/99, a cosine was added to the calculation 
+of WNS1 in TRANSD. This change should not have been made and has been corrected 
+in the current version. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Thermal radiation. </b>The formula used to estimate incident thermal 
+radiation was changed to that of Monteith &amp; Unsworth (1990) Principles 
+of Environmental Physics V2 p53 - this formula takes into account higher radiation
+from cloudy skies. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Understorey</b>. A program has been written to calculate radiation absorption 
+and photosynthesis by a grass understorey. This program is not available on
+this web site but may be obtained by writing to Belinda Medlyn. </p>
+ 
+<blockquote><b><font size="+1">CHANGES TO 12/1/00</font></b></blockquote>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Fixed millennium bug.</b> Dates should still be specified as ‘DD/MM/YY’. 
+YY = 50 - 99, years 1950-1999 assumed; YY = 00 - 49, years 2000 – 2049 assumed. 
+Someone else can change the program come 2050 …  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Powerstation Version:</b> Changes made so that program compiles in Microsoft 
+Fortran PowerStation. <b><u>IMPORTANT</u></b>:&nbsp; in input files, arrays 
+involving strings (e.g. dates) must come at the end of the namelist, after 
+all numbers – this means a change to the input file. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Added incident total short-wave radiation</b> to hourly input met data 
+options. Column ‘RAD’ in W m-2. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Added new VPD function for Jarvis stomatal conductance</b>. <br>
+ &nbsp;&nbsp;&nbsp; F(VPD) = min(1,1/(VK1*VPD^VK2)) <br>
+ with parameters VK1 and VK2 in namelist JARGS in phy.dat. To use, set j
+= 3 in namelist MODELGS in <i>confile.dat</i>. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Bugs Fixed: </b>(in order of importance) <br>
+ (1) The photosynthesis subroutine PHOTOSYN was returning gross photosynthesis,
+ not net, for the Ball-Berry-Leuning case. <br>
+ (2) A correction to the subroutine DIST in radn.for to handle the case where 
+the ray is completely outwith the crown. <br>
+ (3) Handle correctly the cases where Jmax or Vcmax &lt;= 0, where photosynthesis
+ is below the light compensation point, and to calculate Gamma* when T &lt;
+ 0. <br>
+ (4) If physiology is only specified for one age class, but LAD distributions
+ are specified for several, the physiology data must be copied into arrays
+ for the other age classes. <br>
+ (5) In the calculation of the beam fraction of incident radiation, a more 
+accurate estimate of the zenith angle is now used. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>New Parameters Added:</b> <br>
+ (1) The initial slope of the light-response curve of electron transport
+is now the parameter AJQ (namelist: JMAXPARS in phy.dat). Default value:
+ALPHAQ = 0.425 mol mol-1 (defined in <i>maestcom</i>). <br>
+ (2) Added parameters to force Jmax and Vcmax to go to zero at low temperatures.
+ They begin to decline linearly to zero at T = TVJUP °C and reach zero
+ at T = TVJDN °C. TVJUP, TVJDN are in namelist VCMAXPARS in phy.dat.
+Default values: -100. </p>
+ 
+<ul>
+ &nbsp; <br>
+   <b><font size="+1">CHANGES TO 14/3/99</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>BUG in TRANSD fixed. </b>There was a missing cosine in the calculation 
+of WNS1 in TRANSD, which affected the calculation of absorbed diffuse radiation.
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>The MAESTEST program.</b> I added a new program to the family, which 
+prints out radiation incident at specified grid points. It is useful for testing
+measurements made with PAR sensors. The input file, points.dat, contains the
+co-ordinates of the sensors. The output file, testflx.dat, gives beam, diffuse,
+and total transmission of PAR to the sensors for each half-hour.  </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Direct beam fraction at low sun angles. </b>The program uses Spitter's 
+routine to differentiate beam &amp; diffuse fractions. This was only developed 
+for sun angles &gt; 80 deg (from vertical). The problem was how to estimate 
+the diffuse fraction for very low sun angles. I have now assumed that all 
+radiation is diffuse &gt; 80 deg. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Respiration</b> is now set to zero if the air temperature is &lt; TBELOW 
+degrees.TBELOW is specified in the RDPARS namelist in <i>phy.dat</i>. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Daily shortwave irradiance.</b> In daily met files, you can specifiy 
+incident radiation as global shortwave radiation (in MJ m-2 d-1) - the column 
+heading should be 'SI'. Either 'SI' or 'PAR' must be specified. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The calculation of photosynthesis on sunlit foliage can now be done separately 
+for each angle class, by setting the switch MODELSS = 2 (in MODEL namelist,
+ <i>confile.dat</i>). </p>
+ 
+<ul>
+   <b><font size="+1">CHANGES TO 7/6/98</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Incident radiation</b>. There were a couple of problems with the calculation 
+of PAR in W m-2 and the estimation of incident NIR and longwave radiation. 
+The following changes were made:  
+<ol>
+  <li> the conversion factor from umol to J (UMOLPERJ) in maestcom was changed
+ from 2.1 to 4.57 (see Jones 1992 Table 2.2).</li>
+   <li> the incident NIR is estimated from PAR using the fraction FPAR (in 
+maestcom, currently 0.5), which is the fraction of total incident shortwave 
+which is PAR.</li>
+   <li> the equation used to calculate incident thermal radiation was changed 
+to: (see Leuning et al 1995 PC&amp;E 18:1183-1200) thermal = 0.642*(EA/TK(TAIR(I)))**(1./7.)*SIGMA*(TK(TAIR(I))**4)
+ where EA is the atmospheric water vapour pressure. These changes will only
+ affect calculation of transpiration when leaf boundary layers conductances
+ are very low.</li>
+   
+</ol>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Effects of OTC</b>. If met data has been measured outside the chamber, 
+the effects of the chamber on climate can be incorporated using the following 
+namelist (in confile.dat):  
+<ul>
+  <dt> &amp;OTC</dt>
+   <dt> TOTC = 1.5 / increase in temperature (deg C)</dt>
+   <dt> WINDOTC = 0.15 / absolute windspeed in chamber (m s-1)</dt>
+   <dt> PAROTC = 0.85 / fraction of PAR entering the chamber (0 - 1)</dt>
+   <dt> FBEAMOTC = 0.0 / fractional reduction in beam fraction (0 - 1)</dt>
+   <dt> /</dt>
+   
+</ul>
+  If temperature is affected, the absolute humidity is assumed constant and
+ VPD and RH adjusted accordingly.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Leaf phenology</b>. The model of leaf expansion used by Wang, Rey &amp; 
+Jarvis (1998, GCB) has been added. This can be used instead of specifying 
+leaf areas. Note, however, that it does assume that all trees have the same 
+leaf area. Instead of the namelist INDIVLAREA or ALLLAREA, add the following 
+to trees.dat: </p>
+ 
+<ul>
+  <dt> &amp;PHENOLOGY</dt>
+   <dt> FLUSHDATE = '16/04/94' / date of appearance of leaves</dt>
+   <dt> DT1 = 47 / days to end of first leaf flush</dt>
+   <dt> DT2 = 107 / days to end of second leaf flush</dt>
+   <dt> DT3 = 164 / days to beginning of leaf senescence</dt>
+   <dt> DT4 = 204 / days to end of leaf senescence</dt>
+   <dt> EXPTIME = 28 / time taken for leaf to fully expand</dt>
+   <dt> MAXLEAVES = 6587 / maximum number of leaves</dt>
+   <dt> SIZELEAF = 0.001071 / average leaf size (m2)</dt>
+   <dt> /</dt>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Respiration outputs</b>. Daily respiration fluxes are all output to
+a separate file, <i>resp.dat</i>. To get this output you must add IORESP
+= 1 to the CONTROL namelist in confile.dat. There is a also a separate program 
+(<i>resp.exe</i>) which only calculates the respiration fluxes, allowing you
+to do these calculations independently of radiation interception &amp; photosynthesis.
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Respiration</b>. The program can now calculate growth and maintenance 
+respiration for foliage, stem, branch, fine root and coarse root separately. 
+Foliage maintenance respiration, and stem growth and maintenance are calculated 
+as before. The following namelists give the parameters required to calculate 
+branch and root maintenance respiration rates (in phy.dat): </p>
+ 
+<ul>
+  <dt> &amp;BRESP / branch respiration</dt>
+   <dt> RMB = 0.28285 / respiration rate (in umol kg-1 DW s-1)</dt>
+   <dt> Q10B = 0.06931 / exponential coefficient for T-dependence</dt>
+   <dt> RTEMPB = 25 / temperature at which RMB applies</dt>
+   <dt> /</dt>
+   <dt> &amp;RRESP / root respiration</dt>
+   <dt> RMCR = 0.28285 / coarse root respiration rate (in umol kg-1 DW s-1)</dt>
+   <dt> RMFR = 14.0 / fine root respiration rate (in umol kg-1 DW s-1)</dt>
+   <dt> Q10R = 0.06931 / exponential coefficient for T-dependence</dt>
+   <dt> RTEMPR = 25 / temperature at which RMCR &amp; RMFR apply</dt>
+   <dt> /</dt>
+   
+</ul>
+  Note that root respiration rates depend on the soil temperature. Soil T
+is now calculated as the mean daily air temperature. The biomass of roots
+and branches is estimated from stem height and diameter according to the
+allometic relation:  
+<ul>
+ BIOM = COEFFT * HT * (DIAM^EXPONT) + INTERC 
+</ul>
+  Fine roots are assumed to be a constant fraction of the total root biomass.
+ The following namelists are used to specify the parameters of this relation
+ (in str.dat):  
+<ul>
+  <dt> &amp;ALLOMB / coefficients for branch biomass</dt>
+   <dt> BEXPONT = 2. / exponent in above eqn</dt>
+   <dt> BCOEFFT = 103.9471 / coefficient in above eqn</dt>
+   <dt> BINTERC = -0.03123 / intercept in above eqn</dt>
+   <dt> /</dt>
+   <dt> &amp;ALLOMR / coefficients for total (coarse + fine) root biomass</dt>
+   <dt> REXPONT = 2. / exponent in above eqn</dt>
+   <dt> RCOEFFT = 103.9471 / coefficient in above eqn</dt>
+   <dt> RINTERC = -0.03123 / intercept in above eqn</dt>
+   <dt> FRFRAC = 0.22 / fraction of total root biomass that is fine roots</dt>
+   <dt> /</dt>
+   
+</ul>
+  Note that an intercept has also been added to this relation for stem biomass;
+ the parameter WINTERC can be added to the namelist ALLOM in str.dat. The
+biomass increment of each component is also calculated and used to estimate
+growth respiration according to  
+<ul>
+ GRESP = EFFY * BIOMINC 
+</ul>
+  where EFFY is in g g-1 C. Only two efficiencies are used: one for foliage
+ and fine roots (EFFYRF) and one for stem, branch and coarse roots (EFFY).
+ EFFYRF is added to the RDPARS namelist and EFFY is added to the WRESP namelist,
+ both in phy.dat. Foliage biomass is calculated from leaf area and SLA.  
+<p>SLA can be specified by layer, age and date, in a similar fashion to JMAX, 
+VCMAX &amp; LEAFN. Use the following namelists (in phy.dat): </p>
+ 
+<ul>
+  <dt> &amp;SLACON</dt>
+   <dt> NOLAYERS = 5</dt>
+   <dt> NOAGES = 1</dt>
+   <dt> NODATES = 1</dt>
+   <dt> /</dt>
+   <dt> &amp;SLA</dt>
+   <dt> VALUES = 13.675 16.28 18.65 24.42 30.46</dt>
+   <dt> /</dt>
+   
+</ul>
+  This value of SLA is only used for the calculation of foliage growth respiration,
+ nothing else.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>PAR Histogram.</b> The program can print out a frequency histogram of 
+PAR within each tree crown during the simulation. To get the histogram, put 
+IOHIST = 1 in the CONTROL namelist in confile.dat. Then add a namelist which 
+gives the size of the histogram intervals (in umol m-2 s-1) to confile.dat. 
+An example: </p>
+ 
+<ul>
+  <dt> &amp;HISTO</dt>
+   <dt> BINSIZE = 25</dt>
+   <dt> /</dt>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Climate change scenarios</b>. The program can add a fixed amount to
+CO2 concentration and temperature from the met file. The following namelist
+should be put in <i>confile.dat</i>:  
+<ul>
+  <dt> &amp;CCSCEN</dt>
+   <dt> CO2INC = 350</dt>
+   <dt> TINC = 4</dt>
+   <dt> /</dt>
+   
+</ul>
+  The temperature increase is assumed to affect both air temperature and
+soil temperature. Absolute air humidity (g m-3) is assumed to remain constant;
+ RH &amp; VPD are adjusted accordingly.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Stomatal conductance (Jarvis model)</b>. I added some alternative functions 
+for responses in the Jarvis model. </p>
+ 
+<ul>
+  <li> New VPD responses:</li>
+      
+  <ul>
+  <li> FVPD = 1 - VMFD/VMFD0 where VMFD is the vapour pressure mole fraction 
+deficit and VMFD0 is a parameter (in mmol mol-1). VMFD0 should be added to 
+the GSJARVIS namelist in <i>phy.dat</i>.</li>
+   <li> FVPD = 1 - (VPD - VPD1)/(VPD2 - VPD1) where VPD1 and VPD2 are parameters
+ (in Pa) to be added to the GSJARVIS namelist in <i>phy.dat</i>.</li>
+     
+  </ul>
+   <li> New T response:</li>
+      
+  <ul>
+  <li> The T response given by McMurtrie et al (For Ecol Manag 31:381-413). 
+It takes the same parameters as the previous T response, ie T0, TREF, TMAX.</li>
+     
+  </ul>
+   
+</ul>
+  To indicate which model is wished: MODELGS (in <i>confile.dat</i>) can
+be up to three digits long, e.g. <b>ijk</b>. If:  
+<ul>
+  <li> i = 0: quadratic T-response</li>
+   <li> i = 1: power function T-response</li>
+   <li> (NB if Tmax &lt;= 0 no T-response is used in either case)</li>
+   <li> j = 0: non-linear VPD response</li>
+   <li> j = 1: linear response to vapour pressure mole fraction deficit</li>
+   <li> j = 2: linear VPD response</li>
+   <li> k = 0: linear response to CO2</li>
+   <li> k = 1: non-linear response to CO2</li>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Pressure, vapour pressure mole fraction deficit, dewpoint temp</b>.
+All of these can now be entered as hourly values in met data files. The column 
+headings are 'PRESS' (Pa), 'MFD' (mmol mol-1), 'TDEW' (deg C). If RH and VPD
+are both missing, MFD or TDEW will be used to calculate them.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  <b>Sumtrees program</b>. This program takes normal output files, in which 
+fluxes are specified for each tree (dayflx.dat, hrflux.dat,histo.dat) and 
+computes totals on an area basis. You can specify which trees you want summed, 
+and weightings for them (e.g. for diameter classes) by using an input file 
+<i>sumcon.dat</i> with the following namelist: </p>
+ 
+<ul>
+  <dt> &amp;TARGETS</dt>
+   <dt> ITARGETS = 25 27</dt>
+   <dt> WEIGHTS = 0.25 0.75</dt>
+   <dt> /</dt>
+   
+</ul>
+  where ITARGETS are the numbers of the trees you want summed, and weights
+ are the weights needed. If this file is not available, all trees are summed
+ and given equal weights.  
+<ul>
+   <b><font size="+1">CHANGES TO 24/3/98</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; Bug fix: Foliage respiration was being subtracted twice from the
+gross photosynthetic rate. Correction to subroutine PHOTOSYN in <i>physiol.for</i>.
+ 
+<ul>
+   <b><font size="+1">CHANGES TO 9/2/98</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; In the met data file, hourly relative humidity can be entered as
+% if wished. The column should be called 'RH%'.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; The crown can have a box shape. Put CSHAPE = 'BOX' in the CANOPY
+namelist in str.dat. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; You can specify a list of target trees to use, rather than just one. 
+In confile.dat, add ITARGETS = list of target tree numbers to the TREESCON 
+namelist (instead of NOTARGET or NORANDOM). e.g. </p>
+ 
+<address> &amp;TREESCON</address>
+    
+<address> NOTREES = 50</address>
+    
+<address> ITARGETS = 5 10 15 20</address>
+   <br>
+ /  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; The wind speed declines exponentially with depth in the canopy. The 
+exponential coefficient is given in STR.DAT: </p>
+ 
+<address> &amp;AERO</address>
+    
+<address> EXTWIND</address>
+   <br>
+ /  
+<p>where the windspeed at canopy depth D, W(D) is given by W(D) = W(0)*exp(-EXTWIND*D).
+ Default: EXTWIND = 0. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; Transpiration rate is also calculated from the conductance of the 
+whole canopy. This is printed out in hrflux.dat to compare with the transpiration 
+rate calculated by applying the Penman-Monteith equation to each grid point. 
+The canopy stomatal conductance is calculated as the sum of the individual 
+leaf conductances. The canopy boundary layer conductance is calculated from
+ </p>
+ 
+<ul>
+ GB = K^2 * U / (LN((ZHT - ZPD)/Z0HT))^2 (Jones 1992 eqn. 3.42). 
+</ul>
+  U is the wind speed, K is von Karman's constant (added to MAESTCOM), and
+ new parameters required are (in trees.dat):  
+<address> &amp;AERODYN</address>
+    
+<address> ZHT (measurement height, m)</address>
+    
+<address> ZPD (zero-plane displacement, m)</address>
+    
+<address> Z0HT (roughness length, m)</address>
+   <br>
+ /  
+<p>If these parameters aren't specified, this calculation is not done. This 
+part is not fully tested yet. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; Entered the equations for stem respiration rate from Collelongo (Valentini 
+et al 1996, Global Change Biol 2: 199 - 207). The stem respiration rate is 
+given by </p>
+ 
+<ul>
+ RMW = CA * EXP(CK * DIAM) * STEMSDW 
+</ul>
+  The parameters required (in phy.dat) are  
+<address> &amp;COLLWRESP</address>
+    
+<address> CA (constant: paper gives 0.217)</address>
+    
+<address> CK (constant: paper gives 0.065)</address>
+    
+<address> STEMSDW (the stem surface area: dry weight ratio in m2 kg-1)</address>
+   <br>
+ /  
+<p>To indicate that you want to use this model, add MODELRW = 1 to the MODEL 
+namelist in confile.dat. The parameters of the temperature dependence, ie 
+RTEMPW and Q10W should be entered using the WRESP namelist as usual. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; You can now enter the mean leaf inclination angle and the program 
+will calculate the fractions of foliage area in each angle class assuming 
+an elliptical distribution (instead of having to enter the ELP parameter). 
+Just add the parameter AVGANG (in degrees) to the LIA namelist in str.dat. 
+(NB previous methods of entering the LIA distribution are still supported).
+ </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+ &nbsp; Leaf temperature is now printed out in PTFLX.DAT. </p>
+ 
+<ul>
+   <b><font size="+1">CHANGES TO 5/12/97</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The program will run for more than one tree at a time. Using controls in 
+<i>confile.dat</i>, you can make the program do the calculations for a specified 
+number of randomly-chosen trees, or for all trees in the plot. If you do not
+want to include trees around the edge of the plot, you can specify the edge
+width, and trees within this distance from the edge will not be used as target
+trees.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  A minimum (cuticular) conductance was added to the Jarvis model, to avoid 
+the stomatal conductance going to zero. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The units of the output files were changed to more sensible units (mainly 
+umol m-2 s-1). The new units are shown in the output files. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The photosynthesis calculations can be done for sunlit and shaded foliage 
+separately, or done assuming that the absorbed radiation at a grid point is
+spread evenly over the foliage at that grid point. Use the flag MODELSS in
+<i>confile.dat</i> to control this. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The latitude and longitude are now specified in the <i>met.dat</i> file.
+ </p>
+ 
+<ul>
+   <b><font size="+1">CHANGES TO 10/9/97</font></b> 
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  You can read the hourly or daily CO2 concentrations from the met file.
+Add a column with the title 'CO2' to MET.DAT. Values should be in umol mol-1.
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Added Spitter's formula to calculate the diffuse fraction of radiation. 
+For hourly data, FBEAM is no longer necessary. For daily data, the incident 
+radiation should be entered in columns 'PAR' and 'FBEAM' (rather than RBM 
+and RDF), where FBEAM is not necessary. (Spitters et al 1986, Agric For Meteorol 
+38: 217-229) </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Bug fix - Fixed a bug in the subroutine SUN - the date used to calculate 
+the daylength was fixed! Added a routine to calculate the julian date (DAYJUL). 
+Also added a routine to calculate the Julian day (JDATE). </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Night-time foliar respiration is calculated and subtracted from hourly
+and daily CO2 flux. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Woody maintenance respiration is calculated from the woody biomass, which 
+in turn is calculated using an allometric relation with height and diameter. 
+The diameter should be input in the file trees.dat, in a similar format to 
+the height and radius, i.e. </p>
+ 
+<p>NAMELIST /ALLDIAM/ NODATES, DATES, VALUES </p>
+ 
+<p>or </p>
+ 
+<p>NAMELIST /INDIVDIAM/ NODATES, DATES, VALUES </p>
+ 
+<p>where the diameter is in m. The allometric relationship is given by: </p>
+ 
+<p>WBIOM = COEFFT * HEIGHT * DIAM^EXPONT (1) </p>
+ 
+<p>where: WBIOM is the woody biomass (in kg DW tree-1), HEIGHT is the total
+ height of the tree in m (green height + trunk length), DIAM is the diameter
+ in m, and COEFFT and EXPONT are parameters. The diameters should be specified
+ at the height for which they were used to develop this allometric relationship.
+ The allometric parameters should be added to the file STR.DAT using the
+namelist:  </p>
+ 
+<p>NAMELIST /ALLOM/ COEFFT, EXPONT </p>
+ 
+<p>The woody maintenance respiration rate is given by a Q10 relationship:
+ </p>
+ 
+<p>RESPW = RMW * exp(Q10W * (TAIR - RTEMPW)) * WBIOM (2) </p>
+ 
+<p>where RMW is the maintenance respiration rate (in umol kg-1 DW s-1 or
+nmol g-1 DW s-1) at temperature RTEMPW and Q10W is the temperature response
+factor. The maintenance respiration is calculated on an hourly basis and
+output in the hourly and daily files. The daily woody growth respiration
+is calculated from the increment in woody biomass on that day according to
+</p>
+ 
+<p>RESPWG = WBINC * EFFY </p>
+ 
+<p>where EFFY is the efficiency of woody biomass growth (mol CO2 g-1 DW)
+and WBINC is the daily increment in woody biomass (g DW d-1) which is calculated
+ from the changes in height and diameter, using the allometric relation (1). 
+The parameters required for the calculation of woody respiration rates should 
+be added to PHY.DAT using </p>
+ 
+<p>NAMELIST /WRESP/ EFFY,RMW,RTEMPW,Q10W </p>
+ 
+<p>Note that the photosynthesis values reported in the hourly and daily output 
+files are net of foliar respiration but not of woody respiration. The woody 
+maintenance respiration is reported in both the hourly and daily output files. 
+The woody growth respiration is calculated on a daily basis &amp; so is reported 
+only in the daily output file. Note that Franz says woody growth respiration 
+will probably lag the actual growth by approx. one week. We could add a lag 
+to the calculation of the growth rate. Also we could add some kind of fix 
+to make a relationship with temperature. However we don't have the time course 
+of the growth in any fine detail so it's probably not worth making these corrections
+to the growth respiration calculation. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The temperature at which respiration rates (foliage, woody) are specified 
+must be given - RTEMP (deg C) in the physiology file. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  The program now integrates the physiology parameters to give the correct 
+value for each layer (you used to have to have the radiation layers a multiple 
+of the physiology layers). This is for the reflectance, transmittance, Jmax, 
+Vcmax , leaf N and Rd. In the input files: </p>
+ 
+<ul>
+  <li> the reflectance and transmittance must be specified with the values 
+for different layers in columns and the values for different wavelengths in
+rows.</li>
+   <li> the Jmax etc must be specified with the values for different layers 
+in columns. The values for each date should be grouped together, with one
+ row for each age class.</li>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Output in layers and for individual points. If you set IOHRLY (in confile.dat) 
+to 2, the values of absorbed PAR, photosynthesis and transpiration for each 
+layer for each hour will be printed to the file layflx.dat. There is also 
+another main program which only runs one hour and prints out values for individual 
+points. When compiling, replace maestra.for by maeshr.for. When running maeshr, 
+it will ask which hour you want to do the simulation for. It will then output 
+results for individual points (by layer) to the file ptflx.dat.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Added new shapes for the canopy. The new possible shapes are: </p>
+ 
+<ul>
+  <li> ‘ROUND’ - canopy is a full ellipsoid (‘ELIP’ gives half-ellipsoid)</li>
+   <li> ‘CYL’ - canopy is upright cylinder</li>
+   <li> I also fixed ‘PARA’ so the paraboloidal crown now works too.</li>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Made some changes to the way BETA is calculated. Abandoned the beta interpolation 
+table - don’t think it helps much anyway? Also, note that the integral of 
+BETA in the vertical direction must be 1, and in the horizontal direction 
+2 PI. - this determines what a and d must be in the beta formula.  
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Re-structured the input files to make them more self-contained. I did not 
+want to change the format of the input files but the division of parameters 
+between files was not very logical. I think it is now very logical and should 
+not have to be changed again. Now: </p>
+ 
+<ul>
+  <li> confile.dat - all parameters controlling the course of the simulation</li>
+   <li> trees.dat - all parameters concerned with the particular plot</li>
+   <li> str.dat - parameters describing canopy structure generally</li>
+   <li> phy.dat - physiological parameters</li>
+   <li> met.dat - meteorological files.</li>
+   
+</ul>
+  <img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Worked through the scattered radiation routines, adding comments, re-structuring 
+code - and fixed one bug (subtracted sky diffuse radiation from downward diffuse
+flux). The scattered radiation routines still need more work though! Added
+parameter DIFSKY to namelist ENVIRON in met.dat. This parameter controls the
+distribution of diffuse radiation incident from the sky. The distribution 
+function is given by  
+<p>G(zenith) = (1 + DIFSKY*cos(zenith)) / (1 + 2/PI * DIFSKY) </p>
+ 
+<p>For a uniform overcast sky, DIFSKY = 0.0 (default). See Wang &amp; Jarvis
+ (1990) Silva Carelica 15:167-180 and Steven &amp; Unsworth (1980) Quart.
+J. Roy. Meteorol. Soc. 105: 593-602 for more information about DIFSKY. </p>
+ 
+<p><img src="./Maestra homepage_files/dot_red.gif" height="9" width="9">
+  Included a simulation of shadecloth covering a greenhouse around the trees. 
+I assume that the greenhouse is rectangular in shape and the corners are at
+co-ordinates (0,0), (0,YMAX), (XMAX,0), (XMAX,YMAX). I added a parameter SHADEHT
+to namelist PLOT in trees.dat, which is the height of shadecloth on the greenhouse
+(in m). It is assumed that no rays pass through the shadecloth.  </p>
+ 
+<p> </p>
+ 
+<hr width="100%"> <br>
+ <br>
+
+
+<span id="sbmarwbthv5"></span></body></html>

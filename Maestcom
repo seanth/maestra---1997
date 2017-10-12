@@ -1,0 +1,102 @@
+C Names of constants
+
+C Maximum dimensions of arrays
+      PARAMETER (MAXT = 720)          ! Maximum no. of trees in plot
+      PARAMETER (MAXTT = 720)         ! Maximum no. of trees considered in calcns
+      PARAMETER (MAXLAY = 60)         ! Maximum no. of layers for radiation
+      PARAMETER (PPLAY = 12)          ! Grid points per layer
+      PARAMETER (MAXP = MAXLAY*PPLAY) ! Maximum no. of gridpoints
+	  PARAMETER (MAXS = 5)			  ! Maximum no. of soil layers
+      PARAMETER (MAXC = 3)            ! Maximum no. of leaf area distributions
+      PARAMETER (MAXANG = 9)          ! Maximum no. of zenith & leaf angles
+	  PARAMETER (MAXD = 10)		      ! For resp prog
+      PARAMETER (MAXTDATE = 15)       ! Maximum no. of dates for tree parameters
+      PARAMETER (MAXPDATE = 10)       ! Maximum no. of dates for physiol parameters
+      PARAMETER (MAXMET = 17)         ! Maximum columns in met data file
+      PARAMETER (MAXHISTO = 40)       ! Maximum bins in PAR histogram
+      PARAMETER (KHRS = 48)           ! Number of time intervals in a day
+      PARAMETER (HHRS = (KHRS)/2.0)   ! Half a day length
+      PARAMETER (SPERHR = 3600*24/KHRS) ! Seconds in one time interval
+      PARAMETER (TOL = 0.01)          ! Tolerance for leaf temp iteration
+      PARAMETER (MAXDAY = 365)         ! For sumtrees program
+
+C Values of physical constants
+      PARAMETER (DEFWIND = 2.5)       ! Default wind speed (m s-1)
+      PARAMETER (UMOLPERJ = 4.57)     ! Conversion from J to umol quanta
+      PARAMETER (FPAR = 0.5)         ! Fraction of global radiation that is PAR
+      PARAMETER (ABSZERO = -273.15)   ! Absolute zero in degrees Celsius
+      PARAMETER (TAU = 0.76)          ! Transmissivity of atmosphere
+      PARAMETER (PI = 3.1415927)      ! Pi
+      PARAMETER (TWOPI = 2.0*PI)      ! Two times Pi
+      PARAMETER (PID2 = PI/2.0)       ! Pi divided by two
+      PARAMETER (PID180 = PI/180.0)   ! Pi divided by 180 degrees
+      PARAMETER (AIRMA = 29.e-3)      ! mol mass air (kg/mol)
+      PARAMETER (PATM = 1.0125E5)     ! atmospheric pressure - standard condns (Pa)
+      PARAMETER (CPAIR = 1010.)       ! heat capacity of air (J/kg/K)
+      PARAMETER (DHEAT = 21.5e-6)     ! molecular diffusivity for heat
+      PARAMETER (EMLEAF = 0.95)       ! emissivity of thermal radiation by leaf
+      PARAMETER (H2OLV0 = 2.501e6)    ! latent heat H2O (J/kg)
+      PARAMETER (H2OMW = 18.e-3)      ! mol mass H2O (kg/mol)
+      PARAMETER (RCONST = 8.314)      ! universal gas constant (J/mol/K)
+      PARAMETER (SIGMA = 5.67e-8)     ! Steffan Boltzman constant (W/m2/K4)
+      PARAMETER (GBHGBC = 1.32)       ! Ratio of Gbh:Gbc
+      PARAMETER (GSVGSC = 1.57)       ! Ratio of Gsw:Gsc
+      PARAMETER (GBVGBH = 1.075)      ! Ratio of Gbw:Gbh
+      PARAMETER (ALPHAQ = 0.425)      ! Quantum yield of RuBP regen (mol mol-1)
+      PARAMETER (SOLARC = 1370)       ! Solar constant (J m-2 s-1)
+      PARAMETER (GCPERMOL = 12.0)     ! Grams C per mol C
+      PARAMETER (CPERDW = 0.5)        ! C fraction per DW
+      PARAMETER (VONKARMAN = 0.41)    ! von Karman's constant
+
+C Numbers of I/O units
+
+      INTEGER UCONTROL,UTREES,USTR,UPHY,UMET,UTUTD,UTEST
+      INTEGER UDAILY,UHRLY,UERROR,ULAY,UPT,UHIST
+      INTEGER UTCON,UTDAY,UTHR,UTHIST,URESP
+      INTEGER UPOINTSI,UPOINTSO,USTOREYI,USTOREYO
+	  INTEGER USOILI,USOILO,USPTO
+
+      PARAMETER (UCONTROL = 1)        ! Confile.dat
+      PARAMETER (UTREES = 2)          ! Trees.dat
+      PARAMETER (USTR = 3)            ! Str.dat
+      PARAMETER (UPHY = 4)            ! Phy.dat
+      PARAMETER (UMET = 5)            ! Met.dat
+      PARAMETER (UTUTD = 6)           ! Tutd.dat
+      PARAMETER (UTEST = 7)           ! Points.dat
+      PARAMETER (UDAILY = 10)         ! Dayflx.dat
+      PARAMETER (UHRLY = 11)          ! Hrflx.dat
+      PARAMETER (UERROR = 12)         ! Maeserr.dat
+      PARAMETER (ULAY = 13)           ! Layflx.dat
+      PARAMETER (UPT = 14)            ! Ptflx.dat
+      PARAMETER (UHIST = 15)          ! Histo.dat
+      PARAMETER (UTDAY = 16)          ! Daytot.dat
+      PARAMETER (UTHR = 17)           ! Hrtot.dat
+      PARAMETER (UTCON = 18)          ! Sumcon.dat
+      PARAMETER (UTHIST = 19)         ! Tothist.dat
+      PARAMETER (URESP = 20)          ! Resp.dat
+      PARAMETER (UPOINTSI = 21)       ! Points.dat
+      PARAMETER (UPOINTSO = 22)       ! Testflx.dat
+	  PARAMETER (USOILI = 23)		  ! Soil.dat
+	  PARAMETER (USOILO = 24)		  ! Soilout.dat
+	  PARAMETER (USTOREYI = 25)		  ! Ustorey.dat
+	  PARAMETER (USTOREYO = 26)		  ! Usout.dat
+	  PARAMETER (USPTO = 27)		  ! Uspts.dat
+
+C Flags passed to error handling subroutine
+
+      PARAMETER (IFATAL = 100)        ! Error was fatal - stop program
+      PARAMETER (IWARN = 200)         ! Error non-fatal: just print warning
+
+C Flags for crown shape
+
+      PARAMETER (JCONE = 1)           ! Conical shape
+      PARAMETER (JHELIP = 2)          ! Half-ellipsoid
+      PARAMETER (JPARA = 3)           ! Paraboloidal shape
+      PARAMETER (JFELIP = 4)          ! Full ellipsoid
+      PARAMETER (JCYL = 5)            ! Cylindrical
+      PARAMETER (JBOX = 6)            ! Box-shaped
+
+C Flags to indicate which program it is
+
+      PARAMETER (INORMAL = 0)         ! Maestra, Maeshr
+      PARAMETER (ITEST = 1)           ! Maestest

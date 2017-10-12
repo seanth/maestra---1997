@@ -1,0 +1,1449 @@
+.MCAD 303020000 1 74 750 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 2 211 0
+Cg a52.250000,72.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\fs36 Test Physiology Routines 
+in Physiol.fo}{\fs36 r}}
+}
+.TXT 4 0 551 0
+Cg a70.750000,72.000000,171
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {This file implements all the code
+ in physiol.for, with the exception that
+ the effect of boundary layer conductance
+ on leaf surface CO2 is not here taken into
+ account. }}
+}
+.TXT 6 0 71 0
+Cg a6.500000,72.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Globals:}}
+}
+.EQN 3 0 9 0
+{0:Tk}NAME({0:T}NAME):{0:T}NAME+273.15
+.TXT 0 23 341 0
+Cg a15.500000,49.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Temperature in Kelvin}}
+}
+.EQN 3 -23 10 0
+{0:Rgas}NAME:8.314
+.TXT 0 23 342 0
+Cg a22.625000,49.000000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Universal gas constant. J mol-1}}
+}
+.EQN 4 -23 272 0
+{0:H2OLV0}NAME:2.501*(10)^(6)
+.TXT 0 23 343 0
+Cg a19.625000,49.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Latent heat of water. J kg-1}}
+}
+.EQN 4 -23 273 0
+{0:H2OMW}NAME:18*(10)^(-3)
+.TXT 0 23 344 0
+Cg a24.875000,49.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Molecular mass of water. kg mol-1}}
+}
+.EQN 4 -23 280 0
+{0:Sigma}NAME:5.67*(10)^(-8)
+.TXT 0 23 345 0
+Cg a28.000000,49.000000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Steffan Boltzman constant. W m-2
+ K-4}}
+}
+.EQN 4 -23 281 0
+{0:Airma}NAME:29*(10)^(-3)
+.TXT 0 23 346 0
+Cg a22.750000,49.000000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Molecular mass of air. kg mol-1}}
+}
+.EQN 3 -23 282 0
+{0:Cpair}NAME:1010
+.TXT 0 23 347 0
+Cg a22.375000,49.000000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Heat capacity of air. J kg-1 K-1}}
+}
+.EQN 4 -23 284 0
+{0:Emleaf}NAME:0.95
+.TXT 0 23 348 0
+Cg a17.375000,49.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Leaf emissivity (fraction)}}
+}
+.EQN 4 -23 303 0
+{0:Dheat}NAME:21.5*(10)^(-6)
+.TXT 0 23 349 0
+Cg a19.375000,49.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {molecular diffusivity of heat}}
+}
+.EQN 4 -23 307 0
+{0:gbhgbc}NAME:1.32
+.EQN 0 13 308 0
+{0:gsvgsc}NAME:1.57
+.EQN 0 12 309 0
+{0:gbvgbh}NAME:1.075
+.TXT 0 14 350 0
+Cg a25.250000,33.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Conversion factors for conductance}}
+}
+.TXT 5 -39 55 0
+Cg a9.125000,73.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Parameters}}
+}
+.TXT 4 0 60 0
+Cg a16.375000,72.000000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {1. Met driving variables}}
+}
+.EQN 4 -1 212 0
+{0:par1}NAME:222.9
+.TXT 0 15 215 0
+Cg a28.375000,58.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {test value - incident PAR. umol
+ m-2 s-1}}
+}
+.EQN 4 -15 213 0
+{0:T1}NAME:9.42
+.TXT 0 15 216 0
+Cg a27.875000,58.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {test value - leaf temperature degrees
+ C}}
+}
+.EQN 4 -15 57 0
+{0:cs}NAME:350
+.TXT 0 15 63 0
+Cg a28.250000,58.000000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {surface CO2 concentration. umol
+ mol-1}}
+}
+.EQN 4 -15 546 0
+{0:gsm}NAME:3
+.TXT 0 15 547 0
+Cg a19.750000,58.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Choice of stom cond model}}
+}
+.EQN 4 -15 58 0
+{0:RHair}NAME:0.932
+.TXT 0 15 64 0
+Cg a17.875000,58.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {relative humidity. fraction}}
+}
+.EQN 4 -15 609 0
+{0:Press}NAME:101250
+.TXT 0 16 610 0
+Cg a10.000000,11.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pressure (Pa)}}
+}
+.EQN 5 -16 67 0
+{0:satur}NAME({0:T}NAME):0.61078*{0:exp}NAME(17.269*({0:T}NAME)/(237.3+{0:T}NAME))*(10)^(3)
+.TXT 0 38 219 0
+Cg a14.125000,42.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {saturated}{ VPD. Pa.}}
+}
+.EQN 5 -38 59 0
+{0:VPDair}NAME({0:RH}NAME,{0:Ta}NAME):(1-{0:RH}NAME)*{0:satur}NAME({0:Ta}NAME)
+.TXT 0 31 65 0
+Cg a19.625000,58.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {vapour pressure deficit. Pa.}}
+}
+.EQN 0 24 69 0
+{0:VPDair}NAME({0:RHair}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.EQN 5 -55 607 0
+{0:VMFDair}NAME({0:RH}NAME,{0:Ta}NAME):({0:VPDair}NAME({0:RH}NAME,{0:Ta}NAME))/({0:Press}NAME)*(10)^(3)
+.TXT 0 29 613 0
+Cg a35.875000,44.000000,53
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {vapour pressure mole fraction deficit.
+ mmol mol-1.}}
+}
+.EQN 0 39 614 0
+{0:VMFDair}NAME({0:RHair}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 16 -67 72 0
+Cg a21.375000,73.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {2. Photosynthetic parameters}}
+}
+.EQN 4 0 73 0
+{0:Jmax25}NAME:101.976
+.EQN 0 14 74 0
+{0:EaVj}NAME:37000
+.EQN 0 11 75 0
+{0:EdVj}NAME:220000
+.EQN 0 12 76 0
+{0:delsj}NAME:710
+.TXT 0 10 220 0
+Cg a22.250000,25.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Temperature response of Jmax}}
+}
+.EQN 3 -47 77 0
+{0:Vcmax25}NAME:44.14
+.EQN 0 14 78 0
+{0:EaVc}NAME:58520
+.EQN 0 11 79 0
+{0:EdVc}NAME:0
+.EQN 0 12 85 0
+{0:delsc}NAME:0
+.TXT 0 10 221 0
+Cg a23.500000,25.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Temperature response of Vcmax}}
+}
+.TXT 3 0 222 0
+Cg a25.000000,25.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Parameters of light-response curve}}
+}
+.EQN 1 -47 80 0
+{0:theta}NAME:0.7
+.EQN 0 9 81 0
+{0:alpha}NAME:(0.85)/(2)
+.EQN 4 -9 82 0
+{0:Rd0}NAME:0.088
+.EQN 0 9 83 0
+{0:Q10f}NAME:0.095
+.EQN 0 11 84 0
+{0:dayresp}NAME:0.6
+.TXT 0 27 224 0
+Cg a16.750000,25.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Respiration parameters}}
+}
+.EQN 4 -47 600 0
+{0:Rtemp}NAME:0
+.TXT 4 0 86 0
+Cg a30.500000,72.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {3a. Leuning & BB stom. cond. parameters}}
+}
+.EQN 4 0 87 0
+{0:g0}NAME:0.001
+.EQN 0 9 88 0
+{0:a1}NAME:2.78
+.EQN 0 8 89 0
+{0:D0}NAME:1000
+.TXT 0 9 638 0
+Cg a2.000000,46.000000,5
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pa}}
+}
+.TXT 0 22 230 0
+Cg a17.500000,24.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Soil water factor is = 1\par in
+ all models in this file.}}
+}
+.EQN 4 -48 92 0
+{0:BBslope}NAME:16.36
+.EQN 0 13 93 0
+{0:fwsoil}NAME:1
+.EQN 0 9 153 0
+{0:gamma}NAME:0
+.TXT 4 -22 226 0
+Cg a24.500000,72.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {3b. Jarvis stom. cond. parameters}}
+}
+.EQN 4 0 95 0
+{0:gsref}NAME:0.0325
+.EQN 0 13 637 0
+{0:gsmin}NAME:0.0066
+.TXT 0 12 139 0
+Cg a8.625000,47.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {mol m-2 s-1}}
+}
+.EQN 4 -25 99 0
+{0:Tref}NAME:30
+.EQN 0 8 100 0
+{0:T0}NAME:-2
+.EQN 0 7 101 0
+{0:Tmax}NAME:52
+.EQN 4 -15 229 0
+{0:D0}NAME:5100
+.TXT 0 11 640 0
+Cg a2.000000,45.000000,5
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pa}}
+}
+.EQN 0 10 606 0
+{0:VMFD0}NAME:53.2
+.TXT 0 14 642 0
+Cg a8.500000,20.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {mmol mol-1}}
+}
+.EQN 4 -35 102 0
+{0:fwsj}NAME:1.0
+.EQN 0 10 97 0
+{0:par0}NAME:0.995
+.EQN 0 10 98 0
+{0:gsjb}NAME:0
+.EQN 0 10 105 0
+{0:gsja}NAME:0
+.TXT 5 -30 260 0
+Cg a25.625000,72.000000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {4. Additional values for transpiration}}
+}
+.EQN 4 0 261 0
+{0:Rdfipt}NAME:0.718
+.EQN 0 13 262 0
+{0:Tuipt}NAME:0.844
+.EQN 0 12 263 0
+{0:Tdipt}NAME:0.687
+.TXT 0 14 351 0
+Cg a25.500000,36.000000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Radiation Transmission coefficients}}
+}
+.EQN 3 -39 736 0
+{0:nir}NAME({0:par}NAME):{0:par}NAME
+.TXT 0 39 421 0
+Cg a17.125000,36.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Estimated NIR radiation}}
+}
+.EQN 4 -39 411 0
+{0:thr1}NAME({0:T}NAME):1.06*{0:Sigma}NAME*({0:Tk}NAME({0:T}NAME))^(4)-119
+.TXT 0 39 422 0
+Cg a26.000000,36.000000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Estimated incident thermal radiation}}
+}
+.EQN 7 -39 743 0
+{0:Emsky}NAME({0:T}NAME):0.642*((({0:satur}NAME({0:T}NAME)-{0:VPDair}NAME({0:RHair}NAME,{0:T}NAME))/({0:Tk}NAME({0:T}NAME))))^((1)/(7))
+.EQN 7 0 737 0
+{0:abspar}NAME:0.8
+.EQN 0 11 738 0
+{0:absnir}NAME:0.2
+.EQN 6 -11 264 0
+{0:Rnet}NAME({0:par}NAME,{0:Ta}NAME):({0:abspar}NAME*{0:par}NAME+{0:absnir}NAME*{0:nir}NAME({0:par}NAME))/(4.57)+({0:Emsky}NAME({0:Ta}NAME)-{0:Emleaf}NAME)*{0:Sigma}NAME*({0:Tk}NAME({0:Ta}NAME))^(4)
+.EQN 5 0 644 0
+{0:Rnet}NAME({0:par1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 39 353 0
+Cg a25.000000,59.000000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Estimated n}{et radiation (J m-2
+ s-1)}}
+}
+.EQN 8 -39 265 0
+{0:Wind}NAME:0.15
+.TXT 0 16 355 0
+Cg a13.750000,59.000000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {wind speed (m s-1)}}
+}
+.EQN 4 -16 267 0
+{0:Wleaf}NAME:0.04
+.TXT 0 16 356 0
+Cg a10.125000,59.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Leaf width (m)}}
+}
+.EQN 4 -16 268 0
+{0:Nsides}NAME:1
+.TXT 0 16 357 0
+Cg a18.625000,59.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Sides of leaf with stomata}}
+}
+.EQN 5 -16 499 0
+{0:slope}NAME({0:T}NAME):({0:satur}NAME({0:T}NAME+0.1)-{0:satur}NAME({0:T}NAME))/(0.1)
+.EQN 0 46 500 0
+{0:slope}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 501 0
+Cg a4.625000,6.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pa / K}}
+}
+.EQN 5 -65 502 0
+{0:VPD}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME):{0:VPDair}NAME({0:RH}NAME,{0:Ta}NAME)+{0:slope}NAME({0:Ta}NAME)*({0:Tl}NAME-{0:Ta}NAME)
+.TXT 0 46 550 0
+Cg a16.500000,26.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {leaf surface VPD & RH}}
+}
+.EQN 5 -46 548 0
+{0:RH}NAME({0:RHair}NAME,{0:Tl}NAME,{0:Ta}NAME):1-({0:VPD}NAME({0:RHair}NAME,{0:Tl}NAME,{0:Ta}NAME))/({0:satur}NAME({0:Ta}NAME))
+.EQN 0 32 628 0
+{0:VMFD}NAME({0:RHair}NAME,{0:Tl}NAME,{0:Ta}NAME):({0:VPD}NAME({0:RHair}NAME,{0:Tl}NAME,{0:Ta}NAME))/({0:Press}NAME)*(10)^(3)
+.TXT 6 -32 108 0
+Cg a7.625000,72.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Functions}}
+}
+.TXT 5 0 31 0
+Cg a8.375000,31.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b GAMMAFN}}
+}
+.EQN 4 -1 1 0
+{0:Gamma}NAME({0:T}NAME):36.9+1.88*({0:T}NAME-25)+0.036*(({0:T}NAME-25))^(2)
+.EQN 4 0 252 0
+{0:Gamma}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 4 1 32 0
+Cg a4.625000,32.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b KMFN}}
+}
+.EQN 3 -1 3 0
+{0:Oi}NAME:205000
+.EQN 0 11 4 0
+{0:Kc25}NAME:404
+.EQN 0 13 6 0
+{0:KcEa}NAME:59400
+.EQN 4 -13 5 0
+{0:Ko25}NAME:248000
+.EQN 0 13 7 0
+{0:KoEa}NAME:36000
+.EQN 7 -24 8 0
+{0:Kc}NAME({0:T}NAME):{0:Kc25}NAME*{0:exp}NAME(({0:KcEa}NAME*({0:T}NAME-25))/({0:Tk}NAME(25)*{0:Rgas}NAME*{0:Tk}NAME({0:T}NAME)))
+.EQN 0 35 257 0
+{0:Kc}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.EQN 6 -35 11 0
+{0:Ko}NAME({0:T}NAME):{0:Ko25}NAME*{0:exp}NAME(({0:KoEa}NAME*({0:T}NAME-25))/({0:Tk}NAME(25)*{0:Rgas}NAME*{0:Tk}NAME({0:T}NAME)))
+.EQN 0 35 259 0
+{0:Ko}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.EQN 6 -35 12 0
+{0:Km}NAME({0:T}NAME):{0:Kc}NAME({0:T}NAME)*(1+({0:Oi}NAME)/({0:Ko}NAME({0:T}NAME)))
+.EQN 6 0 253 0
+{0:Km}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 6 0 33 0
+Cg a7.625000,15.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b JMAXTFN}}
+}
+.EQN 6 0 16 0
+{0:Jmax}NAME({0:T}NAME):{0:Jmax25}NAME*{0:exp}NAME((({0:T}NAME-25)*{0:EaVj}NAME)/({0:Rgas}NAME*{0:Tk}NAME({0:T}NAME)*{0:Tk}NAME(25)))*(1+{0:exp}NAME(({0:delsj}NAME*{0:Tk}NAME(25)-{0:EdVj}NAME)/({0:Rgas}NAME*{0:Tk}NAME(25))))/(1+{0:exp}NAME(({0:delsj}NAME*
+{0:Tk}NAME({0:T}NAME)-{0:EdVj}NAME)/({0:Rgas}NAME*{0:Tk}NAME({0:T}NAME))))
+.EQN 8 0 254 0
+{0:Jmax}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 5 0 34 0
+Cg a9.000000,15.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b VCMAXTFN}}
+}
+.EQN 4 0 18 0
+{0:Vcmax1}NAME({0:T}NAME):{0:Vcmax25}NAME*{0:exp}NAME(({0:EaVc}NAME*({0:T}NAME-25))/({0:Tk}NAME(25)*{0:Rgas}NAME*{0:Tk}NAME({0:T}NAME)))
+.EQN 11 0 22 0
+{0:Vcmax2}NAME({0:T}NAME):{0:Vcmax25}NAME*{0:exp}NAME((({0:T}NAME-25)*{0:EaVc}NAME)/({0:Rgas}NAME*{0:Tk}NAME({0:T}NAME)*{0:Tk}NAME(25)))*(1+{0:exp}NAME(({0:delsc}NAME*{0:Tk}NAME(25)-{0:EdVc}NAME)/({0:Rgas}NAME*{0:Tk}NAME(25))))/(1+{0:exp}NAME((
+{0:delsc}NAME*{0:Tk}NAME({0:T}NAME)-{0:EdVc}NAME)/({0:Rgas}NAME*{0:Tk}NAME({0:T}NAME))))
+.EQN 8 0 25 0
+{0:Vcmax}NAME({0:T}NAME):{0:if}NAME({0:EdVc}NAMEó0.0,{0:Vcmax1}NAME({0:T}NAME),{0:Vcmax2}NAME({0:T}NAME))
+.EQN 4 0 255 0
+{0:Vcmax}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 8 0 35 0
+Cg a5.375000,15.000000,11
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b RESPF}}
+}
+.EQN 4 0 26 0
+{0:Rd}NAME({0:T}NAME):{0:Rd0}NAME*{0:exp}NAME({0:Q10f}NAME*({0:T}NAME-{0:Rtemp}NAME))*{0:dayresp}NAME
+.EQN 5 0 256 0
+{0:Rd}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 5 0 36 0
+Cg a12.250000,15.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b QUADM,QUADP}}
+}
+.EQN 5 0 27 0
+{0:quadm}NAME({0:a}NAME,{0:b}NAME,{0:c}NAME):(-{0:b}NAME-\(({0:b}NAME)^(2)-4*{0:a}NAME*{0:c}NAME))/(2*{0:a}NAME)
+.EQN 0 25 28 0
+{0:quadp}NAME({0:a}NAME,{0:b}NAME,{0:c}NAME):(-{0:b}NAME+\(({0:b}NAME)^(2)-4*{0:a}NAME*{0:c}NAME))/(2*{0:a}NAME)
+.TXT 6 -25 235 0
+Cg a14.125000,73.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Additional functions}}
+}
+.EQN 6 0 39 0
+{0:Vj}NAME({0:par}NAME,{0:T}NAME):({0:quadm}NAME({0:theta}NAME,-({0:alpha}NAME*{0:par}NAME+{0:Jmax}NAME({0:T}NAME)),{0:alpha}NAME*{0:par}NAME*{0:Jmax}NAME({0:T}NAME)))/(4.0)
+.TXT 0 53 236 0
+Cg a12.000000,20.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {RuBP regen rate}}
+}
+.EQN 8 -53 183 0
+{0:Ac}NAME({0:T}NAME,{0:ci}NAME):{0:Vcmax}NAME({0:T}NAME)*({0:ci}NAME-{0:Gamma}NAME({0:T}NAME))/({0:ci}NAME+{0:Km}NAME({0:T}NAME))-{0:Rd}NAME({0:T}NAME)
+.TXT 0 53 237 0
+Cg a16.750000,20.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Ac as a function of ci\par (used
+ in graphs below).}}
+}
+.TXT 7 0 238 0
+Cg a16.750000,20.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Aj as a function of ci\par (used
+ in graphs below).}}
+}
+.EQN 1 -53 186 0
+{0:Aj}NAME({0:par}NAME,{0:T}NAME,{0:ci}NAME):{0:Vj}NAME({0:par}NAME,{0:T}NAME)*({0:ci}NAME-{0:Gamma}NAME({0:T}NAME))/({0:ci}NAME+2*{0:Gamma}NAME({0:T}NAME))-{0:Rd}NAME({0:T}NAME)
+.TXT 8 0 37 0
+Cg a32.625000,73.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\fs32 GS Jarvis - Models 0 and 
+1:}}
+}
+.TXT 4 1 232 0
+Cg a23.000000,72.000000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Calculate environmental factors.}}
+}
+.EQN 5 0 615 0
+{0:flight}NAME({0:par}NAME):({0:par}NAME)/({0:par}NAME+{0:par0}NAME)
+.EQN 0 56 649 0
+{0:flight}NAME({0:par1}NAME)={0}?_n_u_l_l_
+.EQN 6 -56 42 0
+{0:ftemp1}NAME({0:T}NAME):(({0:T}NAME-{0:T0}NAME)*(2*{0:Tmax}NAME-{0:T0}NAME-{0:T}NAME))/(({0:Tref}NAME-{0:T0}NAME)*(2*{0:Tmax}NAME-{0:T0}NAME-{0:Tref}NAME))
+.EQN 7 0 618 0
+{0:P}NAME:({0:Tmax}NAME-{0:Tref}NAME)/({0:Tref}NAME-{0:T0}NAME)
+.EQN 0 16 619 0
+{0:ftemp2}NAME({0:T}NAME):(({0:T}NAME-{0:T0}NAME)*(({0:Tmax}NAME-{0:T}NAME))^({0:P}NAME))/(({0:Tref}NAME-{0:T0}NAME)*(({0:Tmax}NAME-{0:Tref}NAME))^({0:P}NAME))
+.EQN 6 -16 620 0
+{0:ftemp}NAME({0:T}NAME):{0:if}NAME({0:mod}NAME({0:gsm}NAME,1000)ò100,{0:ftemp2}NAME({0:T}NAME),{0:ftemp1}NAME({0:T}NAME))
+.EQN 4 0 47 0
+{0:ftemp}NAME({0:T}NAME):{0:if}NAME({0:Tmax}NAMEó0.0,1,{0:ftemp}NAME({0:T}NAME))
+.EQN 0 56 646 0
+{0:ftemp}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.EQN 4 -56 147 0
+{0:fcs1}NAME({0:cs}NAME):(1-{0:gsja}NAME*({0:cs}NAME-350))
+.EQN 0 31 150 0
+{0:fcs2}NAME({0:cs}NAME):({0:gsjb}NAME+350)/({0:gsjb}NAME+{0:cs}NAME)
+.EQN 4 -31 622 0
+{0:fcs}NAME({0:cs}NAME):{0:if}NAME({0:mod}NAME({0:gsm}NAME,10)÷0,{0:fcs1}NAME({0:cs}NAME),{0:fcs2}NAME({0:cs}NAME))
+.EQN 0 56 647 0
+{0:fcs}NAME({0:cs}NAME)={0}?_n_u_l_l_
+.EQN 5 -56 625 0
+{0:fvpd1}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME):(1)/(1+({0:VPD}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME))/({0:D0}NAME))
+.EQN 0 30 629 0
+{0:fvpd2}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME):1-({0:VMFD}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME))/({0:VMFD0}NAME)
+.EQN 2 34 652 0
+{0:fvpd2}NAME({0:RHair}NAME,{0:T1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.EQN 5 -64 630 0
+{0:fvpd}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME):{0:if}NAME({0:mod}NAME({0:gsm}NAME,100)ò10,{0:fvpd2}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME),{0:fvpd1}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME))
+.EQN 0 56 648 0
+{0:fvpd}NAME({0:RHair}NAME,{0:T1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 4 -56 233 0
+Cg a16.375000,72.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Calculate stom. cond. }}
+}
+.EQN 4 0 631 0
+{0:fgs}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:cs}NAME,{0:RH}NAME):{0:flight}NAME({0:par}NAME)*{0:ftemp}NAME({0:Tl}NAME)*{0:fcs}NAME({0:cs}NAME)*{0:fvpd}NAME({0:RH}NAME,{0:Tl}NAME,{0:Ta}NAME)
+.EQN 4 0 633 0
+{0:fgs}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:cs}NAME,{0:RH}NAME):{0:if}NAME({0:fgs}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:cs}NAME,{0:RH}NAME)<0,0,{0:fgs}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:cs}NAME,{0:RH}NAME))
+.EQN 4 0 40 0
+{0:gs0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:gsref}NAME-{0:gsmin}NAME)*{0:fgs}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:cs}NAME,{0:RH}NAME)+{0:gsmin}NAME
+.EQN 4 0 645 0
+{0:gs0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.TXT 4 0 234 0
+Cg a28.125000,72.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Solve two quadratics to get Aj 
+and Ac. }}
+}
+.EQN 4 0 49 0
+{0:a}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):(1)/({0:gs0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))
+.EQN 8 0 52 0
+{0:b}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Rd}NAME({0:Tl}NAME)-{0:Vcmax}NAME({0:Tl}NAME))/({0:gs0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))-{0:cs}NAME-{0:Km}NAME({0:Tl}NAME)
+.EQN 0 47 140 0
+{0:b1}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Rd}NAME({0:Tl}NAME)-{0:Vj}NAME({0:par}NAME,{0:Tl}NAME))/({0:gs0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))-{0:cs}NAME-2*{0:Gamma}NAME({0:Tl}NAME)
+.EQN 7 -47 53 0
+{0:c}NAME({0:T}NAME):{0:Vcmax}NAME({0:T}NAME)*({0:cs}NAME-{0:Gamma}NAME({0:T}NAME))-{0:Rd}NAME({0:T}NAME)*({0:cs}NAME+{0:Km}NAME({0:T}NAME))
+.EQN 0 47 141 0
+{0:c1}NAME({0:par}NAME,{0:T}NAME):{0:Vj}NAME({0:par}NAME,{0:T}NAME)*({0:cs}NAME-{0:Gamma}NAME({0:T}NAME))-{0:Rd}NAME({0:T}NAME)*({0:cs}NAME+2*{0:Gamma}NAME({0:T}NAME))
+.EQN 4 -47 54 0
+{0:Ac0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:quadm}NAME({0:a}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:b}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:c}NAME({0:Tl}NAME))
+.EQN 4 0 142 0
+{0:Aj0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:quadm}NAME({0:a}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:b1}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:c1}NAME({0:par}NAME,{0:Tl}NAME))
+.EQN 4 0 144 0
+{0:A0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:if}NAME({0:Ac0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME)<{0:Aj0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:Ac0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:Aj0}NAME(
+{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))
+.TXT 4 0 239 0
+Cg a15.250000,72.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Values for par1 & T1:}}
+}
+.EQN 5 0 136 0
+{0:Ac0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 26 143 0
+{0:Aj0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.TXT 0 26 240 0
+Cg a14.750000,33.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {(net photosynthesis)}}
+}
+.EQN 5 -52 205 0
+{0:gs0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 0 26 145 0
+{0:A0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.TXT 5 -26 242 0
+Cg a14.125000,72.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Visualise functions:}}
+}
+.EQN 0 19 127 0
+{0:ci}NAME:0,10;500
+.EQN 3 -18 122 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:Ac}NAME({0:T1}NAME,{0:ci}NAME),{0:Aj}NAME({0:par1}NAME,{0:T1}NAME,{0:ci}NAME),{0:gs0}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*({0:cs}NAME-{0:ci}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:ci}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 19 0 3 
+.TXT 32 1 151 0
+Cg a42.875000,70.000000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\fs32 GS Ball-Berry-Leuning: Models
+ 2 & 3}}
+}
+.TXT 6 0 246 0
+Cg a11.625000,70.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Calculate gs / A}}
+}
+.EQN 6 0 152 0
+{0:gsdivaBB}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:BBslope}NAME*{0:fwsoil}NAME*({0:RH}NAME({0:RHa}NAME,{0:Tl}NAME,{0:Ta}NAME))/(({0:cs}NAME-{0:gamma}NAME))
+.TXT 0 45 243 0
+Cg a22.500000,31.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Ball-Berry model (GSMODEL2)}}
+}
+.EQN 7 -45 154 0
+{0:gsdivaL}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:a1}NAME*({0:fwsoil}NAME)/(({0:cs}NAME-{0:gamma}NAME)*(1+({0:VPD}NAME({0:RHa}NAME,{0:Tl}NAME,{0:Ta}NAME))/({0:D0}NAME)))
+.TXT 0 48 244 0
+Cg a21.000000,31.000000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Leuning model (GSMODEL3)}}
+}
+.EQN 9 -48 155 0
+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:if}NAME({0:gsm}NAME÷2,{0:gsdivaBB}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:gsdivaL}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.TXT 7 0 247 0
+Cg a33.500000,70.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Solve quadratics to get ci (from
+ Leuning 1990):}}
+}
+.EQN 4 0 156 0
+{0:a}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:Vcmax}NAME({0:Tl}NAME)-{0:Rd}NAME({0:Tl}NAME))
+.EQN 4 0 157 0
+{0:b}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):(1-{0:cs}NAME*{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))*({0:Vcmax}NAME({0:Tl}NAME)-{0:Rd}NAME({0:Tl}NAME))+{0:g0}NAME*({0:Km}NAME({0:Tl}NAME)-{0:cs}NAME)-{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,
+{0:RHa}NAME)*({0:Vcmax}NAME({0:Tl}NAME)*{0:Gamma}NAME({0:Tl}NAME)+{0:Km}NAME({0:Tl}NAME)*{0:Rd}NAME({0:Tl}NAME))
+.EQN 4 0 158 0
+{0:c}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):-(1-{0:cs}NAME*{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))*({0:Vcmax}NAME({0:Tl}NAME)*{0:Gamma}NAME({0:Tl}NAME)+{0:Km}NAME({0:Tl}NAME)*{0:Rd}NAME({0:Tl}NAME))-{0:g0}NAME*{0:Km}NAME({0:Tl}NAME)*{0:cs}NAME
+
+.EQN 4 0 160 0
+{0:cic2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:quadp}NAME({0:a}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:b}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:c}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 4 0 161 0
+{0:a}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:Vj}NAME({0:par}NAME,{0:Tl}NAME)-{0:Rd}NAME({0:Tl}NAME))
+.EQN 4 0 162 0
+{0:b}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):(1.0-{0:cs}NAME*{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))*({0:Vj}NAME({0:par}NAME,{0:Tl}NAME)-{0:Rd}NAME({0:Tl}NAME))+{0:g0}NAME*(2.0*{0:Gamma}NAME({0:Tl}NAME)-{0:cs}NAME)-{0:gsdiva}NAME(
+{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:Vj}NAME({0:par}NAME,{0:Tl}NAME)*{0:Gamma}NAME({0:Tl}NAME)+2.0*{0:Gamma}NAME({0:Tl}NAME)*{0:Rd}NAME({0:Tl}NAME))
+.EQN 4 0 163 0
+{0:c}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):-(1.0-{0:cs}NAME*{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))*({0:Vj}NAME({0:par}NAME,{0:Tl}NAME)*{0:Gamma}NAME({0:Tl}NAME)+2.0*{0:Gamma}NAME({0:Tl}NAME)*{0:Rd}NAME({0:Tl}NAME))-{0:g0}NAME*2.0
+*{0:Gamma}NAME({0:Tl}NAME)*{0:cs}NAME
+.EQN 4 0 164 0
+{0:cij2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:quadp}NAME({0:a}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:b}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:c}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.TXT 5 0 248 0
+Cg a6.375000,70.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Solution:}}
+}
+.EQN 4 0 176 0
+{0:Ac2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:Ac}NAME({0:Tl}NAME,{0:cic2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 0 32 178 0
+{0:Aj2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:Aj}NAME({0:par}NAME,{0:Tl}NAME,{0:cij2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 4 -32 169 0
+{0:A2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:if}NAME({0:Ac2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)<{0:Aj2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:Ac2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:Aj2}NAME({0:par}NAME,
+{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 3 0 182 0
+{0:ci2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:if}NAME({0:Ac2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)<{0:Aj2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:cic2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME),{0:cij2}NAME({0:par}NAME,
+{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 4 0 168 0
+{0:gsBBc}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:Ac2}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 5 0 196 0
+{0:gsBBj}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:Aj2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.EQN 4 0 206 0
+{0:gsBB}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME):{0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME)*({0:A2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RHa}NAME))
+.TXT 5 0 249 0
+Cg a15.250000,70.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Values for par1 & T1:}}
+}
+.EQN 3 0 166 0
+{0:cic2}NAME({0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 23 177 0
+{0:Ac2}NAME({0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 24 170 0
+{0:gsBBc}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 5 -47 167 0
+{0:cij2}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 23 179 0
+{0:Aj2}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 24 199 0
+{0:gsBBj}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 5 -47 203 0
+{0:ci2}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 0 23 180 0
+{0:A2}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 0 24 207 0
+{0:gsBB}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.TXT 4 -47 250 0
+Cg a10.125000,70.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Check values:}}
+}
+.EQN 4 0 181 0
+{0:gsBBc}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*({0:cs}NAME-{0:cic2}NAME({0:T1}NAME,{0:T1}NAME,{0:RHair}NAME))={0}?_n_u_l_l_
+.EQN 4 0 201 0
+{0:gsBBj}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*({0:cs}NAME-{0:cij2}NAME({0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME))={0}?_n_u_l_l_
+.TXT 0 0 251 0
+Cg a13.250000,70.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Visualise solution:}}
+}
+.EQN 5 0 190 0
+{0:cifn}NAME({0:Tl}NAME,{0:Ta}NAME,{0:A}NAME,{0:RH}NAME):{0:cs}NAME-({0:A}NAME)/({0:g0}NAME+{0:gsdiva}NAME({0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME)*{0:A}NAME)
+.EQN 0 39 191 0
+{0:A}NAME:0,2;10
+.EQN 0 12 192 0
+{0:ci}NAME:0,10;500
+.EQN 5 -51 189 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:Aj}NAME({0:par1}NAME,{0:T1}NAME,{0:ci}NAME),{0:Ac}NAME({0:T1}NAME,{0:ci}NAME),{0:A}NAME@&&(_n_u_l_l_&_n_u_l_l_)&{0:ci}NAME,{0:ci}NAME,{0:cifn}NAME({0:T1}NAME,{0:T1}NAME,{0:A}NAME,{0:RHair}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 30 -1 313 0
+{0:gsc}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:if}NAME({0:gsmodel}NAME<2,{0:gs0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:gsBB}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))
+.EQN 0 63 381 0
+{0:gsc}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 4 -63 378 0
+{0:A}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:if}NAME({0:gsmodel}NAME<2,{0:A0}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME),{0:A2}NAME({0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))
+.EQN 0 63 382 0
+{0:A}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 4 0 384 0
+{0:Rd}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 6 -63 269 0
+Cg a24.625000,71.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs32 PSTRANSP Routine}}
+}
+.TXT 5 0 469 0
+Cg a34.750000,71.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Calculate transpiration and leaf
+ energy balance. }}
+}
+.TXT 4 0 472 0
+Cg a12.250000,71.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {1. Conductances}}
+}
+.EQN 5 0 270 0
+{0:Cmolar}NAME({0:T}NAME):({0:Press}NAME)/({0:Rgas}NAME*{0:Tk}NAME({0:T}NAME))
+.EQN 0 46 285 0
+{0:Cmolar}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 286 0
+Cg a32.125000,43.750000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Conversion factor m/s to mol/m2/s
+ (mol m-3)}}
+}
+.EQN 6 -65 271 0
+{0:LHV}NAME({0:T}NAME):({0:H2OLV0}NAME-2.365*(10)^(3)*{0:T}NAME)*{0:H2OMW}NAME
+.EQN 0 46 287 0
+{0:LHV}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 289 0
+Cg a21.500000,25.125000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Latent heat of water  (J mol-1)}}
+}
+.EQN 6 -65 278 0
+{0:slope}NAME({0:T}NAME):({0:satur}NAME({0:T}NAME+0.1)-{0:satur}NAME({0:T}NAME))/(0.1)
+.EQN 0 46 290 0
+{0:slope}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 359 0
+Cg a4.625000,6.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pa / K}}
+}
+.EQN 8 -65 279 0
+{0:gradn}NAME({0:T}NAME):(4*{0:Sigma}NAME*(({0:Tk}NAME({0:T}NAME))^(3))*({0:Rdfipt}NAME)/({0:Tdipt}NAME)*{0:Emleaf}NAME*({0:Tdipt}NAME+{0:Tuipt}NAME))/({0:Cpair}NAME*{0:Airma}NAME)
+.EQN 0 46 291 0
+{0:gradn}NAME({0:T1}NAME)={18997}?_n_u_l_l_
+.TXT 0 19 360 0
+Cg a26.625000,36.000000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Radiation conductance (mol m-2 
+s-1)}}
+}
+.EQN 7 -65 294 0
+{0:gbhu}NAME({0:T}NAME):0.003*\(({0:Wind}NAME)/({0:Wleaf}NAME))*{0:Cmolar}NAME({0:T}NAME)
+.EQN 0 46 297 0
+{0:gbhu}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 361 0
+Cg a27.375000,63.250000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Boundary layer conductance to heat\par 
+ - forced convection. (mol m-2 s-1)}}
+}
+.EQN 7 -65 301 0
+{0:Grashof}NAME({0:Tl}NAME,{0:Ta}NAME):1.6*(10)^(8)*|({0:Tl}NAME-{0:Ta}NAME)*({0:Wleaf}NAME)^(3)
+.EQN 4 0 302 0
+{0:gbhf}NAME({0:Tl}NAME,{0:Ta}NAME):0.5*({0:Dheat}NAME)/({0:Wleaf}NAME)*({0:Grashof}NAME({0:Tl}NAME,{0:Ta}NAME))^(0.25)*{0:Cmolar}NAME({0:Ta}NAME)
+.EQN 0 46 304 0
+{0:gbhf}NAME({0:T1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 362 0
+Cg a27.375000,63.250000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Boundary layer conductance to heat\par 
+ - free convection. (mol m-2 s-1)}}
+}
+.EQN 8 -65 305 0
+{0:gbh}NAME({0:Tl}NAME,{0:Ta}NAME):{0:gbhf}NAME({0:Tl}NAME,{0:Ta}NAME)+{0:gbhu}NAME({0:Ta}NAME)
+.EQN 0 46 327 0
+{0:gbh}NAME({0:T1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 363 0
+Cg a31.375000,53.125000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Boundary layer cond. for heat (mol
+ m-2 s-1)}}
+}
+.EQN 4 -65 306 0
+{0:gh}NAME({0:Tl}NAME,{0:Ta}NAME):2*{0:gbh}NAME({0:Tl}NAME,{0:Ta}NAME)+{0:gradn}NAME({0:Ta}NAME)
+.EQN 0 46 328 0
+{0:gh}NAME({0:T1}NAME,{0:T1}NAME)={18997}?_n_u_l_l_
+.TXT 0 19 375 0
+Cg a19.125000,26.125000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Total conductance for heat}}
+}
+.EQN 5 -65 310 0
+{0:gbv}NAME({0:Tl}NAME,{0:Ta}NAME):{0:gbvgbh}NAME*{0:gbh}NAME({0:Tl}NAME,{0:Ta}NAME)
+.EQN 0 46 329 0
+{0:gbv}NAME({0:T1}NAME,{0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 19 364 0
+Cg a27.125000,49.125000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Boundary layer cond. for water 
+vapour}}
+}
+.EQN 4 -19 376 0
+{0:gsc}NAME(3,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 5 -47 312 0
+{0:gsv}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):{0:gsvgsc}NAME*{0:gsc}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME)
+.EQN 0 56 330 0
+{0:gsv}NAME(3,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.TXT 2 10 365 0
+Cg a38.125000,45.375000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Stomatal conductance for water 
+vapour (mol m-2 s-1)}}
+}
+.EQN 3 -66 314 0
+{0:gv}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Nsides}NAME)/((1)/({0:gbv}NAME({0:Tl}NAME,{0:Ta}NAME))+(1)/({0:gsv}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME)))
+.EQN 1 56 331 0
+{0:gv}NAME(3,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.TXT 3 10 366 0
+Cg a35.125000,45.375000,53
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Total}{ conductance for water vapour
+ (mol m-2 s-1)}}
+}
+.TXT 5 -66 473 0
+Cg a9.000000,72.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {2. Functions}}
+}
+.TXT 4 -1 316 0
+Cg a7.000000,73.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b PENMON}}
+}
+.EQN 4 0 317 0
+{0:GammaP}NAME({0:T}NAME):{0:Cpair}NAME*{0:Airma}NAME*({0:Press}NAME)/({0:LHV}NAME({0:T}NAME))
+.EQN 0 48 332 0
+{0:GammaP}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 20 367 0
+Cg a5.000000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Pa K-1}}
+}
+.EQN 6 -68 318 0
+{0:Epsilon}NAME({0:T}NAME):({0:slope}NAME({0:T}NAME))/({0:GammaP}NAME({0:T}NAME))
+.EQN 0 48 333 0
+{0:Epsilon}NAME({0:T1}NAME)={0}?_n_u_l_l_
+.TXT 0 20 368 0
+Cg a10.375000,18.875000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {dimensionless}}
+}
+.EQN 10 -68 319 0
+{0:Latent}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Epsilon}NAME({0:Ta}NAME)*{0:Rnet}NAME({0:par}NAME,{0:Ta}NAME)+{0:LHV}NAME({0:Ta}NAME)*{0:VPDair}NAME({0:RH}NAME,{0:Ta}NAME)*({0:gh}NAME({0:Tl}NAME,{0:Ta}NAME))/({0:Press}NAME
+))/(({0:Epsilon}NAME({0:Ta}NAME)+({0:gh}NAME({0:Tl}NAME,{0:Ta}NAME))/({0:gv}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))))
+.TXT 9 51 447 0
+Cg a19.875000,46.125000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Latent heat loss (J m-2 s-1)}}
+}
+.EQN 6 -51 442 0
+{0:ET}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Latent}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))/({0:LHV}NAME({0:Ta}NAME))
+.TXT 0 51 448 0
+Cg a19.375000,20.375000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Transpiration (mol m-2 s-1)}}
+}
+.EQN 5 -51 449 0
+{0:C}NAME({0:Tl}NAME,{0:Ta}NAME):{0:gh}NAME({0:Tl}NAME,{0:Ta}NAME)*{0:Airma}NAME*{0:Cpair}NAME*({0:Tl}NAME-{0:Ta}NAME)
+.TXT 0 51 450 0
+Cg a21.625000,22.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Sensible heat loss (J m-2 s-1)}}
+}
+.TXT 11 -50 474 0
+Cg a15.750000,72.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {3. Solution - graphical}}
+}
+.EQN 3 112 483 0
+{0:ET}NAME(0,{0:par1}NAME,22.8308,20)={18997}?_n_u_l_l_
+.EQN 1 -112 402 0
+{0:Tleaf}NAME:{0:T1}NAME-0.5,{0:T1}NAME-0.4;{0:T1}NAME+3
+.EQN 2 0 408 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:Latent}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tleaf}NAME,{0:T1}NAME,{0:RHair}NAME),{0:C}NAME({0:Tleaf}NAME,{0:T1}NAME),{0:Latent}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tleaf}NAME,{0:T1}NAME,{0:RHair}NAME)+{0:C}NAME({0:Tleaf}NAME,{0:T1}NAME)
+,{0:Rnet}NAME({0:par1}NAME,{0:T1}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:Tleaf}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 18 0 3 
+.EQN 1 112 484 0
+{0:gh}NAME(22.8308,20)={18997}?_n_u_l_l_
+.TXT 27 -112 477 0
+Cg a32.500000,72.000000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Solution is the Tleaf where Latent
+ + C = Rnet}}
+}
+.EQN 3 0 461 0
+{0:Tlf}NAME:{0:T1}NAME
+.EQN 3 0 458 0
+{0:Tsoln}NAME({0:gsmodel}NAME):{0:root}NAME({0:Latent}NAME({0:gsmodel}NAME,{0:par1}NAME,{0:Tlf}NAME,{0:T1}NAME,{0:RHair}NAME)+{0:C}NAME({0:Tlf}NAME,{0:T1}NAME)-{0:Rnet}NAME({0:par1}NAME,{0:T1}NAME),{0:Tlf}NAME)
+.EQN 4 0 462 0
+{0:Tsoln}NAME({0:gsm}NAME)={0}?_n_u_l_l_
+.TXT 0 17 478 0
+Cg a18.875000,59.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Solution from root function}}
+}
+.TXT 6 -17 480 0
+Cg a29.750000,72.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {4. Solution using iteration (as
+ in Maestro)}}
+}
+.EQN 7 0 395 0
+{0:Tdiff}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME):({0:Rnet}NAME({0:par}NAME,{0:Ta}NAME)-{0:Latent}NAME({0:gsmodel}NAME,{0:par}NAME,{0:Tl}NAME,{0:Ta}NAME,{0:RH}NAME))/({0:gh}NAME({0:Tl}NAME,{0:Ta}NAME)*{0:Cpair}NAME*{0:Airma}NAME)
+
+.EQN 0 58 396 0
+{0:Tdiff}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 7 -57 463 0
+{0:Tair}NAME:{0:T1}NAME
+.EQN 0 9 390 0
+{0:itermax}NAME:5
+.EQN 0 12 388 0
+{0:i}NAME:1;{0:itermax}NAME
+.EQN 0 13 495 0
+{0:j}NAME:0;{0:itermax}NAME
+.EQN 4 -34 386 0
+({0:Tl}NAME)[(0):{0:Tair}NAME
+.EQN 5 0 387 0
+({0:Tl}NAME)[({0:i}NAME):{0:Tair}NAME+{0:Tdiff}NAME({0:gsm}NAME,{0:par1}NAME,({0:Tl}NAME)[({0:i}NAME-1),{0:Tair}NAME,{0:RHair}NAME)
+.EQN 12 0 393 0
+{0:Tl}NAME={0}?_n_u_l_l_
+.TXT 13 -1 526 0
+Cg a28.125000,30.000000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Another method of checking solution:\par 
+compare VPDleaf & transpiration.}}
+}
+.EQN 6 0 506 0
+{0:ET}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 4 0 508 0
+({0:gv}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)*{0:VPD}NAME({0:RHair}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME))/({0:Press}NAME)={18997}?_n_u_l_l_
+.EQN 4 -1 512 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:ET}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tleaf}NAME,{0:Tair}NAME,{0:RHair}NAME),({0:gv}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tleaf}NAME,{0:Tair}NAME,{0:RHair}NAME)*{0:VPD}NAME({0:RHair}NAME,{0:Tleaf}NAME,{0:Tair}NAME))/({0:Press}NAME)@&&(
+_n_u_l_l_&_n_u_l_l_)&{0:Tleaf}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 16 0 3 
+.TXT 29 1 527 0
+Cg a15.500000,72.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Final set of solutions:}}
+}
+.EQN 4 0 529 0
+{0:gsc}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 4 0 531 0
+{0:A}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 4 0 532 0
+{0:Rd}NAME({0:Tsoln}NAME({0:gsm}NAME))={18997}?_n_u_l_l_
+.EQN 4 0 533 0
+{0:ET}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)={18997}?_n_u_l_l_
+.EQN 4 0 534 0
+{0:Latent}NAME({0:gsm}NAME,{0:par1}NAME,{0:Tsoln}NAME({0:gsm}NAME),{0:Tair}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 4 0 538 0
+{0:Tsoln}NAME({0:gsm}NAME)={0}?_n_u_l_l_
+.EQN 1 34 560 0
+{0:ET}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*(10)^(6)={0}?_n_u_l_l_
+.EQN 5 -33 580 0
+{0:VPDair}NAME({0:T1}NAME,{0:RHair}NAME)*0.16={0}?_n_u_l_l_
+.EQN 0 33 581 0
+{0:gv}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*{0:VPDair}NAME({0:RHair}NAME,{0:T1}NAME)*((10)^(6))/({0:Press}NAME)={0}?_n_u_l_l_
+.EQN 4 -33 582 0
+({0:ET}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)*(10)^(6))/({0:A}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME))={0}?_n_u_l_l_
+.EQN 3 33 583 0
+{0:gsc}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 5 -32 592 0
+{0:VPD}NAME:750
+.EQN 1 32 584 0
+{0:gv}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME)={0}?_n_u_l_l_
+.EQN 3 -32 593 0
+{0:gs}NAME:0.1
+.EQN 2 32 585 0
+{0:ci}NAME:{0:cs}NAME-({0:A}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME))/({0:gsc}NAME({0:gsm}NAME,{0:par1}NAME,{0:T1}NAME,{0:T1}NAME,{0:RHair}NAME))
+.EQN 2 -32 594 0
+{0:E}NAME:({0:gs}NAME*{0:VPD}NAME)/({0:Press}NAME)*(10)^(6)
+.EQN 4 32 586 0
+{0:ci}NAME={0}?_n_u_l_l_
+.EQN 2 -32 595 0
+{0:E}NAME={0}?_n_u_l_l_

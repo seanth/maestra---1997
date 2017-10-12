@@ -1,0 +1,26 @@
+Program:    MAESTRA: Version September 2001                             
+Control:    ***  SAMPLE CONTROL  ***                                    
+Trees:      *** SAMPLE TREES FILE ***                                   
+Structure:  *** SAMPLE STR FILE ***                                     
+Physiology: *** SAMPLE PHY FILE ***                                     
+Met data:   *** SAMPLE MET FILE : HALF-HOURLY DATA ***                  
+                                                                                
+Daily maintenance and growth respiration components
+Rmf: Foliage maintenance resp.    mol tree-1 d-1
+Rmw: Stem maintenance resp.       mol tree-1 d-1
+RmB: Branch maintenance resp.     mol tree-1 d-1
+Rmcr: Coarse root maintenance resp. mol tree-1 d-1
+Rmfr: Fine root maintenance resp. mol tree-1 d-1
+Rgf: Foliage growth resp.         mol tree-1 d-1
+Rgw: Stem growth resp.            mol tree-1 d-1
+Rgb: Branch growth resp.          mol tree-1 d-1
+Rgcr: Coarse root growth resp.    mol tree-1 d-1
+Rgfr: Fine root growth resp.      mol tree-1 d-1
+                                                                                
+Columns: DOY, Tree, Rmf, Rmw, Rmb, Rmcr, Rmfr, Rgf, Rgw,   Rgb, Rgcr, Rgfr
+      1   25      0.18908      0.07850      0.03925      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000
+      2   25      0.15882      0.06459      0.03229      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000
+      3   25      0.18650      0.07747      0.03874      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000
+      1   26      0.14956      0.06115      0.03058      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000
+      2   26      0.12562      0.05032      0.02516      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000
+      3   26      0.14751      0.06036      0.03018      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000      0.00000

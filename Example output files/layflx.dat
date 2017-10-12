@@ -1,0 +1,19 @@
+Program:    MAESHR: Version September 2001                              
+ Fluxes for each layer on an hourly basis
+ Rows: absorbed PAR (umol m-2 leaf s-1) 
+       photosynthesis net of Rleaf (umol m-2 leaf s-1) 
+       transpiration (umol m-2 leaf s-1) 
+ 
+ LEAF AREA OF TARGET TREE IN EACH LAYER IN M2
+   3.14039    3.19410    2.51165    1.67612    0.85688    0.20178
+ 
+ JMAX (CURRENT) IN EACH LAYER IN UMOL M-2 S-1
+ 144.80000  144.80000  144.79999  144.80002  144.79997  144.80002
+ 
+ VCMAX (CURRENT) IN EACH LAYER IN UMOL M-2 S-1
+  67.10000   67.10000   67.09999   67.10001   67.09998   67.10001
+ 
+  DAY    1 HOUR   24
+     55.51     127.24     208.66     295.55     404.11     522.09
+      2.33       5.05       7.69       9.58       9.87       9.87
+    272.14     559.34     853.75    1060.09    1099.66    1108.44

@@ -1,0 +1,97 @@
+*** SAMPLE PHY FILE ***
+
+Transmittance and reflectance of foliage. Soil reflectance. All in 3 wavebands.
+&ABSORP
+NOLAYERS = 1
+RHOSOL = 0.10 0.30 0.05
+ATAU = 0.133		0.32	0.01
+ARHO = 0.133		0.48	0.05
+/	
+
+Specifying Jmax, potential electron transport rate. 
+&JMAXCON			
+NOLAYERS = 1			
+NOAGES = 1			
+NODATES = 1			
+/
+
+&JMAX
+VALUES = 144.8
+DATES = '14/09/00'
+/
+
+Specifying Vcmax, maximum rate of Rubisco activity. 
+&VCMAXCON
+NOLAYERS = 1
+NOAGES = 1
+NODATES = 1
+/
+
+&VCMAX
+VALUES = 67.1
+DATES = '13/09/00'
+/
+
+Additional parameters related to light and temperature responses of photosynthesis. 
+&JMAXPARS
+THETA =0.7
+EAVJ = 37000
+EDVJ = 220000
+DELSJ = 710
+/
+
+&VCMAXPARS
+EAVC = 58520
+/
+
+Specifying foliar respiration.
+&RDCON
+NOLAYERS = 1
+NOAGES = 1
+NODATES = 2
+/
+
+&RD
+VALUES = 0.21	 0.23
+DATES = '15/06/00' '15/07/00'
+/
+
+&RDPARS
+RTEMP = 15.0
+Q10F = 0.07
+DAYRESP = 1
+/ 
+
+Specifying stomatal conductance. 
+&BBLGS
+G0 = 0.015
+D0L = 10000
+GAMMA = 55
+G1 = 3.53
+NSIDES = 1
+WLEAF = 0.002
+/
+
+&BBGS
+G0 = 0.00
+GAMMA = 55
+G1 = 5.5
+NSIDES = 1
+WLEAF = 0.002
+/
+
+Stem respiration parameters. 
+&WRESP
+EFFY=0.18
+RM=0.231
+Q10W= 0.078
+RTEMP= 15
+/
+
+Branch respiration parameters. 
+&BRESP
+RMB=0.1155
+Q10B= 0.078
+RTEMPB= 15
+/
+

@@ -1,0 +1,36 @@
+***  SAMPLE CONTROL  ***
+
+Specifying level of output wanted.
+&CONTROL
+IOHRLY=2
+IOTUTD=9
+IORESP=1
+/
+
+Specifying which submodels to use. 
+&MODEL
+MODELGS = 2
+MODELRD = 0
+MODELJM = 0
+ITERMAX = 0
+MODELSS = 0
+/
+
+Which trees to use as target trees. 
+&TREESCON							
+NOTREES	= 50	
+ITARGETS = 25 26
+/							
+
+Simulation dates. 
+&DATES
+START = '16/07/00'
+END = '18/07/00'
+/
+
+Number of gridpoints and angles to integrate over. 
+&DIFFANG					
+NOLAY = 6
+NZEN = 5					
+NAZ= 11					
+/

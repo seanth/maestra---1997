@@ -1,0 +1,1120 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f4\froman\fcharset0\fprq2{\*\panose 00000000000000000000}Times;}
+{\f5\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Helvetica;}{\f6\fmodern\fcharset0\fprq1{\*\panose 00000000000000000000}Courier;}{\f7\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Geneva;}
+{\f8\froman\fcharset0\fprq2{\*\panose 00000000000000000000}Tms Rmn;}{\f9\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Helv;}{\f10\froman\fcharset0\fprq2{\*\panose 00000000000000000000}MS Serif;}
+{\f11\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}MS Sans Serif;}{\f12\froman\fcharset0\fprq2{\*\panose 00000000000000000000}New York;}{\f13\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}System;}
+{\f14\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f15\fswiss\fcharset0\fprq3{\*\panose 00000000000000000000}Tahoma;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;}{\stylesheet{\widctlpar\adjustright \lang2057\cgrid \snext0 Normal;}{\s1\qc\sb240\sa60\keepn\widctlpar\adjustright \b\fs32\lang2057\kerning28\cgrid \sbasedon0 \snext0 heading 1;}{\*\cs10 \additive Default Paragraph Font;}{
+\s15\sb120\sa120\widctlpar\tqr\tldot\tx8306\adjustright \b\caps\fs20\lang2057\cgrid \sbasedon0 \snext0 toc 1;}}{\*\listtable{\list\listtemplateid-1\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext
+\'01*;}{\levelnumbers;}}{\listname ;}\listid-2}}{\*\listoverridetable{\listoverride\listid-2\listoverridecount1{\lfolevel\listoverrideformat{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent360{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360 }}\ls1}}{\*\revtbl {Unknown;}}{\info{\title MAESTRA Manual}{\author Biology Division}{\operator Belinda Medlyn}{\creatim\yr1998\mo6\dy17\hr11\min24}{\revtim\yr1998\mo6\dy17\hr11\min24}
+{\printim\yr1997\mo9\dy10\hr19\min10}{\version2}{\edmins0}{\nofpages24}{\nofwords9147}{\nofchars52138}{\*\company Edinburgh University Computing Service}{\nofcharsws64029}{\vern89}}\paperw11906\paperh16838 
+\widowctrl\ftnbj\aenddoc\lytprtmet\formshade\viewkind4\viewscale100\pgbrdrhead\pgbrdrfoot \fet0\sectd \linex0\endnhere\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}
+{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain 
+\qc\sa120\widctlpar\adjustright \lang2057\cgrid {\b\fs40\ul {\*\bkmkstart _Toc390860021}MAESTRA Manual
+\par }\pard \qc\widctlpar\adjustright {\b\fs32 Part II: Programmer\rquote s Guide
+\par 
+\par }{Belinda Medlyn, July 1997
+\par }\pard \widctlpar\adjustright {
+\par 
+\par }\pard\plain \s15\sb120\sa120\widctlpar\tqr\tldot\tx8306\adjustright \b\caps\fs20\lang2057\cgrid {\field\fldedit{\*\fldinst { TOC \\o "1-3" }}{\fldrslt {Programming Conventions:\tab }{\field\flddirty{\*\fldinst {\caps0  GOTOBUTTON _Toc392319527  }
+{\field{\*\fldinst {\caps0  PAGEREF _Toc392319527 }}{\fldrslt {\caps0 2}}}}}{
+\par Subroutine Hierarchy:\tab }{\field\flddirty{\*\fldinst {\caps0  GOTOBUTTON _Toc392319528  }{\field{\*\fldinst {\caps0  PAGEREF _Toc392319528 }}{\fldrslt {\caps0 3}}}}}{
+\par Sample Main Program Structure:\tab }{\field\flddirty{\*\fldinst {\caps0  GOTOBUTTON _Toc392319529  }{\field{\*\fldinst {\caps0  PAGEREF _Toc392319529 }}{\fldrslt {\caps0 4}}}}}{
+\par Function Dictionary:\tab }{\field\flddirty{\*\fldinst {\caps0  GOTOBUTTON _Toc392319530  }{\field{\*\fldinst {\caps0  PAGEREF _Toc392319530 }}{\fldrslt {\caps0 6}}}}}{
+\par Variable Dictionary:\tab }{\field\flddirty{\*\fldinst {\caps0  GOTOBUTTON _Toc392319531  }{\field{\*\fldinst {\caps0  PAGEREF _Toc392319531 }}{\fldrslt {\caps0 21}}}}}{
+\par }\pard\plain \qc\widctlpar\adjustright \lang2057\cgrid }}\pard\plain \qc\widctlpar\adjustright \lang2057\cgrid {\b\fs32 
+\par }\pard\plain \s1\qc\sb240\sa60\keepn\widctlpar\outlinelevel0\adjustright \b\fs32\lang2057\kerning28\cgrid {\page {\*\bkmkstart _Toc392319527}Programming Conventions{\*\bkmkend _Toc390860021}:{\*\bkmkend _Toc392319527}
+\par }\pard\plain \qc\widctlpar\adjustright \lang2057\cgrid {\b Conventions set out for revision of program
+\par }\pard \widctlpar\adjustright {
+\par }\pard \sa120\widctlpar\adjustright {\tab The chief aspect of the revision was to modularise, in a strict sense, the code. This means breaking the code down into a number of small \lquote modules\rquote 
+, each with a clearly specified function, and each with clearly specified inputs and outputs. This is unfortunately not possible to enforce in FORTRAN. However, the protocol I have adopted is to specify each subroutine as:
+\par }\pard \sa120\widctlpar\adjustright {SUBROUTINE name (input-vars, output-vars)
+\par where the subroutine CANNOT refer to, or modify, any variables other than those in the passed parameter list (and local variables). This spells out
+\par - the function of the subroutine (i.e. which variables it calculates)
+\par - the requirements of the subroutine (i.e. which variables it needs to run)
+\par \tab I have also removed all common blocks - the use of common blocks destroys the above modularity. 
+\par \tab Program constants are defined in the file \lquote maestcom\rquote 
+ which is included in each subroutine. This file includes physical constants, such as the gas constant, and program constants, such as the maximum size of arrays. It should NOT include parameter values. 
+\par \tab All input should be done in separate sub-routines, not the main sub-routines. In order to keep input as flexible as possible, I have used the \lquote namelist\rquote  commands as suggested by Tony Ludlow & Lisa. 
+\par \tab 
+\par }{\b To be done: 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\sa120\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {
+Error-handling: some done, using SUBERROR, but could be more complete. 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\sa120\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {Tidy and check radiation interception routines. 
+
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\sa120\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {Add water balance back in. 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\sa120\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {Interface to ECOCRAFT parameter database. 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\sa120\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {Soil flux routines.
+\par }\pard\plain \s1\qc\sb240\sa60\keepn\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\outlinelevel0\adjustright \b\fs32\lang2057\kerning28\cgrid {{\*\bkmkstart _Toc390860035}\page {\*\bkmkstart _Toc392319528}Subroutine Hierarchy
+{\*\bkmkend _Toc390860035}:{\*\bkmkend _Toc392319528}
+\par }\pard\plain \qc\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright \lang2057\cgrid {\b List of subroutines, classified according to function and level 
+\par }\pard \qc\sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b Input functions}{ (}{\i Inout.for}{ or }{\i Getmet.for}{)}{\b 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Main functions: 
+\par }{\tab OPENF, CLOSEF, OPENMETF,
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\tab INPUTSTR, INPUTPHY, INPUTTREE, GETMET, 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\tab OUTPUTDY, OUTPUTHR, OUTPUTLAY,
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright { \tab INTERPOLATE
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Openmetf:}{ READENVIRON
+\par }{\i Getmet: }{GETMETDAY, GETMETHR, CALCTHRLY, CALCTSOIL, CALCRH, RHTOVPD, CALCPARHRLY, CALCFBMD, CALCFBMH, CALCNIR, THERMAL, CALCFSUN, TK, SATUR, ETRAD
+\par }{\i Inputstr:}{ READDATES, READCROWN, READLIA, READZEN, READBETA, READALLOM
+\par }{\i Inputphy:}{ READMODEL,READAGEP,READPROP, READABSRP, READGS, READLEAFN, READJMAX, READRD, READPHYARRAY,READRW,RINTEG
+\par }{\i Inputtree:}{ READPLOT, READXYZ, READTREEARRAY, CALCLAI, READCONTREES,SORTTREES
+\par }{\i Interpolate:}{ PHYINTERP, TREEINTERP
+\par }{\i ReadLIA: }{ANGLE, AVGANG, INTEG, FANG
+\par }{\b 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b Canopy structure functions}{ (}{\i Radn.for}{)}{\b 
+\par }{\i Main functions: }{POINTS, (TESTPOINTS)
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Subsidiary functions:}{ SEGMT, CUMUL, SURFACE
+\par 
+\par }{\b Radiation functions }{(}{\i Radn.for}{)}{\b 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Main functions: }{ABSRAD, SCATTER
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Subsidiary functions: }{EHC, EXDIFF, EXBEAM, SLOPES, SUN, TRANSD, TRANSB, ZENAZ
+\par }{\i EHC: }{ASSIGN, CHART, TDUMIN
+\par }{\i Transd, Transb:}{ TREDST, DISTIN, DIST, CDIST, WPATH, POSSIBLE, SHADED
+\par }{\i Exbeam, Exdiff: }{COSDEL}{\i 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Sun: }{ALUNAR, ANOM, ECCENT, EPSIL, OMEGA, DAYJUL
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }{\b Physiology functions}{ (}{\i Physiol.for)}{\b 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Main functions: }{PSTRANSP,}{\i  }{PHOTOSYN
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Subsidiary functions: }{GAMMAFN, GBHFREE, GBHFORCED, GRADIATION, GSJARVIS, KMFN, JMAXTFN, VCMAXTFN, RESPF, PENMON, CALCWBIOM, GRESP
+\par 
+\par }{\b Utility functions
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Utils.for: }{QUADM, QUADP,  IDATE50,  IDATEYR,  JDATE,  SUBERROR,  BETA\tab 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i main program: }{ZERODY, ZEROHR, SUMHR, SUMDAILY
+\par 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard\plain \s1\qc\sb240\sa60\keepn\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\outlinelevel0\adjustright \b\fs32\lang2057\kerning28\cgrid {{\*\bkmkstart _Toc390860027}{\*\bkmkstart _Toc392319529}Sample Main Program Structure
+{\*\bkmkend _Toc390860027}:{\*\bkmkend _Toc392319529}
+\par }\pard\plain \qc\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright \lang2057\cgrid {\b Example of order in which subroutines could be called
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 C Open input and output files
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 \tab CALL Openf()
+\par 
+\par C Get input which is constant for the whole simulation
+\par \tab CALL InputStr()
+\par \tab CALL InputPhy()
+\par \tab CALL OpenMetF()
+\par \tab CALL InputTrees()
+\par 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 C Do calculations which are not day-dependent
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 \tab CALL EXDIFF()
+\par 
+\par C********************************************************
+\par C Begin daily loop
+\par     \tab IDAY = 0
+\par 10   \tab CONTINUE
+\par 
+\par C Interpolate arrays of variables which change over time.
+\par \tab CALL INTERPOLATE()
+\par 
+\par C If the canopy has changed since the previous day, set up grid 
+\par C points again. 
+\par \tab IF (NEWCANOPY.EQ.1) THEN 
+\par        CALL Points()
+\par      \tab END IF
+\par 
+\par C Calculate diffuse transmittances
+\par \tab CALL TRANSD()
+\par 
+\par C If required, calculate the EHC
+\par \tab IF (NEWTUTD.EQ.1) THEN
+\par         CALL EHC()
+\par      \tab END IF
+\par 
+\par C Calculate zenith angle of sun
+\par \tab CALL SUN()
+\par      \tab CALL ZENAZ()
+\par 
+\par C Get meteorological data
+\par \tab CALL GETMET()
+\par 
+\par C Zero daily fluxes
+\par \tab CALL ZEROD()
+\par C Zero hourly fluxes 
+\par      \tab CALL ZEROHR()
+\par 
+\par C********************************************************
+\par C Begin hourly loop
+\par       DO 100 IHOUR = 1,KHRS
+\par 
+\par C Test to see if daylight hours
+\par         IF (ABS(ZEN(IHOUR)).LE.1.57) THEN
+\par 
+\par C Get slope correction factor
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20           call SLOPES()
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 
+\par C Get beam extinction coefficient
+\par           CALL EXBEAM()
+\par 
+\par 
+\par C Loop over grid points
+\par           DO 80 IPT = 1,NUMPNT
+\par 
+\par C Calculate the weighted pathlengths for beam radiation.
+\par             CALL TRANSB()
+\par 
+\par C Loop over the 3 wavelengths
+\par             DO 90 IWAVE = 1,3
+\par 
+\par C Calculate the scattered radiation 
+\par               CALL SCATTER()
+\par 
+\par C Calculate absorbed radiation
+\par               CALL ABSRAD()
+\par 
+\par 90          CONTINUE ! End loop over wavelengths
+\par 
+\par             DO 95 ISUNLIT = 1,2 ! Loop over sunlit & shaded leaves
+\par 
+\par               IF (ISUNLIT.EQ.1) THEN
+\par                 APAR = (BFLUX(IPT,1) + DFLUX(IPT,1))*MOLPERMJ
+\par                 RNET = APAR + BFLUX(IPT,2) +
+\par      +                  DFLUX(IPT,2) + DFLUX(IPT,3)
+\par                 AREA = SLA
+\par               ELSE
+\par                 APAR = DFLUX(IPT,1)*MOLPERMJ
+\par                 RNET = APAR/MOLPERMJ + DFLUX(IPT,2) + DFLUX(IPT,3)
+\par                 AREA = 1.0 - SLA
+\par               END IF
+\par 
+\par               DO 95 IAGE = 1,NOAGEP ! Loop over age classes
+\par                 CONVERT = AREA * DLI(IAGE,IPT) * VL(IPT) * SPERHR
+\par 
+\par C Call physiology routine
+\par               CALL PSTRANSP()
+\par 
+\par C Sum outputs for the hour
+\par               CALL SUMHR()
+\par                 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 95          CONTINUE ! End loop over sunlit / shaded leaves
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2\fs20 
+\par 80        CONTINUE ! End loop over grid points
+\par 
+\par         ELSE ! Night-time
+\par 
+\par         END IF ! If day or night
+\par 
+\par C Output hourly totals
+\par         CALL OUTPUTHR()
+\par 
+\par C********************************************************
+\par 100  \tab CONTINUE
+\par C End hourly loop
+\par 
+\par C Output daily totals
+\par      \tab CALL SUMDAILY()
+\par      \tab CALL OUTPUTDY()
+\par 
+\par      \tab IDAY = IDAY + NSTEP
+\par      \tab IF ((ISTART+IDAY).LE.IEND) THEN
+\par        GOTO 10
+\par      \tab END IF
+\par 
+\par C********************************************************
+\par 110  CONTINUE 
+\par C End daily loop
+\par 
+\par \tab CALL Closef(IOHRLY)
+\par 
+\par      \tab RETURN
+\par      \tab END !MAIN
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard\plain \s1\qc\sb240\sa60\keepn\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\outlinelevel0\adjustright \b\fs32\lang2057\kerning28\cgrid {{\*\bkmkstart _Toc390860036}{\*\bkmkstart _Toc392319530}Function Dictionary{\*\bkmkend _Toc390860036}:
+{\*\bkmkend _Toc392319530}
+\par }\pard\plain \qc\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright \lang2057\cgrid {\b Definitions of all subroutines and functions
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul ABSRAD
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {This subroutine sums all the radiation calculations for a given gridpoint (IPT) and wavelength (IWAVE). 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  IPT,IWAVE,NZEN,DEXT,BEXT,BMULT,BPATH,RELDF,
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 RADABV,FBEAM,ZEN,ABSRP,DIFDN,DIFUP
+\par }{\i Returns:}{\f2  DFLUX,BFLUX,SCATFX
+\par 
+\par }{The absorbed beam flux is given by 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\tab a I}{\sub 0}{ k exp(-k L) / cos(Z)
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {where:
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {a is the absorptance (ABSRP, from physiology)}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright { I}{\sub 0}{
+ is the incident beam radiation (RADABV * FBEAM, from met data)}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {
+ k is the extinction coefficient for beam radiation (BEXT, calculated in EXBEAM)}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {
+L is the weighted pathlength of beam radiation to the gridpoint (BPATH, calculated in TRANSB)}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {Z is the sun zenith angle (ZEN, calculated in ZENAZ)}{\f2 
+
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }{The absorbed sky-diffuse flux absorbed is given by
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\tab a R}{\sub df}{ I}{\sub 0
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {where:
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {a is the absorptance (ABSRP, from physiology)}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {R}{\sub df}{ is the fraction of
+ incident sky diffuse radiation which is absorbed (RELDF, calculated in TRANSD)
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {I}{\sub 0}{
+ is the incident diffuse radiation (RADABV * (1-FBEAM), from met data)
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+The absorbed scattered flux is given by the average over the NZEN zenith angles for diffuse radiation, of the upward and downward diffuse fluxes of scattered radiation (DIFUP + DIFDN) times the extinction coefficient of diffuse radiation (DEXT) in that ze
+nith angle direction. The scattered radiation fluxes are from the subroutine SCATTER; the diffuse extinction coefficients are from EXDIFF. 
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }{\b\ul ALUNAR}{\b  }{Compute longitude of ascending node of lunar orbit  - used in SUN.
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul ANGLE}{ Calculates the fraction of leaf area in each leaf incidence angle class. }{\b\ul 
+\par }{\i Required:}{\f2  ELP,NALPHA
+\par }{\i Returns:}{\f2  FALPHA
+\par }{This uses the assumption of an ellipsoidal leaf angle distribution (Campbell 1986?). ELP is the ratio of the horizontal to vertical diameters of the ellipsoid. Called from INPUTSTR.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul ANOM }{Calculates mean anomaly in radians - used in SUN.}{\f2 
+\par }\pard \sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul ASSIGN
+\par }{Matches the grid point to some point in an horizontal canopy.}{\f2 
+\par }{\i Required:}{\f2  TU,TD,NUMPNT,NLAY,RTA
+\par }{\i Returns:}{\f2  LAYER,MLAYER
+\par }{This subroutine is called by EHC when setting up the equivalent horizontal canopy. The I\rquote th grid point will correspond to LAYER(I) in a horizontal canopy having a total of MLAYER(I) layers. The parameters }{\f2 NLAY,RTA}{
+ are calculated previously in EHC. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul AVGANG }{Calculates the average leaf incidence angle given an ellipsoidal leaf angle distribution with parameter ELP.}{\b\ul 
+\par }{\i Required:}{ ELP.}{\f2 
+\par }{Called from INPUTSTR.}{\b\ul 
+\par 
+\par BETA}{ Implements the beta function for leaf area density.}{\b\ul 
+\par }{\i Required:}{\f2  BC1,BC2,BC3,RP
+\par }{Called by CUMUL, from POINTS, when calculating leaf area density associated with each grid point. Also called by BETATABLE when setting up the interpolation array BPTOT. }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul BETAINTERP}{ Calculates the leaf area density at a given point in the canopy, given the interpolation array BPTOT. }{\b\ul 
+\par }{\i Required:}{\f2  jj,RD,BPTOT
+\par }{Called by WPATH. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul BETATABLE 
+\par }{Calculates the interpolation table for leaf area density distribution.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 JLEAF,NOAGEC,BPT,PROP,BPTOT
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{\f2 BPTOT
+\par }{
+This interpolation array is calculated before the main program to speed up calculations. The subroutine calculates values of the horizontal and vertical beta distributions at 20 heights & radii in the canopy, & stores them in the array BPTOT for later use
+.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }{\b\ul CALCFSUN
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Calculates the fraction of the hour that is sunlit from the beam fraction.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  FBEAM
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  FSUN
+\par }{One of the utility functions in GETMET.FOR.}{\i 
+\par }{\f2 
+\par }{\b\ul CALCLAI
+\par }{Calculate the total LAI of the plot. Called by INPUTTREE. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  NOLADATES, FLT, NOALLTREES, XMAX, YMAX, XSLOPE, YSLOPE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  TOTLAI
+\par }{
+The total LAI is required for calculating the equivalent horizontal canopy (EHC). Here it is calculated (for a series of dates) by summing the leaf area of each tree in the plot, on each date, and dividing by the horizontal ground area. LAI on each day is
+ calculated from linear interpolation. }{\f2 
+\par 
+\par }{\b\ul CALCNIR
+\par }{From the incident PAR, calculates the incident NIR.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  RADABV
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  RADABV,FBEAM
+\par }{One of the utility functions in GETMET.FOR. }{\i 
+\par }{\f2 
+\par }{\b\ul CALCPARHRLY
+\par }{Calculates the daily course of incident PAR from daily totals of beam and diffuse radiation (in MJ m-2 d-1).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  RADBM,RADDF,ZEN,DAYL
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  RADABV,FBEAM
+\par }{One of the utility functions in GETMET.FOR. }{\i 
+\par }{\f2 
+\par }{\b\ul CALCRH
+\par }{Calculates the hourly relative humidity from air temperature and minimum daily temperature (assumed to be the dewpoint).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  TMIN,TAIR
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  RH
+\par }{One of the utility functions in GETMET.FOR. }{\i 
+\par }{\b\ul 
+\par CALCTHRLY
+\par }{Calculates a daily variation in temperature from maximum & minimum temperatures. Temperature is assumed to vary linearly between sunset & sunrise, and sinusoidally during the day.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  TMAX,TMIN,DAYL
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  TAIR
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {One of the utility functions in GETMET.FOR. }{\i 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }{\b\ul CALCTSOIL
+\par }{Calculate soil temperatures from air temperatures. Currently, soil temperature is just set equal to the air temperature.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  TAIR
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  TSOIL}{\i 
+\par }{One of the utility functions in GETMET.FOR. }{\i 
+\par }{\f2 
+\par }{\b\ul CDIST
+\par }{This subroutine calculates the coefficients of the quadratic equation in the distance calculation subroutines. It is called by DIST and CDIST.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul CHART
+\par }{This subroutine computes the tau's for a series of depths in a horizontal canopy. It is called by EHC. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul CLOSEF 
+\par }{This subroutine closes the open input & output files. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 IOHRLY,IOTEST
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{\f2 -
+\par }{The control flags are required to indicate which files were being used. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul COSDEL
+\par }{A function which calculates cos(delta)  =  cos(theta)*cos(alpha) where theta is the solar zenith angle and alpha is the leaf inclination angle. Called by EXBEAM and EXDIFF. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul CUMUL 
+\par }{Uses a Gaussian numerical integration method to sum the beta-distribution at a given gridpoint. Called in POINTS. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul DIST
+\par }{This subroutine is used to calculate the pathlength inside all trees around the target tree. It is called from TREDST. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul DISTIN
+\par }{This subroutine is used to calculate the pathlength inside the target tree crown. It is called from TREDST. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul ECCENT
+\par }{Calculates the \lquote eccentricity\rquote . Called from SUN. }{\b\ul 
+\par 
+\par EHC
+\par }{This subroutine sets up the equivalent horizontal canopy.}{\b\ul 
+\par }{\i Required:}{\f2  NUMPNT, TU, TD, TOTLAI, XSLOPE, YSLOPE, NAZ, NZEN, DIFZEN, DEXT
+\par }{\i Returns:}{\f2  DLAI,LAYER,MLAYER
+\par }{The equivalent horizontal canopy is used when doing the scattered radiation calculations. An EHC must be calculated for each grid point. }{\i 
+\par }{\f2 
+\par }{\b\ul EPSIL
+\par }{Calculates the obliquity of ecliptic - used in SUN.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul EXBEAM
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Calculates the extinction coefficients for incident beam radiation in the sun zenith angle direction. }{\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  NALPHA,ALPHA,FALPHA,RANDOM,BZEN
+\par }{\i Returns:}{\f2  BEXT}{\i 
+\par }{The required information is the distribution of leaf incidence angles (}{\f2 NALPHA, ALPHA, FALPHA)}{,  the clumping of the canopy (}{\f2 RANDOM}{), and the zenith direction required (}{\f2 BZEN}{). 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul EXDIFF
+\par }{Calculates the extinction coefficients for scattered diffuse radiation in NZEN zenith angle directions. }{\b\ul 
+\par }{\i Required:}{\f2  NALPHA,ALPHA,FALPHA,NZEN,DIFZEN,RANDOM
+\par }{\i Returns:}{\f2  DEXT}{\i 
+\par }{The required information is the distribution of leaf incidence angles (}{\f2 NALPHA, ALPHA, FALPHA)}{,  the clumping of the canopy (}{\f2 RANDOM}{), and the zenith directions required (}{\f2 NZEN,DIFZEN}{). 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul FANG
+\par }{This is the ellipsoidal leaf angular density function (GS Campbell). It is called when setting up ALPHA in INPUTSTR (via READLIA, ANGLE & INTEG). 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul GAMMAFN 
+\par }{Calculates }{\f3 \'47}{\f3\sub \'2a}{, the CO}{\sub 2}{ compensation point in the absence of non-photorespiratory respiration. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 TLEAF
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{ }{\f3 \'47}{\f3\sub \'2a}{ at temperature TLEAF (}{\f3 \'6d}{mol mol}{\super -1}{).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+The function used here was taken from Brooks & Farquhar (1985), but is modified to reflect the values obtained in Rubisco-deficient mutants by von Caemmerer et al (1994). This formulation was agreed upon by ECOCRAFT. 
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul GBHFORCED
+\par }{\i Required:}{\f2  TAIR,PRESS,WIND,WLEAF
+\par }{\i Returns:}{ Boundary layer conductance for heat - single sided, forced convection - in mol m-2 s-1.}{\i 
+\par }{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul GBHFREE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  TAIR,TLEAF,PRESS,WLEAF
+\par }{\i Returns:}{\f2  }{Boundary layer conductance for heat - single sided, free convection - in mol m-2 s-1.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul GETMET
+\par }{This function reads in the meteorological data for use in MAESTRO.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  IDAY,ISTART,MFLAG,ZEN,DEC,DAYL
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  windah, tsoil, tair, radabv, fbeam, fsun, RH, VPD,  error, ERRMSG
+\par }{This is the main function for reading in meteorological data. Essentially it just uses the flag MFLAG to determine the data input format and calls the appropriate routines to read that format. }{\i 
+\par }{\f2 
+\par }{\b\ul GETMETDAY
+\par }{Reads met data in my old daily met input format.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  IDAY,IDATE,ZEN,DAYL
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  windah, tsoil, tair, radabv, fbeam, fsun, RH, VPD,  error, ERRMSG
+\par }{My old format being: 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {title line
+\par header line
+\par start date
+\par end date 
+\par flag line
+\par data in format: day, windspeed, Tmin, Tmax, beam radiation, diffuse radiation. }{\i 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul GRADIATION
+\par }{\i Required:}{\f2  TAIR,RDFIPT,TUIPT,TDIPT
+\par }{\i Returns:}{ Returns the 'radiation conductance' at given temperature.}{\i 
+\par }{\b\ul 
+\par GSJARVIS 
+\par }{Calculates stomatal conductance according to the Jarvis (1976) model. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{ }{\f2 GSMODEL, PAR, I0, VPD, D0, CS, GSJA, GSJB, TLEAF, T0, TREF, TMAX, FWSJ, GSREF
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{Stomatal conductance to CO}{\sub 2}{ in mol m}{\super -2}{ s}{\super -1}{. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+The model calculates stomatal conductance by multiplying together several factors dependent on environmental conditions. The formulation of these factors was agreed upon by ECOCRAFT. The dependences on PAR, VPD, and soil water content were agreed. There a
+re two alternative formulations of the dependence on CO}{\sub 2}{ - linear (GSMODEL = 0) and non-linear (GSMODEL = 1). There is also an optional temperature dependence - to omit this, set TMAX = 0.0. 
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul IDATE50
+\par }{This function translates a string-format date (DD/MM/YY) into the number of days since 1/1/1950. This provides a numerical way of handling dates.}{\i  
+\par Required:}{ }{\f2 STRDATE
+\par }{\i Returns: }{ date in days-since-1950 format. }{\f2 
+\par 
+\par }{\b\ul IDATEYR
+\par }{Given a date strdate (in format DD/MM/YY), this function calculates the number of the day, from 1 on 1st Jan to 365/366 on 31st Dec.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  STRDATE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{julian date
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul INPUTPHY 
+\par }{This subroutine reads in all the physiological parameters from the input files. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{-
+\par }{\i Returns: }{\f2 NOPLAY, ABSRP, REFLEC, TRANS, RHOSOL, CA, PRESS, JMAX25, EAVJ, EDVJ, DELSJ, VCMAX25, EAVC, EDVC, DELSV,
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 THETA, RD0, Q10F, DAYRESP, GSMODEL, GSREF, PAR0, D0, GSJA, GSJB, T0, TREF, TMAX,G0, D0L, GAMMA, A1, G1, WLEAF, NSIDES, ITERMAX
+\par }{The physiology parameters required may be input in a number of different ways. To change the method of input, this is the subroutine which should be changed.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul INPUTSTR 
+\par }{This subroutine reads in all the structural information from the input files. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{-
+\par }{\i Returns:}{ }{\f2 ISTART, IEND, NSTEP, NUMPNT, NOPLAY, NOAGEC, NOAGEP, XSLOPE, YSLOPE, BEAR, XMAX, YMAX, ALAT, TTIMD, JLEAF, BPT, PROP, JSHAPE, SHAPE, NALPHA, ALPHA, FALPHA, NZEN, DIFZEN, NAZ, RANDOM
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {The subroutine calls a number of smaller subroutines, each of which deals with a particular set of information. The structural information required may be input i
+n a number of different ways. To change the method of input, these are the subroutine which should be changed.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul INPUTTREE 
+\par }{This subroutine reads in all the information about crown positions and dimensions from the input files.  
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 XSLOPE,YSLOPE,XMAX,YMAX}{
+\par }{\i Returns:}{ }{\f2 NOTREES, NOXDATES, NOYDATES, NOZDATES, NOTDATES, NOLADATES, XDATES, YDATES, ZDATES, TDATES, LADATES, DXT, DYT, DZT, RX, RY, RZ, ZBC, FOLT, TOTLAI}{
+\par The subroutine calls a number of smaller subroutines, each of which deals with a particular se
+t of information. The information about crown position and dimensions required may be input in a number of different ways. To change the method of input, these are the subroutines which should be changed.
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul INTEG
+\par }{This function integrates the leaf area density function over a specified angle range. Called from ANGLE in READLIA (under INPUTSTR) when calculating ALPHA. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul JMAXTFN 
+\par }{Calculates }{\i J}{\sub max}{ at the leaf temperature. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 JMAX25,TLEAF,EAVJ,EDVJ,DELSJ
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: J}{\sub max}{ at temperature TLEAF (}{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {The function used for this calculation is from Lloyd et al. (1995). This formulation was agreed upon by ECOCRAFT. 
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul KMFN 
+\par }{Calculates }{\i K}{\sub m}{, the effective Michaelis-Menten coefficient for CO}{\sub 2}{ fixation by Rubisco. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 TLEAF
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: K}{\sub m}{ at temperature TLEAF (}{\f3 \'6d}{mol mol}{\super -1}{). 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {This is calculated from the Michaelis-Menten coefficients for CO}{\sub 2}{ and O}{\sub 2}{ fixation for Rubisco. The values of these coefficients at 25\'ba
+C are taken from von Caemmerer et al (1994); the activation energies (or temperature dependences) from Badger & Collatz (1977). This formulation was agreed upon by ECOCRAFT. 
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul OMEGA
+\par }{Calculates mean longitude of perigee - used in SUN.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul OPENF 
+\par }{Opens the input and output text files. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{-
+\par }{\i Returns: }{\f2 IOHRLY,IOTUTD,MFLAG
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {All the control flags are read from the control file and returned from this subroutine. It also writes comments to the start of the output files. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul OUTPUTDY
+\par }{Outputs the daily totals of fluxes to the daily output file. }{\b\ul 
+\par }{\i Required: }{\f2 IDAY,TDYAB,TOTCO2,TOTH2O,TOTHFX}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: -}{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par OUTPUTHR
+\par }{Outputs the hourly fluxes to the hourly output file. }{\b\ul 
+\par }{\i Required:}{\f2  IOHRLY,IDAY,IHOUR,THRAB,FCO2,FH2O,FHEAT}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: -}{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par PENMON}{  
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Implements the Penman-Monteith equation.
+\par }{\i Required: }{\f2 PRESS,SLOPE,LHV,RNET,VPD,GH,GV
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{Transpiration rate in mol H}{\sub 2}{O m}{\super -2}{ s}{\super -1}{. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }{\b\ul PHENOLOGY 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {This subroutine should return the crown positions and dimensions, including LAI. It should also indicate whether the LAI has changed (meaning grid points need to be re-assigned). 
+
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{ }{\f2 IDAY,XSLOPE,YSLOPE,XMAX,YMAX}{\i  
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{\f2 MTT,NT,DXT,DYT,DZT,RX,RY,RZ,ZBC,FOLT,TOTLAI, NEWCANOPY
+\par }{
+Currently, this subroutine just reads the trees.dat file if IDAY = 0 (the first day of the simulation), otherwise the canopy is unchanged. However, there is potential to modify the canopy in this subroutine, either by reading in more data, or by implement
+ing a phenological routine.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul PHOTOSYN 
+\par }{Calculates leaf photosynthesis and stomatal conductance. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Meteorological variables: }{\f2 PAR,TLEAF,CS,RH,VPD
+\par }{\i Photosynthetic parameters: }{\f2 JMAX25, EAVJ, EDVJ, DELSJ, VCMAX25, EAVC, EDVC, DELSV, THETA, ALPHA
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Respiration parameters: }{\f2 RD0,Q10F,DAYRESP
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Stomatal conductance parameters: }{\f2 GSMODEL, GSREF, I0, D0, GSJA, GSJB, T0, TREF, TMAX, FWSBB, FWSL, G0, D0L, GAMMA, A1, G1
+\par }{\i Returns:
+\par }{\f2 GSC,ALEAF,RD\tab 
+\par 
+\par }{Leaf photosynthesis is calculated according to the ECOCRAFT-agreed formulation of the Farquhar & von Caemmerer (1982) (FvC) photosynthesis model. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\tab A choice of stomatal conductance models is available, controlled by the parameter GSMODEL. The formulation of these models is also agreed by ECOCRAFT. (Detail
+s available on the web page). 
+\par GSMODEL = 0: Jarvis-type model, with a linear dependence of }{\i g}{\sub s}{ on CO}{\sub 2
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {GSMODEL = 1: Jarvis-type model, with a non-linear dependence of }{\i g}{\sub s}{ on CO}{\sub 2
+\par }{GSMODEL = 2: the original Ball-Berry model
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {GSMODEL = 3: the Ball-Berry-Leuning model
+\par }{\f2 \tab }{If the stomatal model is Jarvis-type, then GSC can be calculated directly (subroutine GSJARVIS). ALEAF is then calculated by solving quadratics which are obtained by substituting (}{\i c}{\sub i}{ = }{\i c}{\sub s}{ - }{\i A}{/}{\i g}{\sub s}
+{) into the FvC equations.
+\par  \tab If the stomatal model is Ball-Berry type, then }{\i c}{\sub i}{\- is obtained by solving quadratics given by Leuning (1990). ALEAF and GSC are then calculated from the FvC and Ball-Berry equations.
+\par  \tab Note that in both cases, two quadratics must be solved, one for Rubisco-limited photosynthesis and one for RuBP-regeneration limited photosynthesis. ALEAF is taken as the minimum of these two rates.
+\par 
+\par }{\b\ul PHYINTERP 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Interpolates physiological parameters for this date from the date arrays read in from physiology file.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  IDATE,NODATES,IDATEARR,PARAMTABLE,NOPLAY,NOAGEP
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{\f2 PARAMS
+\par }{The parameters }{\i J}{\sub max}{, }{\i V}{\sub cmax}{ and }{\i R}{\sub d}{
+ can be input as a series of values on different dates. The parameters are in PARAMTABLE, the dates in IDATEARR, and the number of dates in NODATES. The values can also be specified for NOPLAY different horizontal layers and NOAGEP age classes. This proce
+dure linearly interpolates to give the values for each layer & age class on the simulation date, IDATE. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+\par }{\b\ul POINTS 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Sets up the array of grid points in the target crown.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  NUMPNT, JLEAF, JSHAPE, SHAPE, RX(1), RY(1), RZ(1), ZBC(1), DXT(1), DYT(1), DZT(1), FOL(1), PROP, BPT, NOAGEC, NOAGEP, NOPLAY
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  XL,YL,ZL,VL,DLT,DLI,LGP
+\par }{Given all the information about the target crown position and dimensions, the subroutine sets up the array of gridpoints, calculating their co-ordinates (XL, YL, ZL) and the leaf area density (DLT, DLI) and subvolume (VL) of crown associated with each.
+
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul POSSIBLE
+\par }{This function tests to see if the tree at xt,yt could possibly be in  the path of the ray at angle az through the point at xp,yp.  It is called by TREDST. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {
+It is designed to be a  fast filter to remove those trees which  are obviously not in the path of the ray.  It returns true if the tree is possibly in the path of the ray and  false if it is impossible for the tree to be in the path.
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul PSTRANSP 
+\par }{The main subroutine for calculating leaf photosynthesis and transpiration. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Met variables:}{\i\f2  }{\f2 RDFIPT, TUIPT, TDIPT, RNET, WIND, PAR, TAIR, CA, RH, VPD, PRESS
+\par }{\i Photosynthetic parameters: }{\f2 JMAX25, EAVJ, EDVJ, DELSJ, VCMAX25, EAVC, EDVC, DELSV, THETA, ALPHA, ITERMAX
+\par }{\i Respiration parameters: }{\f2 RD0, Q10F, DAYRESP
+\par }{\i Stomatal conductance parameters: }{\f2 GSMODEL, GSREF, I0, D0, GSJA, GSJB, T0, TREF, TMAX, FWSJ, FWSBB, FWSL, G0, D0L, GAMMA, A1, G1, WLEAF, NSIDES
+\par }{\i Returns:
+\par }{\f2 GSC, ALEAF, RD, ET, ERROR, ERRMSG
+\par }{\tab The subroutine calls PHOTOSYN to calculate photosynthesis and PENMON to calculate transpiration. There are (currently) two cases:
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {(1) Leaf temperature is assumed equal to air temperature (additionally, the surface CO}{\sub 2}{ and VPD are assumed equal to the atmospheric CO}{\sub 2}{ and VPD)
+\par (2) Leaf temperature is calculated using the iterative scheme proposed by Wang & Leuning (1997). Surface CO}{\sub 2}{ and VPD are also calculated iteratively, but the convergence of leaf temperature is used to stop the iteration.
+\par  \tab If the parameter ITERMAX = 0, then case (1) occurs. Otherwise, ITERMAX is the maximum number of iterations allowed in case (2).
+\par  \tab In both cases, the boundary layer conductances to heat and water vapour are calculated according to Leuning et al. (1995).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul QUADM 
+\par }{Finds the smaller root of a quadratic equation with coefficients a, b, c.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{ a, b, c
+\par }{\i Returns: }{quadratic solution
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul QUADP 
+\par }{Finds the larger root of a quadratic equation with coefficients a, b, c.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{ a, b, c
+\par }{\i Returns: }{quadratic solution
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul READCLASSES}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads in numbers of layers and age classes. Called by INPUTSTR.
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  NUMPNT, NOPLAY, NOAGEC, NOAGEP
+\par }{The foliage is divided into vertical layers and into age classes.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Vertical layers:
+\par NORLAY is the number of vertica
+l layers used to calculate radiation interception (NUMPNT = NORLAY * points per layer). NOPLAY is the number of crown layers for which physiological parameters are provided. For  best results, NORLAY >= 5, and NOPLAY = 1 or NORLAY. 
+\par Age classes:
+\par  NOAGEC is the number of age classes of foliage for which distributions of leaf area density are provided. NOAGEP is the number of age classes  of foliage for which physiological parameters are provided. If neither NOAGEC nor NOAGEP = 1, then NOAGEC must 
+= NOAGEP. 
+\par }{\b\ul 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul READCROWN}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads in crown shape parameters. Called by INPUTSTR.
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  JSHAPE, SHAPE
+\par }{JSHAPE & SHAPE are set given a character string indicating the crown shape (\lquote CONE\rquote , \rquote ELIP\rquote , or \lquote PARA\rquote ).}{\f2 
+\par 
+\par }{\b\ul READDATES}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads the start and end dates for the simulation. Called by INPUTSTR.
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{\f2 ISTART, IEND, NSTEP
+\par }{The routine must return start and end dates for the simulation, in days-since-1950 format. The function IDATE50 converts a DD/MM/YY date to this format. The routine must also retu
+rn NSTEP where the program is to use met data for every NSTEP'th day (default 1).  If the dates are missing, the program will use all the met data available in the met data file (indicated by ISTART = IEND = 0).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul READLIA}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads the leaf incidence angles. Called by INPUTSTR. 
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  NALPHA, ALPHA, FALPHA
+\par 
+\par }{\b\ul READPLOT}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads the plot details. Called by INPUTSTR. 
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  XMAX, YMAX, XSLOPE, YSLOPE, BEAR, ALAT, TTIMD
+\par 
+\par }{\b\ul READTREEARRAY}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads in an array of a particular crown dimension. Called by INPUTTREE. 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required: }{\f2 UFILE, NARRAY, NOALLTREES
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  NDATE, IDATES, VALUES
+\par }{
+The crown dimensions (radii in the x and y directions, green crown height, trunk height, and leaf area per tree) can all be read in using this procedure. NARRAY specifies which dimension is to be read. The values can be specified for each tree, or for all
+ trees; and they can be specified for a series of dates. }{\f2 
+\par 
+\par }{\b\ul READTREES}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads in the total number of trees, the number of trees for the calculations, and the number of the target tree. Called by INPUTTREE. 
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  NOALLTREES, NOTREES, NOTARGET
+\par 
+\par }{\b\ul READXYZ}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads the X and Y co-ordinates of each tree crown. Called by INPUTTREE. 
+\par }{\i Required:}{\f2  UFILE,NOALLTREES,XMAX,YMAX,XSLOPE,YSLOPE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  DX,DY,DZ
+\par }{The X,Y co-ordinates of each crown may be read in from the input file, or may be calculated from the number of trees and the plot area, assuming an even spacing of trees. The Z co-ordinates are calculated from the slopes of the plot. }{\f2 
+\par 
+\par }{\b\ul READZEN}{
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {Reads the number of zenith and azimuth angles to be used for diffuse radiation. Called by INPUTSTR. 
+\par }{\i Required: }{\f2 UFILE
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  NZEN,NAZ,DIFZEN
+\par 
+\par }{\b\ul RESPF 
+\par }{Calculates the rate of leaf respiration at leaf temperature
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  RD0,TLEAF,Q10F,DAYRESP
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns: }{Leaf respiration rate at temperature TLEAF (}{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {An exponential (Q10) formulation is used. The rate is also corrected for inhibition of respiration in daylight.
+\par }{\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul RHTOVPD
+\par }{Converts daily relative humidities to VPD.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Required:}{\f2  RH,TAIR
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\i Returns:}{\f2  VPD
+\par }{A utility function in GETMET.FOR.
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f2 
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul SATUR
+\par }{Calculates the saturated water vapour pressure (Pa) at temperature T (Celsius).
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {A utility function in GETMET.FOR.
+\par }{\i Required: }{\f2 TAIR
+\par }\pard \widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\ul 
+\par SCATTER
+\par }{Calculates the upward and downward scattered radiation flux at gridpoint IPT for wavelength IWAVE. }{\b\ul 
+\par }{\i Required:}{\f2  IPT, IWAVE, MLAYERI, LAYERI, DLAI, XSLOPE, YSLOPE, DMULT2, SOMULT, BMULT, NAZ, NZEN, DIFZEN, ZEN, RADABV, FBEAM, TAIR, TSOIL, BEXT, DEXT, ARHO, ATAU, RHOSOL
+\par }{\i Returns:}{\f2  DIFUP,DIFDN,SCLOST}{\i 
+\par }{An iterative method (Norman, 1980) is used to calculate the scattering. The required information is: 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {details of the EHC (}{\f2 MLAYERI, LAYERI, DLAI}{) from EHC}
+{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {the slopes and slope modifiers (}{\f2 
+XSLOPE, YSLOPE, DMULT2, SOMULT, BMULT}{ ) from SLOPES,}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {the zenith and azimuth angles of the sun (}{\f2 
+NAZ, NZEN, DIFZEN, ZEN), }{from ZENAZ}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {the reflectivity and transmissivity of leaves and soil (}{
+\f2 ARHO, ATAU, RHOSOL) }{ - physiological inputs}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {the extinction coefficients for beam and diffuse radiation (
+}{\f2 BEXT, DEXT}{), calculated in EXBEAM & EXDIFF}{\f2 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {incident radiation and temperatures of foliage and soil (}{
+\f2 RADABV, FBEAM, TAIR, TSOIL)}{, from met data inputs}{\f2 
+\par }\pard \widctlpar\adjustright {The outputs are then the downwards scattered flux above the gridpoint (DIFDN) and the upwards scattered flux below the grid point (DIFUP). }{\f2 
+\par 
+\par }{\b\ul SEGMT 
+\par }{This subroutine calculates the volume of a segment of the crown.
+\par }\pard \widctlpar\adjustright {\i Required: }{\f2 JSHAPE,HUP,HDN,DH,RX1,RY1,RZ1
+\par }\pard \widctlpar\adjustright {\i Returns: }{\f2 VLM
+\par }{This subroutine is called by POINTS when setting up the grid points. Different formulae are used according to the crown shape. 
+\par }\pard \widctlpar\adjustright {\f2 
+\par }\pard \widctlpar\adjustright {\b\ul SLOPES
+\par }{Calculates the slope corrections for soil reflectance.}{\b\ul 
+\par }{\i Required:}{\f2  IHOUR,TTIMD,EQNTIM,ALAT,DEC,XSLOPE,YSLOPE,BEAR,ZEN
+\par }{\i Returns:}{\f2  BMULT,DMULT2,SOMULT
+\par }{\b\ul 
+\par SORTTREES
+\par }{This routine selects the NOTREES trees closest to the target tree. It sorts the information about each tree into order of distance from the target tree. Called by INPUTTREE.
+\par }\pard \widctlpar\adjustright {\i Required:}{\f2  NOALLTREES, NOTREES, NOTARGET, DX, DY, DZ, R1, R2, R3, TRUNK, FLT
+\par }\pard \widctlpar\adjustright {\i Returns:}{\f2  DXT,DYT,DZT,RX,RY,RZ,FOLT,ZBC
+\par }{In the trees input file, information can be input for NOALLTREES (up to MAXT) trees. However, when calculating radiation absorbed 
+by crowns adjacent to the target crown, the calculations will be done for NOTREES trees. This subroutine selects the NOTREES crowns closest to the target crown, discards all other information, and sorts the crowns into order of distance from the target cr
+own. }{\b\ul 
+\par 
+\par SUBERROR
+\par }{Error-handling subroutine.
+\par }\pard \widctlpar\adjustright {\i Required: }{\f2 MESSAGE,IFLAG,IOERROR
+\par }\pard \widctlpar\adjustright {\i Returns: }{\f2 -
+\par }{The subroutine prints the error message (MESSAGE) to the error file (UERROR = \lquote MAESERR.DAT\rquote ). IOERROR is the FORTRAN error code, which is also reported. Depending on the v
+alue of IFLAG, the program is aborted (IFLAG = IFATAL) or allowed to continue (IFLAG = IWARN). IFATAL and IWARN are constants defined in MAESTCOM.}{\f2 
+\par }{\b\ul 
+\par SUMDAILY
+\par }{Sums the hourly fluxes to give daily fluxes.
+\par }\pard \widctlpar\adjustright {\i Required: }{\f2 THRAB,FCO2,FH2O,FHEAT
+\par }\pard \widctlpar\adjustright {\i Returns: }{\f2 TDYAB,TOTCO2,TOTH2O,TOTHFX
+\par }{\b\ul 
+\par SUMHR
+\par }{Sums the fluxes at each grid point to give hourly fluxes. }{\b\ul 
+\par }{\i Required:}{\f2  ALEAF,RD,ET,CONVERT,IPT,IHOUR,BFLUX,DFLUX
+\par }\pard \widctlpar\adjustright {\i Returns:}{\f2  THRAB,FCO2,FH2O,FHEAT
+\par }\pard \widctlpar\adjustright {\b\ul 
+\par SUN
+\par }{Calculates the daylength and solar declination angle. }{\b\ul 
+\par }{\i Required:}{\f2  IDOY,ALAT,TTIMD
+\par }{\i Returns:}{\f2  DEC,EQNTIM,DAYL
+\par }{\b\ul 
+\par SURFACE
+\par }{Defines the surface of the tree crown. Called in POINTS. 
+\par }\pard \widctlpar\adjustright {\b\ul 
+\par }\pard \widctlpar\adjustright {\b\ul TDUMIN
+\par }{Part of the equivalent horizontal canopy routine, this function finds the smallest tau to bracket  the canopy. Called by EHC. 
+\par }\pard \widctlpar\adjustright {\b\ul 
+\par }\pard \widctlpar\adjustright {\b\ul TESTPOINTS 
+\par }{Sets up gridpoints within the canopy when the gridpoints are specified externally. NB I have now detached this function - but it could be readily re-attached. 
+\par }\pard \widctlpar\adjustright {\i Required:}{\f2  IOTEST,XSLOPE,YSLOPE,XMAX,YMAX
+\par }\pard \widctlpar\adjustright {\i Returns:}{\f2  NUMPNT,XL,YL,ZL,DLT,VL
+\par }{The gridpoints can either be set up at regular
+ intervals within the crown (done in POINTS), or they can be input to the program, in this subroutine. This is used for testing radiation absorbed measured by sensors at specific points in the crown. The control switch IOTEST is used to indicate how the g
+ridpoints are to be set up.This subroutine still needs work before it could be used - e.g. it does not yet calculate the array LGP.
+\par }\pard \widctlpar\adjustright {\f2 
+\par }\pard \widctlpar\adjustright {\b\ul THERMAL
+\par }{Calculates the incident thermal radiation from air temperature. 
+\par }\pard \widctlpar\adjustright {\i Required:}{\f2  TAIR
+\par }\pard \widctlpar\adjustright {\i Returns:}{\f2  RADABV
+\par }{A utility function in GETMET.FOR.}{\f2 
+\par }{\b\ul 
+\par TK
+\par }{Calculates the temperature in degrees Kelvin.}{\b\ul 
+\par }{\i Required:}{\f2  T}{ (degrees C)}{\f2 
+\par }{A utility function in GETMET.FOR.}{\f2 
+\par }{\b\ul 
+\par TRANSB
+\par }{A subroutine to calculate the transmittances of direct radiation (weighted pathlength) to each grid point.
+\par }\pard \widctlpar\adjustright {\i Required:}{\f2  IHOUR, IPT, ZENITH, AZMTH, XSLOPE, YSLOPE, FBEAM, BEXT, XL, YL, ZL, RX, RY, RZ, DXT, DYT, DZT, FOLT, ZBC, JLEAF, BPTOT, JSHAPE, SHAPE, NT, MGD
+\par }\pard \widctlpar\adjustright {\i Returns:}{\f2  BPATH,SLA
+\par }{\b\ul 
+\par TRANSD
+\par }{A subroutine to calculate the transmittances of diffuse radiation (weighted pathlength) to each grid point.}{\b\ul 
+\par }{\i Required:}{\f2  IDAY, IOTUTD, NT, MGD, XSLOPE, YSLOPE, NZEN, DIFZEN, NAZ, NUMPNT, DEXT, XL, YL, ZL, RX, RY, RZ, DXT, DYT, DZT, FOLT, ZBC, JLEAF, BPTOT, JSHAPE, SHAPE
+\par }{\i Returns:}{\f2  NEWTUTD,TU,TD,RELDF
+\par }{Diffuse transmittances may not be calculated every day - they may be read in from file, or yesterday\rquote s values may be used (the dffuse transmittances do not chnage that much from day to day). }{\f2 
+\par }{\b\ul 
+\par TREDST
+\par }{This subroutine is used to calculate the weighted pathlength, which is also the kernal function of radiation penetration. It is called from TRANSD and TRANSB. 
+\par }\pard \widctlpar\adjustright {
+\par }{\b\ul TREEINTERP 
+\par }\pard \widctlpar\adjustright {This subroutine uses linear interpolation to calculate a given crown dimension for the simulation date from the array of that dimension for a series of dates.  
+\par }\pard \widctlpar\adjustright {\i Required:}{\f2  IDATE, NODATES, IDATEARR, PARAMTABLE, NOTREES, NEWCANOPY}{
+\par }{\i Returns:}{\f2  PARAMS}{
+\par The crown dimensions (radii in the X and Y directions, green crown height, trunk length, and leaf area per tree) may all be specified for a series of dates: NODATES is the number of dates, IDATEARR an arra
+y of the dates, and PARAMTABLE the values of that dimension at those dates. Given a simulation date IDATE, the subroutine uses linear interpolation to calculate the value of that dimension on that date (PARAMS). The parameter NEWCANOPY is used to indicate
+ whether the crown has changed - if it has, then the gridpoints must be re-calculated. }{\b\ul 
+\par }\pard \widctlpar\adjustright {\b\ul 
+\par VCMAXTFN
+\par }{Calculates }{\i V}{\sub cmax}{ at the leaf temperature. 
+\par }\pard \widctlpar\adjustright {\i Required: }{\f2 VCMAX25,TLEAF,EAVC,EDVC,DELSC
+\par }\pard \widctlpar\adjustright {\i Returns: }{Maximum Rubisco activity (}{\i V}{\sub cmax}{) at temperature TLEAF (}{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{).
+\par }\pard \widctlpar\adjustright {
+There are two alternative functions here. One is the standard Arrhenius function (no temperature optimum), the other is the peaked function described by Lloyd et al. (1995). These formulations were agreed upon by ECOCRAFT. To obtain the Arrhenius function
+, set EDVC = 0.0. 
+\par }{\f2 
+\par }\pard \widctlpar\adjustright {\b\ul WPATH
+\par }{This subroutine weighs the pathlength. It is called from TREDST. 
+\par }\pard \widctlpar\adjustright {\b\ul 
+\par }\pard \widctlpar\adjustright {\b\ul ZENAZ
+\par }{Calculates the hourly zenith and azimuth angles.}{\b\ul 
+\par }{\i Required:}{\f2  ALAT,TTIMD,BEAR,DEC,EQNTIM
+\par }{\i Returns:}{\f2  ZEN,AZ
+\par }{\b\ul 
+\par ZEROD
+\par }{Zeros the daily fluxes at the start of each day. }{\b\ul 
+\par }{\i Required:}{\f2  TDYAB,TOTCO2,TOTH2O,TOTHFX
+\par }{\b\ul 
+\par ZEROHR
+\par }{Zeros the arrays containing the hourly fluxes at the start of each day. }{\b\ul 
+\par }{\i Required:}{\f2  THRAB, FCO2, FH2O, FHEAT
+\par }\pard \sa120\widctlpar\adjustright {
+\par }\pard \sa120\widctlpar\adjustright {
+\par 
+\par }\pard\plain \s1\qc\sb240\sa60\keepn\widctlpar\outlinelevel0\adjustright \b\fs32\lang2057\kerning28\cgrid {{\*\bkmkstart _Toc390860037}{\*\bkmkstart _Toc392319531}Variable Dictionary{\*\bkmkend _Toc390860037}:{\*\bkmkend _Toc392319531}
+\par }\pard\plain \qc\widctlpar\adjustright \lang2057\cgrid {\b Definitions of all major program variables
+\par }\pard \widctlpar\adjustright {
+\par }\pard \widctlpar\adjustright {\f2 
+\par }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 A1\tab \cell }\pard \widctlpar\intbl\adjustright {dimensionless\cell }\pard 
+\widctlpar\intbl\adjustright {The slope of the relationship between stomatal conductance and photosynthetic rate in the Ball-Berry equation.
+\par Required by PHOTOSYN. Input in INPUTPHY.\cell }\pard \widctlpar\intbl\adjustright {\row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 
+ABSRP(MAXPLAY,3)\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {The fraction of incident radiation which is absorbed by the foliage. i = foliage layer; j = wavelength of radiation. 
+\par }\pard \widctlpar\intbl\adjustright {Input in INPUTPHY. Used in ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ALAT\cell }{radians\cell }\pard \widctlpar\intbl\adjustright {
+The latitude of the plot (negative in southern hemisphere).
+\par Input in INPUTSTR. Required by SUN, ZENAZ, & SLOPES.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ALEAF\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Rate of leaf photosynthesis. 
+\par Calculated by PHOTOSYN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 ALPHA(MAXANG)\cell }\pard \widctlpar\intbl\adjustright {radians\cell }\pard \widctlpar\intbl\adjustright {
+The average angle of each leaf incidence angle class. There are NALPHA incidence angle classes, and the fraction of leaf area in each is given by FALPHA. 
+\par Input in INPUTSTR. Required by EXBEAM and EXDIFF. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ALPHAQ\cell }{dimensionless\cell }\pard \widctlpar\intbl\adjustright {Leaf absorptance of PAR. 
+\par Required by PHOTOSYN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 ARHO(MAXPLAY,3)\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {
+The fraction of incident radiation which is reflected by the foliage. i = foliage layer; j = wavelength of radiation. 
+\par Input in INPUTPHY. Used in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ATAU(MAXPLAY,3)\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+The fraction of incident radiation which is transmitted by the foliage. i = foliage layer; j = wavelength of radiation. 
+\par Input in INPUTPHY. Used in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 AZ(KHRS)\cell }{radians\cell }\pard \widctlpar\intbl\adjustright {The hourly sun zenith angles. 
+\par Calculated in ZENAZ. Used in TRANSB.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 BEAR\cell }{radians\cell }\pard \widctlpar\intbl\adjustright {The bearing of the x-direction from true north.
+\par Input in INPUTSTR. Required by ZENAZ and SLOPES.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 BEXT\cell }\pard \widctlpar\intbl\adjustright {m}{\super 2}{ ground m}{\super -2}{ leaf\cell }\pard 
+\widctlpar\intbl\adjustright {The extinction coefficient for beam radiation. Calculated for each hour in EXBEAM. Required by TRANSB, SCATTER & ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 
+BFLUX(MAXP,3)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {The beam radiation absorbed by foliage at each grid point. i = grid point number, j = wavelength of radiation. 
+\par Calculated for each hour in ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 BMULT\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+A modifier to account for effect of slope on reflection of beam radiation from the soil. Calculated for each hour in SLOPES. Used in SCATTER and ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 
+BPATH(MAXP)\cell }{m}{\super 2}{ leaf m}{\super -2}{ ground\cell }\pard \widctlpar\intbl\adjustright {The weighted pathlength for beam radiation to each grid point. Calculated for each hour in TRANSB. Used in ABSRAD.\cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 BPT(6,MAXC)\cell }{real\cell }\pard \widctlpar\intbl\adjustright {
+The parameters of the beta-distribution of leaf area density distributions. There are six parameters for each age class and NOAGEC age classes (maximum of MAXC).
+\par Input in INPUTSTR. Used in POINTS to calculate leaf area density associated with each grid point. An interpolation array, BPTOT, is calculated in BETATABLE and used in TRANSB & TRANSD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 BPTOT(2,20)\cell }{m}{\super 2}{ leaf m}{\super -2}{ ground\cell }\pard \widctlpar\intbl\adjustright {
+An interpolation array for the leaf area density distribution, calculated when the distribution is specified for each age class, to speed up calculations. i = horizontal or vertical; j = radial distance or height. 
+\par Calculated in BETATABLE and used in TRANSB & TRANSD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 CA\cell }{\f3 \'6d}{mol mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Atmospheric CO}{\sub 2}{
+. 
+\par Required by PSTRANSP.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 CS\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {CO}{\sub 2}{
+ concentration at the leaf surface. 
+\par Required by PHOTOSYN. Calculated in PSTRANSP. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 D0\cell }\pard \widctlpar\intbl\adjustright {kPa\cell }\pard \widctlpar\intbl\adjustright {
+Constant in the VPD-response of stomatal conductance in the Jarvis model. Required by GSJARVIS. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 D0L\cell }\pard \widctlpar\intbl\adjustright {kPa\cell }\pard 
+\widctlpar\intbl\adjustright {Constant in the VPD-response of stomatal conductance in the Ball-Berry-Leuning model.
+\par }\pard \widctlpar\intbl\adjustright {Required by PHOTOSYN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 DATESJ(MAXDATE)\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard 
+\widctlpar\intbl\adjustright {The dates for which the values of JMAX in JMAXTABLE apply, in days-since-1950 format. The number of dates is given by NOJDATES. Read in INPUTPHY & used when interpolating from JMAXTABLE. \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DATESLA(MAXDATE)\cell }{integer}{\f2 \cell }{
+The dates for which the values of FOLT and TOTLAI in FOLTABLE and TOTLAITABLE apply, in days-since-1950 format. The number of dates is given by NOLADATES. Read in INPUTTREE & used when interpolating from FOLTABLE and TOTLAITABLE.}{\f2 \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DATESRD(MAXDATE)\cell }{integer\cell }\pard 
+\widctlpar\intbl\adjustright {The dates for which the values of RD0 in RDTABLE apply, in days-since-1950 format. The number of dates is given by NORDATES. Read in INPUTPHY & used when interpolating from RDTABLE. \cell }\pard \widctlpar\intbl\adjustright {
+\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DATEST(MAXDATE)\cell }{integer}{\f2 \cell }{
+The dates for which the values of ZBC in ZBCTABLE apply, in days-since-1950 format. The number of dates is given by NOTDATES. Read in INPUTTREE & used when interpolating from ZBCTABLE.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd 
+\trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DATESV(MAXDATE)\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+The dates for which the values of VCMAX in VCMAXTABLE apply, in days-since-1950 format. The number of dates is given by NOVDATES. Read in INPUTPHY & used when interpolating from VCMAXTABLE. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd 
+\trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DATESX(MAXDATE)\cell }{integer}{\f2 \cell }{
+The dates for which the values of RX in RXTABLE apply, in days-since-1950 format. The number of dates is given by NOXDATES. Read in INPUTTREE & used when interpolating from RXTABLE.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 DATESY(MAXDATE)\cell }{integer}{\f2 \cell }{
+The dates for which the values of RY in RYTABLE apply, in days-since-1950 format. The number of dates is given by NOYDATES. Read in INPUTTREE & used when interpolating from RYTABLE.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 DATESZ(MAXDATE)\cell }{integer}{\f2 \cell }{
+The dates for which the values of RZ in RZTABLE apply, in days-since-1950 format. The number of dates is given by NOZDATES. Read in INPUTTREE & used when interpolating from RZTABLE.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd 
+\trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DAYL\cell }{hr d}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+The daylength. Calculated in SUN. Used in GETMET (required to generate hourly met values from daily values). \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DAYRESP \cell }{fraction\cell }\pard 
+\widctlpar\intbl\adjustright {Ratio of daytime leaf mitochondrial respiration to leaf dark respiration.
+\par }\pard \widctlpar\intbl\adjustright {Required by RESPF.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 DEC\cell }\pard \widctlpar\intbl\adjustright {radians\cell }\pard \widctlpar\intbl\adjustright {
+The solar declination angle. 
+\par Calculated in SUN. Used in ZENAZ, GETMET & SLOPES. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DELSC\cell }{J K}{\super -1}{ mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Parameter in the temperature response of Rubisco activity.
+\par Required by VCMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 DELSJ\cell }\pard \widctlpar\intbl\adjustright {J K}{\super -1}{ mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Parameter in the temperature response of the electron transport rate.
+\par Required by JMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 DEXT(MAXANG)\cell }\pard \widctlpar\intbl\adjustright {m}{\super 2}{ ground m}{\super -2}{ leaf\cell }\pard \widctlpar\intbl\adjustright {
+The extinction coefficient for diffuse radiation. i = angle of incidence of radiation. 
+\par Calculated in EXDIFF - constant throughout simulation. 
+\par Required by TRANSD, EHC, SCATTER & ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DFLUX(MAXP,3)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+The diffuse radiation absorbed by foliage at each grid point. i = grid point number, j = wavelength of radiation. NB this includes scattered radiation. 
+\par Calculated for each hour in ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DIFDN(MAXP,3)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+The downwards scattered flux above each grid point. i = grid point number, j = wavelength of radiation.
+\par Calculated for each hour in SCATTER. Summed to give absorbed scattered radiation in ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DIFUP(MAXP,3)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{
+\cell }\pard \widctlpar\intbl\adjustright {The upwards scattered flux below each grid point. i = grid point number, j = wavelength of radiation.
+\par Calculated for each hour in SCATTER. Summed to give absorbed scattered radiation in ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DIFZEN(MAXANG)\cell }{radians\cell }\pard 
+\widctlpar\intbl\adjustright {The angles of incidence for diffuse radiation. 
+\par Input in INPUTSTR. Used in EXDIFF, TRANSD, EHC & SCATTER. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DLAI\cell }\pard \widctlpar\intbl\adjustright {m}{\super 2}{ m}{\super -2}{\cell }\pard 
+\widctlpar\intbl\adjustright {The leaf area index in each layer of the equivalent horizontal canopy. 
+\par Calculated in EHC. Used in SCATTER. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DLI(MAXC,MAXP)
+\par \cell }{m}{\super 2}{ m}{\super -3}{\cell }\pard \widctlpar\intbl\adjustright {The leaf area density of  NOAGEP different age classes of foliage, at each grid point. i = age class number, j = grid point number.
+\par Calculated in POINTS. Used when calculating photosynthesis for different age classes of foliage. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DLT(MAXP)\cell }{m}{\super 2}{ m}{\super -3}{\cell }\pard 
+\widctlpar\intbl\adjustright {Leaf area density of all foliage at each grid point. i = grid point number. 
+\par Calculated in POINTS (or TESTPOINTS). Used when summing photosynthesis & transpiration. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 DMULT2\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+A modifier to account for effect of slope on reflection of diffuse radiation from the soil. Calculated for each hour in SLOPES. Used in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb 
+\cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 DX(MAXT) DY(MAXT) DZ(MAXT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {
+The x, y, and z co-ordinates for all trees in the plot, respectively. 
+\par Input in INPUTTREE; sorted in SORTTREES to give DX, DY and DZ. }{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard 
+\widctlpar\intbl\adjustright {\b\f2 DXT(MAXTT) DYT(MAXTT) DZT(MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {
+The x, y, and z co-ordinates of each tree, respectively. Tree no 1. in the array is the target tree; the rest of the array is sorted according to horizontal distance from the target tree.
+\par Input in INPUTTREE. The z co-ordinate is calculated from the slope of the plot. Used in POINTS, TRANSB & TRANSD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 EAVC\cell }{J mol}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {Activation energy of Rubisco activity, }{\i V}{\sub cmax}{.
+\par Required by VCMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 EAVJ\cell }\pard \widctlpar\intbl\adjustright {J mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Activation energy of electron transport rate, }{\i J}{\sub max}{.
+\par Required by JMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 EDVC\cell }\pard \widctlpar\intbl\adjustright {J mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Curvature parameter in the temperature response of Rubisco activity, }{\i V}{\sub cmax}{.
+\par If no temperature optimum is desired for }{\i V}{\sub cmax}{, set EDVC = 0.0. 
+\par Required by VCMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 EDVJ\cell }\pard \widctlpar\intbl\adjustright {J mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Curvat
+ure parameter in the temp response of the electron transport rate.
+\par Required by JMAXTFN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 EQNTIM\cell }\pard \widctlpar\intbl\adjustright {hr\cell }\pard \widctlpar\intbl\adjustright {Correction factor for time? 
+\par Calculated in SUN. Used in ZENAZ & SLOPES.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ET\cell }{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Leaf transpiration rate.
+\par Calculated in PSTRANSP using PENMON. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 FALPHA(MAXANG)\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {
+Fraction of leaf area in each leaf angle class. 
+\par Input in INPUTSTR. Used in EXDIFF & EXBEAM.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 FBEAM(KHRS,3)\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+The fraction of incident radiation which is beam. i = time; j = wavelength. Input in GETMET. Used in TRANSB, SCATTER & ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430
+\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 FLT(MAXDATE, MAXTT)\cell }{m}{\super 2}{ tree}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+The leaf area per tree for all trees in the plot, on a series of dates.
+\par Input in INPUTTREE; sorted in SORTTREES to give FOLTABLE.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard 
+\widctlpar\intbl\adjustright {\b\f2 FOLT(MAXTT)\cell }{m}{\super 2}{\cell }\pard \widctlpar\intbl\adjustright {Leaf area of each tree, sorted according to distance from target tree. 
+\par Interpolated from FOLTABLE in TREEINTERP. Used in POINTS, TRANSD & TRANSB.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard 
+\widctlpar\intbl\adjustright {\b\f2 FOLTABLE(MAXDATE,MAXTT)\cell }{m}{\super 2}{ tree}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Leaf area per tree, for different dates (i), and individual crowns (j). The trees should be in order of distance from the target tree. The dates f
+or which FOLT is specified are held in DATESLA. Read in INPUTTREE. Daily values are interpolated in TREEINTERP.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb 
+\cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 FSUN(KHRS)\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {Fraction of hour for which sun is shining. i = time. Input in GETMET. ***NOT USED!\cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 FWSBB\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {Reduction of stomatal conductance by low soil water potential - Ball-Berry model. Required by PHOTOSYN. 
+\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 FWSJ\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {
+Reduction of stomatal conductance by low soil water potential - Jarvis model. Required by GSJARVIS. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 FWSL\cell }\pard \widctlpar\intbl\adjustright {fraction\cell 
+}\pard \widctlpar\intbl\adjustright {Reduction of stomatal conductance by low soil water potential - Ball-Berry-Leuning model. Required by PHOTOSYN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 G0\cell }\pard 
+\widctlpar\intbl\adjustright {mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Cuticular stomatal conductance to CO}{\sub 2}{ in BB and BB-Leuning models.
+\par Required by PHOTOSYN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 G1\cell }\pard \widctlpar\intbl\adjustright {dimensionless\cell }\pard \widctlpar\intbl\adjustright {
+The slope of the relationship between stomatal conductance and photosynthetic rate in the Ball-Berry-Leuning equation.
+\par Required by PHOTOSYN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GAMMA\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol mol}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {The leaf CO}{\sub 2}{
+ compensation point (for dark respiration + photorespiration - distinct from }{\f3 \'47}{\f3\sub \'2a}{). 
+\par Required by PHOTOSYN (used in BB and BB-Leuning stomatal models).\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GSC\cell }\pard \widctlpar\intbl\adjustright {mol CO}{\sub 2}{ m}{\super -2}{ s}{\super -1}{\cell 
+}\pard \widctlpar\intbl\adjustright {Stomatal conductance to CO}{\sub 2}{.
+\par Calculated by GSJARVIS (Jarvis model) or PHOTOSYN (BB-type models). Used in PSTRANSP to calculate transpiration rate. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GSJA\cell }\pard \widctlpar\intbl\adjustright 
+{\f3 \'6d}{mol}{\super -1}{ mol\cell }\pard \widctlpar\intbl\adjustright {Constant in the linear response of stomatal conductance to CO}{\sub 2}{ in the Jarvis model. 
+\par }\pard \widctlpar\intbl\adjustright {Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GSJB\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol mol}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {Constant in the non-linear response of stomatal conductance to CO}{\sub 2}{ in the Jarvis model. 
+\par Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GSMODEL\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {
+Controls which model of stomatal conductance is used. 
+\par 0: Jarvis model, linear response of }{\i g}{\sub s}{ to CO}{\sub 2
+\par }\pard \widctlpar\intbl\adjustright {1: Jarvis model, non-linear response of }{\i g}{\sub s}{ to CO}{\sub 2
+\par }{2: Ball-Berry model (response to RH)
+\par }\pard \widctlpar\intbl\adjustright {3: Ball-Berry-Leuning model (response to VPD)
+\par Required by PHOTOSYN and GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 GSREF\cell }\pard \widctlpar\intbl\adjustright {mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+In the Jarvis model of stomatal conductance, it is the value of }{\i g}{\sub s}{ in the limit of saturating light, zero VPD, maximum soil water content and at the reference value of }{\i c}{\sub s}{ = 350 ppm. 
+\par Required by GSJARVIS. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 I0\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+Constant in the response of stomatal conductance to light in the Jarvis model. 
+\par Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 IDAY\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {Day counter for simulation. \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IEND\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {End date of simulation (in days-since-1950 format).
+\par Read in INPUTSTR. Required by GETMET.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IFLAG\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Passed to the error-handling subroutine SUBERROR to indicate whether program should be terminated (= IFATAL) or continued (= IWARN). \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IHOUR\cell }{integer\cell 
+}\pard \widctlpar\intbl\adjustright {Hour counter for simulation. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IOERROR\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard 
+\widctlpar\intbl\adjustright {FORTRAN error number, passed to error-handling subroutine SUBERROR. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IOHRLY\cell }{integer\cell }\pard 
+\widctlpar\intbl\adjustright {Set > 0 if hourly output is required (in file }{\i hrflx.dat}{).
+\par Read in OPENF from }{\i confile.dat}{. Required in CLOSEF, OUTPUT.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IOTEST\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Controls how the grid points are set up.
+\par 0: grid points are set up in a regular array within canopy
+\par 1: grid points are input as co-ordinates from }{\i points.dat}{
+\par 2: grid points are input as a transect from }{\i points.dat}{
+\par Read in OPENF from }{\i confile.dat}{. Required in TESTPOINTS, CLOSEF. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IOTUTD\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Controls how often diffuse transmittances are calculated. 
+\par 0: diffuse transmittances are read in from the file }{\i tutd.dat}{; 
+\par > 0: diffuse transmittances are calculated every IOTUTD\rquote th day, starting with the first. Default: 1.
+\par Read in OPENF from }{\i confile.dat}{. Required in TRANSD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 IPT\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {Gridpoint counter for simulation. \cell 
+}\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ISTART\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {Start date of simulation (in days-since-1950 format).
+\par Read in INPUTSTR. Required by GETMET, SUN\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ITERMAX\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Controls iterations in the combined photosynthesis-transpiration model.
+\par If ITERMAX = 0, leaf temperature is assumed = air temperature. If ITERMAX > 0, an iterative method is used to find leaf temperature, photosynthesis, and transpiration. ITERMAX gives the maximum number of iterations (ensuring convergence). 
+\par Required by PSTRANSP.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 IWAVE\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {Wavelength counter for simulation. \cell 
+}\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 JLEAF\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {A switch indicating the assumption re leaf area density.
+\par 0: Uniform leaf area density assumed.
+\par 1: Leaf area density is variable in vertical direction.
+\par 2: Leaf area density is variable in both horizontal & vertical.
+\par Read in INPUTSTR. Required by POINTS, BETATABLE, TRANSB, TRANSD, TREDST, & WPATH. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 JMAX25(MAXPLAY, MAXC)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell 
+}\pard \widctlpar\intbl\adjustright {Potential electron transport rate at 25\'baC, for different crown layers (i) and age classes (j). Interpolated from JMAXTABLE in PHYINTERP. Required by JMAXTFN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 JMAXTABLE(MAXDATE, MAXPLAY, MAXC)\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\f3 \cell }{Potential electron transport rate at 25\'ba
+C, for different dates (i), crown layers (j) and age classes (k). The dates for which it is specified are held in DATESJ. Read in INPUTPHY. Daily values are interpolated in PHYINTERP.  \cell }\pard \widctlpar\intbl\adjustright {\row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 JMMODEL\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {Indicates how values of Jmax are input.
+\par 0: Read in as array directly from input file.
+\par 1: Calculated from leaf N content.
+\par Read & used in INPUTPHY.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 JSHAPE\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {Describes shape of crowns.
+\par 1: conical; 2: ellipsoid; 3: paraboloid.
+\par Input in INPUTSTR. Required by POINTS, TRANSB, TRANSD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 LAYER(MAXP)\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Each grid point is matched to a point in the equivalent horizontal canopy (EHC). The i\rquote th point corresponds to LAYER(i) in an EHC having MLAYER(i) layers. 
+\par Calculated in EHC. Used in SCATTER. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 LGP(MAXP)\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {The canopy is divide
+d into up to 10 layers. LGP(i) is the layer containing grid point i. 
+\par Calculated in POINTS (or TESTPOINTS). \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 MFLAG\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Indicates the format of the met data. 0: met data is in standard daily format; 1: met data is in standard hourly format. Default: 0.
+\par Read in OPENF from }{\i confile.dat}{. Required by GETMET.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 MLAYER(MAXP)\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Each grid point is matched to a point in the equivalent horizontal canopy (EHC). The i\rquote th point corresponds to LAYER(i) in an EHC having MLAYER(i) layers. 
+\par Calculated in EHC. Used in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 MTT\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of trees in the plot. Read in PHENOLOGY. Not used anywhere else (yet!) Needed????\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NALPHA\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of leaf angle classes. Maximum is MAXANGLE. Read in INPUTSTR. Used in EXDIFF & EXBEAM. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NAZ\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of azimuth angles to be used to calculate diffuse radiation interception. Read in INPUTSTR. Used in TRANSD, EHC, & SCATTER. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NEWCANOPY\cell }{integer
+\cell }\pard \widctlpar\intbl\adjustright {Daily flag, used to indicate whether the canopy has been updated on that day. If so, then the gridpoints must be recalculated. Set in PHENOLOGY and used in POINTS. \cell }\pard \widctlpar\intbl\adjustright {\f2 
+\row }\pard \widctlpar\intbl\adjustright {\b\f2 NEWPROPS\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Daily flag, used to indicate whether the proportions of foliage in each age class have been updated on that day. If so, and if beta distributions are specified for each age class, then the interpolation array BPTOT must be re-calculated. Set in PHENOLOGY 
+and used when calling BETATABLE. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NEWTUTD\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Daily flag, used to indicate whether the diffuse transmittances have been updated that day or not. If so, then the equivalent horizontal canopy (EHC) must be updated. Flag set in TRANSD and used when calling EHC. \cell }\pard \widctlpar\intbl\adjustright 
+{\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOAGEC\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of age classes of foliage for which beta distributions of leaf area density are specified. Must have NOAGEC = 1, NOAGEP = 1, or NOAGEC = NOAGEP. Read in INPUTSTR.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 NOAGEP\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of age classes of foliage for which physiological parameters (JMAX, VCMAX, RD0) are specified. Must have NOAGEC = 1, NOAGEP = 1, or NOAGEC = NOAGEP. Read in INPUTSTR.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 
+\clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 NOALLTREES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {The total number of trees in the plot. Informatio
+n is input for all these trees, but only the information for those NOTREES trees closest to the target tree is used. Input in INPUTTREE, but not used elsewhere. }{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 
+\clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 NOJDATES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of dates for which values of JMAX are specified in JMAXTABLE. Read in INPUTPHY & used in conjunction with JMAXTABLE. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOLADATES\cell }{integer\cell 
+}\pard \widctlpar\intbl\adjustright {Number of dates for which the leaf area per tree, and the total LAI, are specified (the dates themselves are in LADATES, and the values in FOLTABLE and TOTLAITABLE). Input in INPUTTREE. In
+terpolated to give FOLT and TOTLAI in TREEINTERP. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOPLAY\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of canopy layers for which physiology is specified. Read in INPUTPHY. Used when calculating the array LGP in POINTS.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NORDATES\cell }{integer\cell }\pard 
+\widctlpar\intbl\adjustright {Number of dates for which values of RD0 are specified in RDTABLE. Read in INPUTPHY & used in conjunction with RDTABLE. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb 
+\cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 NOTARGET\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+The number of the target tree. Input in INPUTTREE, but  not needed elsewhere. }{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb 
+\cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 NOTDATES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {Number of dates for which the trunk length is specified (the dates t
+hemselves are in ZBCDATES, and the values in ZBCTABLE). Input in INPUTTREE. Interpolated to give ZBC in TREEINTERP. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOTREES\cell }{integer\cell }\pard 
+\widctlpar\intbl\adjustright {Number of neighbouring trees which should be considered when calculating intercepted radiation. 
+\par Read in INPUTTREE. Used in TRANSD & TRANSB. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOVDATES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of dates for which values of VCMAX are specified in VCMAXTABLE. Read in INPUTPHY & used in conjunction with VCMAXTABLE. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOXDATES\cell }{integer\cell 
+}\pard \widctlpar\intbl\adjustright {Number of dates for which the radius in the x-direction is specified (the dates themselves are in XDATES, and the values in RXTABLE). Input in INPUTTREE. Interpolated to give RX in TREEINTERP. \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NOYDATES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of dates for which the radius in the y-direction is specified (the dates themselves are in YDATES, and the values in RYTABLE). Input in INPUTTREE. Interpolated to give RY in TREEINTERP. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 NOZDATES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of dates for which the green crown height is specified (the dates themselves are in ZDATES, and the values in RZTABLE). Input in INPUTTREE. Interpolated to give RZ in TREEINTERP. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 NSIDES\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {No of leaf sides with stomata. 1 = hypostomatous, 2 = amphistomatous.
+\par Required by PSTRANSP.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 NSTEP\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {The model runs for each NSTEP\rquote 
+th day of met data. Default: 1.
+\par Read in INPUTSTR from }{\i str.dat.}{ Used in GETMET.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NUMPNT\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {
+Number of gridpoints. Calculated from NORLAY, which is read in INPUTSTR. Required for POINTS, TRANSD, EHC, & the loop over all points in the main program. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 NZEN
+\cell }{integer\cell }\pard \widctlpar\intbl\adjustright {Number of zenith angles used to calculate diffuse radiation interception. Input in INPUTSTR. Used in EXDIFF, TRANSD, EHC, SCATTER, & ABSRAD.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row 
+}\pard \widctlpar\intbl\adjustright {\b\f2 PAR\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {PAR incident on leaf.
+\par Required by PHOTOSYN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 PRESS\cell }\pard \widctlpar\intbl\adjustright {kPa\cell }\pard \widctlpar\intbl\adjustright {
+Atmospheric pressure. Required by PSTRANSP and PENMON. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 PROP(3)\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {
+The proportion of leaf area in each age class (maximum MAXC age classes), if separate age classes are considered. Input in INPUTSTR. May be altered in PHENOLOGY. Used in BETATABLE, to calculate BPTOT, and POINTS, to calculate DLI. \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 Q10F\cell }{\'baC}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Parameter describing the temperature response of
+ leaf respiration. Note that this is not actually the Q10, but is given by ln(Q10)/10.
+\par Required by RESPF.\cell }\pard \widctlpar\intbl\adjustright {\row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 
+R1(MAXDATE, MAXTT),  R2(MAXDATE, MAXTT), R3(MAXDATE, MAXTT)\cell }\pard \widctlpar\intbl\adjustright {m\cell }\pard \widctlpar\intbl\adjustright {
+The radii in the x and y directions, and the green crown length, for all trees in the plot, and on a series of dates, respectively. 
+\par }\pard \widctlpar\intbl\adjustright {Input in INPUTTREE; sorted in SORTTREES to give RXTABLE, RYTABLE and RZTABLE. }{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb 
+\cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 radabv(KHRS,3)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Incident radiation above the canopy. i = time; j = wavelength. 
+
+\par Input in GETMET. Used in SCATTER & ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RANDOM\cell }{dimensionless\cell }\pard \widctlpar\intbl\adjustright {The \lquote clumping factor\rquote 
+ or ratio of shoot projected area: leaf projected area. Input in INPUTSTR, used in EXDIFF & EXBEAM.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RD\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell 
+}\pard \widctlpar\intbl\adjustright {Rate of leaf mitochondrial respiration. 
+\par Calculated by RESPF.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 RD0(MAXPLAY, MAXC)\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {Mitochondrial respiration rate at 0\'baC, for different crown layers (i) and age classes (j). Interpolated from RDTABLE in PHYINTERP. Required by RESPF. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 RDMODEL\cell }\pard \widctlpar\intbl\adjustright {integer\cell }\pard \widctlpar\intbl\adjustright {Indicates how values of RD0 are input.
+\par 0: Read in as array directly from input file.
+\par 1: Calculated from leaf N content.
+\par Read & used in INPUTPHY.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RDTABLE(MAXDATE, MAXPLAY, MAXC)\cell }{\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\f3 \cell }{Mitochondrial respiration rate at 0\'ba
+C, for different dates (i), crown layers (j) and age classes (k). The dates for which it is specified are held in DATESRD. Read in INPUTPHY. Daily values are interpolated in PHYINTERP.  \cell }\pard \widctlpar\intbl\adjustright {\row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 RELDF(MAXP)\cell }\pard \widctlpar\intbl\adjustright {dimensionless\cell }\pard \widctlpar\intbl\adjustright {The fraction of incident sky diffuse radiation which is absorbed at each grid point. 
+\par Calculated in TRANSD, or read in from }{\i tutd.dat}{. Used in ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RH\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+Atmospheric relative humidity. 
+\par Required by PHOTOSYN.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 RH(KHRS)\cell }\pard \widctlpar\intbl\adjustright {fraction\cell }\pard \widctlpar\intbl\adjustright {
+The relative humidity for each hour. Read in GETMET. Used in PSTRANSP when the Ball-Berry stomatal conductance model is used. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RHOSOL(3)\cell }{fraction\cell 
+}\pard \widctlpar\intbl\adjustright {The reflectance of radiation from the soil surface for three wavelengths. Input in INPUTPHY. Used in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RNET\cell }{
+J m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Net radiation received by a leaf.
+\par Required by PENMON.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 RX(MAXTT)
+\par }\pard \widctlpar\intbl\adjustright {\b\f2 RY(MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {The radius of each tree crown in the x- and y-directions, respectively. The arr
+ays must be sorted according to distance from the target tree (which is the first tree in the array.)
+\par Interpolated from RXTABLE and RYTABLE in TREEINTERP. Used in POINTS, TRANSD & TRANSB.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb 
+\cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 RXTABLE(MAXDATE,MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {
+Crown radius in the x-direction, for different dates (i), and individual crowns (j). The trees should be in order of distance from the target tree. The dates for which RX is specified are held in DATESX. Read in INPUTTREE. Daily values are interpolated in
+ TREEINTERP.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 RYTABLE(MAXDATE,MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {Crow
+n radius in the y-direction, for different dates (i), and individual crowns (j). The trees should be in order of distance from the target tree. The dates for which RY is specified are held in DATESY. Read in INPUTTREE. Daily values are interpolated in TRE
+EINTERP.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 RZ(MAXTT)\cell }{m\cell 
+}\pard \widctlpar\intbl\adjustright {The green crown length of each crown. The array must be sorted according to distance from the target tree (which is the first tree in the array).
+\par Interpolated from RZTABLE in TREEINTERP. Used in POINTS, TRANSD & TRANSB.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard 
+\widctlpar\intbl\adjustright {\b\f2 RZTABLE(MAXDATE,MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {
+Green crown height, for different dates (i), and individual crowns (j). The trees should be in order of distance from the target tree. The dates for which RZ is specified are held in DATESZ. Read in INPUTTREE. Daily values are interpolated in TREEINTERP.}
+{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 SCATFX(MAXP,3)\cell }{\f3 \'6d}{
+mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {The scattered radiation absorbed at each grid point, i = grid point, j = wavelength. Calculated for each hour in ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row 
+}\pard \widctlpar\intbl\adjustright {\b\f2 SCLOST(MAXP,3)\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {The scattered radiation lost from the top of the canopy (for each 
+grid point? don\rquote t understand this!). Calculated in SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 SHAPE\cell }{real\cell }\pard \widctlpar\intbl\adjustright {
+A factor used in calculating gridpoint subvolumes, which varies according to crown shape. For conical crowns, SHAPE = 1/3; for ellipsoidal crowns, SHAPE = 2/3; for paraboloidal crowns, SHAPE = 1/2. Input in INPUTSTR. Used in POINTS, TRANSB & TRANSD.\cell 
+}\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 SLA(MAXP)\cell }{fraction\cell }\pard \widctlpar\intbl\adjustright {
+The sunlit leaf area fraction associated with each grid point. Calculated for each hour in TRANSB. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 SOMULT\cell }{fraction\cell }\pard 
+\widctlpar\intbl\adjustright {Another multiplier for the effect of slope on the reflection of radiation from the soil. Calculated in SLOPES. Required for SCATTER.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {
+\b\f2 T0\cell }{\'baC\cell }\pard \widctlpar\intbl\adjustright {Parameter in temperature response of }{\i g}{\sub s}{ in Jarvis model.
+\par Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 TAIR\cell }\pard \widctlpar\intbl\adjustright {\'baC\cell }\pard \widctlpar\intbl\adjustright {Air temperature.
+\par Required by PSTRANSP.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 tair(KHRS)\cell }\pard \widctlpar\intbl\adjustright {\'baC\cell }\pard \widctlpar\intbl\adjustright {
+The air temperature for each hour. Input in GETMET. Required for thermal radiation scattering in SCATTER,and for physiological routines. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 TD(MAXP)\cell }{
+dimensionless\cell }\pard \widctlpar\intbl\adjustright {The diffuse transmittance downwards for each grid point. Calculated in TRANSD (or read in from }{\i tutd.dat}{). Used in EHC.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 TDYAB(3)\cell }{mol quanta tree}{\super -1}{ day}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {
+The total daily absorbed radiation, in three wavelengths, from the target tree. Calculated in the main program by summing over grid points and hours. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 THETA
+\cell }{dimensionless\cell }\pard \widctlpar\intbl\adjustright {Curvature of light-response of electron transport rate.
+\par Required by PHOTOSYN. \cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 TMAX\cell }\pard \widctlpar\intbl\adjustright {\'baC\cell }\pard \widctlpar\intbl\adjustright {Parameter in temperature response of }{\i g}{
+\sub s}{ in Jarvis model. If no temperature response is desired, then this should be set to 0.0. 
+\par Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 TOTCET\cell }\pard \widctlpar\intbl\adjustright {mol H}{\sub 2}{O   tree}{\super -1}{ day}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {The total daily transpiration from the target tree. Calculated in the main program by summing over grid points and hours.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 TOTHFX
+\cell }{MJ tree}{\super -1}{ day}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {The total daily sensible heat flux from the target tree. Calculated in the main program by summing over grid points and hours.\cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 TOTLAI\cell }{m}{\super 2}{ m}{\super -2}{\cell }\pard \widctlpar\intbl\adjustright {
+The leaf area index for the whole canopy. Interpolated from TOTLAITABLE in TREEINTERP. Required by EHC. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050
+\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 TOTLAITABLE(MAXDATE)\cell }{m}{\super 2}{ m}{\super -2}{\cell }\pard \widctlpar\intbl\adjustright {
+Plot LAI for different dates. The dates for which TOTLAI is specified are held in DATESLA. Calculated from leaf area per tree in CALCLAI, called from INPUTTREE. Daily values are interpolated in TREEINTERP.}{\f2 \cell }\pard \widctlpar\intbl\adjustright {
+\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 TOTPHO\cell }{mol C tree}{\super -1}{ day}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {The total daily C uptake (net of foliage respiration) by the target tree. Calculated in the main program by summing over grid points and hours.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 TREF\cell }{\'baC\cell }\pard \widctlpar\intbl\adjustright {Parameter in temperature response of }{\i g}{\sub s}{ in Jarvis model.
+\par Required by GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 TRUNK(MAXDATE, MAXTT)
+\cell }\pard \widctlpar\intbl\adjustright {m\cell }\pard \widctlpar\intbl\adjustright {The trunk length for all trees in the plot, on a series of dates.
+\par Input in INPUTTREE; sorted in SORTTREES to give ZBCTABLE. }{\f2 \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard 
+\widctlpar\intbl\adjustright {\b\f2 tsoil(KHRS)\cell }{\'baC\cell }\pard \widctlpar\intbl\adjustright {The soil 
+temperature for each hour. Input in GETMET. Required for thermal radiation scattering in SCATTER. Could also be used to calculate soil respiration. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 TTIMD\cell }
+{hr\cell }\pard \widctlpar\intbl\adjustright {Time difference between the longitude of the plot, and the longitude of the time zone.
+\par }\pard \widctlpar\intbl\adjustright {Input in INPUTSTR. Used in SUN, ZENAZ, and SLOPES. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 TU(MAXP)\cell }{dimensionless\cell }\pard \widctlpar\intbl\adjustright {
+The diffuse transmittance upwards for each grid point. Calculated in TRANSD (or read in from }{\i tutd.dat}{). Used in EHC.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 VCMAX25(MAXPLAY, MAXC)\cell }{\f3 
+\'6d}{mol m}{\super -2}{ s}{\super -1}{\cell }\pard \widctlpar\intbl\adjustright {Maximum rate of Rubisco activity at 25\'baC, for different crown layers (i) and age classes (j). Interpolated from VCMAXTABLE in PHYINTERP. Required by VCMAXTFN.\cell 
+}\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 VCMAXTABLE(MAXDATE, MAXPLAY, MAXC)\cell }\pard \widctlpar\intbl\adjustright {\f3 \'6d}{mol m}{\super -2}{ s}{\super -1}{\f3 \cell }{Maximum rate of Rubisco activity at 25
+\'baC, for different dates (i), crown layers (j) and age classes (k). The dates for which it is specified are held in DATESV. Read in INPUTPHY. Daily values are interpolated in PHYINTERP.  \cell }\pard \widctlpar\intbl\adjustright {\row }\pard 
+\widctlpar\intbl\adjustright {\b\f2 VL(MAXP)\cell }\pard \widctlpar\intbl\adjustright {m}{\super 3}{\cell }\pard \widctlpar\intbl\adjustright {The volume of the crown associated with each grid point. Calculated in POINTS (or TESTPOINTS). \cell }\pard 
+\widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 VPD\cell }{kPa\cell }\pard \widctlpar\intbl\adjustright {Leaf to air vapour pressure deficit.
+\par Required by PHOTOSYN and GSJARVIS.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 VPD(KHRS)\cell }\pard \widctlpar\intbl\adjustright {kPa\cell }\pard \widctlpar\intbl\adjustright {
+The saturation water vapour pressure deficit for each hour. Input in GETMET. Required for physiological routines. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 WIND\cell }{m s}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {Horizontal wind speed above the canopy. 
+\par Required by PSTRANSP to calculate leaf boundary layer conductance.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 windah(KHRS)\cell }\pard \widctlpar\intbl\adjustright {m s}{\super -1}{\cell }\pard 
+\widctlpar\intbl\adjustright {The horizontal wind speed above the canopy. Input in GETMET. Required to calculate boundary layer conductances in PSTRANSP. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 WLEAF
+\cell }{m\cell }\pard \widctlpar\intbl\adjustright {Leaf width. 
+\par Required by PSTRANSP to calculate leaf boundary layer conductance.\cell }\pard \widctlpar\intbl\adjustright {\row }\pard \widctlpar\intbl\adjustright {\b\f2 XL(MAXP)\cell }\pard \widctlpar\intbl\adjustright {-\cell }\pard \widctlpar\intbl\adjustright {
+The x co-ordinate of each crown gridpoint. Calculated in POINTS (or TESTPOINTS). Required in TRANSB & TRANSD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 XMAX\cell }{m\cell }\pard 
+\widctlpar\intbl\adjustright {Length of the plot in x-direction. 
+\par Read in INPUTSTR. Required by POINTS (or TESTPOINTS).\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 XSLOPE\cell }{radians\cell }\pard \widctlpar\intbl\adjustright {Slope of plot in x-direction.
+\par Read in INPUTSTR. Required by TESTPOINTS, PHENOLOGY, TRANSD, TRANSB, EHC, SCATTER, and SLOPES.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 YL(MAXP)\cell }{-\cell }\pard \widctlpar\intbl\adjustright {
+The y co-ordinate of each crown gridpoint. Calculated in POINTS (or TESTPOINTS). Required in TRANSB & TRANSD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 YMAX\cell }{m\cell }\pard 
+\widctlpar\intbl\adjustright {Length of the plot in x-direction. 
+\par Read in INPUTSTR. Required by POINTS (or TESTPOINTS).\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 YSLOPE\cell }{radians\cell }\pard \widctlpar\intbl\adjustright {Slope of plot in y-direction.
+\par Read in INPUTSTR. Required by TESTPOINTS, PHENOLOGY, TRANSD, TRANSB, EHC, SCATTER, and SLOPES.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\intbl\adjustright {\b\f2 ZBC(MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {
+The height of the base of the crown, for each tree. The array should be sorted according to distance from the target tree. Interpolated from ZBCTABLE in TREEINTERP. Required in POINTS, TRANSD & TRANSB.\cell }\pard \widctlpar\intbl\adjustright {\f2 \row 
+}\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4050\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 ZBCTABLE(MAXDATE,MAXTT)\cell }{m\cell }\pard \widctlpar\intbl\adjustright {Trunk leng
+th, for different dates (i), and individual crowns (j). The trees should be in order of distance from the target tree. The dates for which ZBC is specified are held in DATEST. Read in INPUTTREE. Daily values are interpolated in TREEINTERP.}{\f2 \cell 
+}\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 ZEN(KHRS)\cell }{radians\cell }\pard 
+\widctlpar\intbl\adjustright {The zenith angle of the sun for each hour. Calculated in ZENAZ. Required by GETMET, SLOPES, EXBEAM, TRANSB, SCATTER & ABSRAD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\trowd \trgaph108\trleft-108 
+\clvertalt\cltxlrtb \cellx2430\clvertalt\cltxlrtb \cellx4049\clvertalt\cltxlrtb \cellx10710\pard \widctlpar\intbl\adjustright {\b\f2 ZL(MAXP)\cell }{-\cell }\pard \widctlpar\intbl\adjustright {
+The z co-ordinate of each crown gridpoint. Calculated in POINTS (or TESTPOINTS). Required in TRANSB & TRANSD. \cell }\pard \widctlpar\intbl\adjustright {\f2 \row }\pard \widctlpar\adjustright {
+\par }\pard \widctlpar\adjustright {
+\par }}

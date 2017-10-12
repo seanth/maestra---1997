@@ -1,0 +1,26 @@
+Program:    MAESTRA: Version September 2001                             
+Control:    ***  SAMPLE CONTROL  ***                                    
+Trees:      *** SAMPLE TREES FILE ***                                   
+Structure:  *** SAMPLE STR FILE ***                                     
+Physiology: *** SAMPLE PHY FILE ***                                     
+Met data:   *** SAMPLE MET FILE : HALF-HOURLY DATA ***                  
+                                                                                
+DOY: simulation date
+Tree: tree number
+absPAR:   absorbed PAR              MJ tree-1 d-1
+absNIR:   absorbed NIR              MJ  tree-1 d-1
+absTherm: absorbed thermal          MJ tree-1 d-1
+totPs: gross photosynthesis         mol tree-1 d-1
+totRf: daily foliar respiration     mol tree-1 d-1
+netPs: photosyn. net of foliar resp   mol tree-1 d-1
+totLE1: daily transpiration         mol H2O tree-1 d-1
+totLE2: daily transpirn (CANOPY calc) mol H2O m-2 d-1
+totH:  daily sensible heat flux     MJ tree-1 d-1
+                                                                                
+Columns: DOY, Tree, absPAR, absNIR, absTherm, totPs, totRf, netPs, totLE1, totLE2, totH
+      1   25     19.81123      8.64093      0.57925      3.35057      0.18908      3.16149    333.54147     72.75969      0.00000
+      2   25     14.79537      6.50839     -1.58569      3.10337      0.15882      2.94455    214.91942     47.62211      0.00000
+      3   25     21.20047      9.12304      1.02509      3.40186      0.18650      3.21536    339.85388     75.32185      0.00000
+      1   26     18.08131      7.57272     -0.95005      2.84574      0.14956      2.69618    284.18350     61.97506      0.00000
+      2   26     13.55950      5.71514     -2.80481      2.63829      0.12562      2.51266    182.35736     40.24706      0.00000
+      3   26     18.74939      7.84259     -0.49493      2.91474      0.14751      2.76722    291.48193     64.33353      0.00000

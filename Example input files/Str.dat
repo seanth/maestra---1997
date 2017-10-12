@@ -1,0 +1,31 @@
+*** SAMPLE STR FILE ***
+
+&LADD
+JLEAF = 2
+NOAGEC = 1
+BPT = 1.72 1.44 0.23 77.83 2.47 2.77 
+RANDOM = 1				
+/					
+
+&CANOPY					
+CSHAPE = 'CONE'					
+/					
+
+&LIA					
+ELP = 1.0					
+NALPHA = 5					
+/	 
+
+&AERO
+EXTWIND = 0.1
+/				
+
+&ALLOM
+COEFFT =104
+EXPONT = 1.75
+/
+
+&ALLOMB
+BCOEFFT =104
+BEXPONT = 1.75
+/

@@ -1,0 +1,33 @@
+C Numbers of columns of met data
+
+      PARAMETER (MISSING = - 1)   
+    
+      PARAMETER (MDDATE = 1)       
+      PARAMETER (MDWIND = 2)       
+      PARAMETER (MDTMAX = 3)       
+      PARAMETER (MDTMIN = 4)       
+      PARAMETER (MDPAR  = 5)       
+      PARAMETER (MDSI   = 6)       
+      PARAMETER (MDFBEAM= 7)       
+      PARAMETER (MDCA   = 8)       
+      PARAMETER (MDPRESS= 9)  
+	  PARAMETER (MDPPT  = 10)    
+	  PARAMETER (MDSW   = 11)    	   
+
+      PARAMETER (MHDATE =  1)
+      PARAMETER (MHTIME =  2)
+      PARAMETER (MHWIND =  3)
+      PARAMETER (MHTAIR =  4)
+      PARAMETER (MHTSOIL = 5)
+      PARAMETER (MHRH =    6)
+      PARAMETER (MHVPD =   7)
+      PARAMETER (MHPAR =   8)
+      PARAMETER (MHFBEAM = 9)
+      PARAMETER (MHCA   = 10)
+      PARAMETER (MHRHP  = 11)
+      PARAMETER (MHMFD  = 12)       ! MOLE FRACTION DEFICIT
+      PARAMETER (MHPRESS= 13)       ! PRESSURE
+      PARAMETER (MHTDEW = 14)       ! DEW TEMPERATURE
+	  PARAMETER (MHRAD =  15)       ! GLOBAL RADIATION 
+	  PARAMETER (MHPPT  = 16)		! RAINFALL
+	  PARAMETER (MHSW   = 17)		! SOIL MOISTURE
